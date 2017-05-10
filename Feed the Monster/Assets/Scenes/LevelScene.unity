@@ -2115,7 +2115,7 @@ MonoBehaviour:
   monsterBar: {fileID: 5289}
   ButtonPrevious: {fileID: 1967971083}
   ButtonNext: {fileID: 2062577425}
-  InstructionSound: {fileID: 8300000, guid: f28f16cd3a776054dbd30b1282cf9ba0, type: 3}
+  InstructionSound: {fileID: 8300000, guid: 27709037672aa4f50b5a3f12d622e24c, type: 3}
   TouchController: {fileID: 126958680}
 --- !u!114 &396
 MonoBehaviour:
@@ -6435,7 +6435,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5996e848dd6dd95469423bf25979bd27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TitleSound: {fileID: 8300000, guid: cc0e86b86ec2e174fbe3b39fda0832ee, type: 3}
+  TitleSound: {fileID: 8300000, guid: c3e75ae6a70ec49f7b1204be6e67723b, type: 3}
   profiles:
   - {fileID: 510784407}
   - {fileID: 999572393}
@@ -6756,7 +6756,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fdfab411e49e6943929952cffd569eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MonsterDiscoveredSound: {fileID: 8300000, guid: ffa7aff6cf1a0ec46ab8cdd7a0a2885b,
+  MonsterDiscoveredSound: {fileID: 8300000, guid: 5c93ee388ba8d42368f54b5e8aeed259,
     type: 3}
   FirstHolder: {fileID: 670}
 --- !u!114 &1153
@@ -7813,7 +7813,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mNextPanelToShow: {fileID: 0}
-  sndRUShure: {fileID: 8300000, guid: ff8c61080a00b7a45a10fcde693430c7, type: 3}
+  sndRUShure: {fileID: 8300000, guid: ded6d5295df5f4d2b98e74487ee06160, type: 3}
 --- !u!114 &4310
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25879,6 +25879,26 @@ Prefab:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 18734171}
+    - target: {fileID: 114153699219346376, guid: e1d6ee951bb24934d8ad6cc6fdec17fc,
+        type: 2}
+      propertyPath: TitleSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 2353c1d88f8d04a478896c087e331367, type: 3}
+    - target: {fileID: 114153699219346376, guid: e1d6ee951bb24934d8ad6cc6fdec17fc,
+        type: 2}
+      propertyPath: VictoryFromAngry
+      value: 
+      objectReference: {fileID: 8300000, guid: 1a99d59cc96b84449abf92ce7cf08b2e, type: 3}
+    - target: {fileID: 114153699219346376, guid: e1d6ee951bb24934d8ad6cc6fdec17fc,
+        type: 2}
+      propertyPath: VictoryFromBored
+      value: 
+      objectReference: {fileID: 8300000, guid: 92c9f1d954a694c1c9658cd918aab644, type: 3}
+    - target: {fileID: 114153699219346376, guid: e1d6ee951bb24934d8ad6cc6fdec17fc,
+        type: 2}
+      propertyPath: VictoryFromSad
+      value: 
+      objectReference: {fileID: 8300000, guid: 2a8aef24df03f46c285c1b91ece92bd7, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e1d6ee951bb24934d8ad6cc6fdec17fc, type: 2}
   m_IsPrefabParent: 0
@@ -92760,7 +92780,7 @@ Prefab:
     - target: {fileID: 114418645699438230, guid: 5111f1f92fa78aa40a692591b2a6aab8,
         type: 2}
       propertyPath: DEBUG_OPEN_ALL_LEVELS_PLAYERPREFS
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114418645699438230, guid: 5111f1f92fa78aa40a692591b2a6aab8,
         type: 2}
@@ -92771,6 +92791,11 @@ Prefab:
         type: 2}
       propertyPath: DEBUG_ADD_ALL_MONSTERS
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114546271614042174, guid: 5111f1f92fa78aa40a692591b2a6aab8,
+        type: 2}
+      propertyPath: NumOfLevels
+      value: 51
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5111f1f92fa78aa40a692591b2a6aab8, type: 2}

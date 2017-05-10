@@ -11,7 +11,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 0
   companyName: Feed The Monster inc.
-  productName: "\u0625\u0637\u0639\u0627\u0645 \u0671\u0644\u0648\u062D\u0634"
+  productName: Feed The Monster
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13333334, g: 0.17254902, b: 0.21176471, a: 1}
@@ -40,8 +40,10 @@ PlayerSettings:
   m_SplashScreenLogos:
   - logo: {fileID: 21300000, guid: f9bbcf1d4e3ad3146b1fc966ad13f922, type: 3}
     duration: 2
-  m_SplashScreenBackgroundLandscape: {fileID: 0}
-  m_SplashScreenBackgroundPortrait: {fileID: 0}
+  m_SplashScreenBackgroundLandscape: {fileID: 1, guid: 00000000000000000000000000000000,
+    type: 0}
+  m_SplashScreenBackgroundPortrait: {fileID: 1, guid: 00000000000000000000000000000000,
+    type: 0}
   m_VirtualRealitySplashScreen: {fileID: 0}
   m_HolographicTrackingLossScreen: {fileID: 0}
   defaultScreenWidth: 450
@@ -208,8 +210,8 @@ PlayerSettings:
   AndroidTargetDevice: 0
   AndroidSplashScreenScale: 2
   androidSplashScreen: {fileID: 2800000, guid: cb3985fdf6e6b7e47b6ba7e2821763ff, type: 3}
-  AndroidKeystoreName: C:/WorkSpace/FTM/FTM-Main/feedthemonster.keystore
-  AndroidKeyaliasName: ftm
+  AndroidKeystoreName: 
+  AndroidKeyaliasName: 
   AndroidTVCompatibility: 0
   AndroidIsGame: 1
   androidEnableBanner: 0

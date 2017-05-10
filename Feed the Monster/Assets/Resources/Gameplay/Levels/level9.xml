@@ -40,7 +40,6 @@
 				<string spawnId="22">t</string>
 				
 			
-				<string spawnId="70">t</string>
 			</Stones>
 			
     
@@ -52,14 +51,7 @@
 		
 		
 			<MonsterRequiredLetters>
-				
-			
 				<string>t</string>
-				
-			
-				<string>a</string>
-				
-		
 				<string spawnId="50">a</string>
 				<string spawnId="22">p</string>
 			</MonsterRequiredLetters>
@@ -81,7 +73,7 @@
 				<string spawnId="36">p</string>
 				
 		
-				<string spawnId="14">p</string>
+				<string spawnId="14">l</string>
 			</Stones>
 			
     
@@ -123,7 +115,7 @@
 				<string spawnId="62">m</string>
 				
 		
-				<string spawnId="16">m</string>
+				<string spawnId="16">s</string>
 			</Stones>
 			
     
@@ -179,14 +171,7 @@
 		
 		
 			<MonsterRequiredLetters>
-				
-			
 				<string>t</string>
-				
-			
-				<string>a</string>
-				
-		
 				<string spawnId="78">a</string>
 				<string spawnId="14">m</string>
 			</MonsterRequiredLetters>

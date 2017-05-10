@@ -40,7 +40,6 @@
 				<string spawnId="25">t</string>
 				
 			
-				<string spawnId="60">t</string>
 			</Stones>
 			
     
@@ -82,7 +81,6 @@
 				<string spawnId="28">p</string>
 				
 		
-				<string spawnId="30">p</string>
 			</Stones>
 			
     
@@ -124,7 +122,6 @@
 				<string spawnId="6">m</string>
 				
 		
-				<string spawnId="60">m</string>
 			</Stones>
 			
     
@@ -166,7 +163,6 @@
 				<string spawnId="7">t</string>
 				
 		
-				<string spawnId="34">t</string>
 			</Stones>
 			
 	

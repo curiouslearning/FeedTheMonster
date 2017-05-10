@@ -49,8 +49,7 @@
 				<string bonusScore="275" spawnId="9">BonusLetter</string>
 				
     	
-				<string spawnId="66">a</string>
-				<string spawnId="68">b</string>
+				<string spawnId="30">b</string>
 			</Stones>
 			
 	
@@ -154,8 +153,7 @@
 				<string spawnId="4">s</string>
 				
       	
-				<string spawnId="74">s</string>
-				<string spawnId="54">u</string>
+				<string spawnId="42">u</string>
 			</Stones>
 			
 	
@@ -259,8 +257,7 @@
 				<string bonusScore="275" spawnId="9">BonusLetter</string>
 				
       	
-				<string spawnId="30">f</string>
-				<string spawnId="18">s</string>
+				<string spawnId="48">s</string>
 			</Stones>
 			
 	

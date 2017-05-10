@@ -18,8 +18,7 @@
 				<string>u</string>
 				
 			
-				<string spawnId="34">u</string>
-				<string spawnId="66">g</string>
+				<string spawnId="20">g</string>
 			</MonsterRequiredLetters>
 			
 			
@@ -111,8 +110,7 @@
 				<string>u</string>
 				
 		
-				<string spawnId="66">u</string>
-				<string spawnId="60">t</string>
+				<string spawnId="36">t</string>
 			</MonsterRequiredLetters>
 			
 		

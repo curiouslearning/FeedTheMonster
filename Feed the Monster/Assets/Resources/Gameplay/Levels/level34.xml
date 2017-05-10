@@ -12,9 +12,10 @@
 			<MonsterRequiredLetters>
 				
 		
-				<string>tug</string>
+				<string>t</string>
 				
 	  
+				<string spawnId="32">ug</string>
 			</MonsterRequiredLetters>
 			
 	  
@@ -33,15 +34,16 @@
 			<Stones>
 				
         
-				<string spawnId="14">tug</string>
+				<string spawnId="14">t</string>
 				
         
-				<string spawnId="74">un</string>
+				<string spawnId="74">ug</string>
 				
 		
-				<string spawnId="20">ut</string>
+				<string spawnId="20">un</string>
 				
       
+				<string spawnId="48">ut</string>
 			</Stones>
 			
     
@@ -55,9 +57,10 @@
 			<MonsterRequiredLetters>
 				
 		
-				<string>bun</string>
+				<string>b</string>
 				
 	  
+				<string spawnId="22">un</string>
 			</MonsterRequiredLetters>
 			
 	  
@@ -76,15 +79,16 @@
 			<Stones>
 				
         
-				<string spawnId="15">bun</string>
+				<string spawnId="15">b</string>
 				
         
-				<string spawnId="75">ug</string>
+				<string spawnId="75">un</string>
 				
         
-				<string spawnId="23">ut</string>
+				<string spawnId="23">ug</string>
 				
       
+				<string spawnId="30">ut</string>
 			</Stones>
 			
     
@@ -98,9 +102,10 @@
 			<MonsterRequiredLetters>
 				
 		
-				<string>nut</string>
+				<string>n</string>
 				
 	  
+				<string spawnId="44">ut</string>
 			</MonsterRequiredLetters>
 			
 	  
@@ -119,15 +124,16 @@
 			<Stones>
 				
         
-				<string spawnId="28">nut</string>
+				<string spawnId="28">n</string>
 				
         
-				<string spawnId="94">ug</string>
+				<string spawnId="94">ut</string>
 				
 		
-				<string spawnId="45">un</string>
+				<string spawnId="45">ug</string>
 				
       
+				<string spawnId="28">un</string>
 			</Stones>
 			
     
@@ -141,9 +147,10 @@
 			<MonsterRequiredLetters>
 				
 		
-				<string>rug</string>
+				<string>r</string>
 				
 	  
+				<string spawnId="22">ug</string>
 			</MonsterRequiredLetters>
 			
 	  
@@ -162,15 +169,16 @@
 			<Stones>
 				
         
-				<string spawnId="25">rug</string>
+				<string spawnId="25">r</string>
 				
         
-				<string spawnId="93">un</string>
+				<string spawnId="93">ug</string>
 				
 		
-				<string spawnId="36">ut</string>
+				<string spawnId="36">un</string>
 				
       
+				<string spawnId="46">ut</string>
 			</Stones>
 			
     
@@ -184,9 +192,10 @@
 			<MonsterRequiredLetters>
 				
 		
-				<string>run</string>
+				<string>r</string>
 				
 	  
+				<string spawnId="54">un</string>
 			</MonsterRequiredLetters>
 			
 	  
@@ -205,15 +214,16 @@
 			<Stones>
 				
         
-				<string spawnId="78">run</string>
+				<string spawnId="78">r</string>
 				
         
-				<string spawnId="60">ug</string>
+				<string spawnId="60">un</string>
 				
 		
-				<string spawnId="79">ut</string>
+				<string spawnId="79">ug</string>
 				
       
+				<string spawnId="52">ut</string>
 			</Stones>
 			
     

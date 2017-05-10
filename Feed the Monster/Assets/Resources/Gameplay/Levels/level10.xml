@@ -43,8 +43,7 @@
 				<string bonusScore="175" spawnId="82">BonusLetter</string>
 				
 			
-				<string spawnId="50">m</string>
-				<string spawnId="68">s</string>
+				<string spawnId="20">s</string>
 			</Stones>
 			
     
@@ -89,8 +88,7 @@
 				<string spawnId="82">MagnetLetter</string>
 				
 		
-				<string spawnId="22">f</string>
-				<string spawnId="72">s</string>
+				<string spawnId="32">s</string>
 			</Stones>
 			
     
@@ -135,8 +133,7 @@
 				<string bonusScore="175" spawnId="61">BonusLetter</string>
 				
 		
-				<string spawnId="48">b</string>
-				<string spawnId="16">f</string>
+				<string spawnId="26">f</string>
 			</Stones>
 			
     
@@ -181,8 +178,7 @@
 				<string spawnId="61">MagnetLetter</string>
 				
 		
-				<string spawnId="42">f</string>
-				<string spawnId="44">s</string>
+				<string spawnId="36">s</string>
 			</Stones>
 			
 	
@@ -230,7 +226,6 @@
 				<string bonusScore="175" spawnId="54">BonusLetter</string>
 				
 		
-				<string spawnId="18">f</string>
 			</Stones>
 			
     

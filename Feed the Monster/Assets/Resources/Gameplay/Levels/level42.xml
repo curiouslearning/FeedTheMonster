@@ -1,237 +1,86 @@
-<?xml version="1.0" ?>
 <XMLLevel CollectableMonster="" HideCallout="3" LettersGroup="4" SegmentTime="9" StoneType="1" monsterInputType="Letter">
-	
-  
-	<Segments>
-		
-    
-		<Segment SegmentTime="10" spawnIds="">
-			
+  <Segments>
+    <Segment SegmentTime="10" spawnIds="">
     	
-    	
-			<MonsterRequiredLetters>
-				
-    		
-				<string>un</string>
-				
-    	
-			</MonsterRequiredLetters>
-			
-    	
-			<MonsterAllLetters>
+    	<MonsterRequiredLetters>
+    		<string>un</string>
+    	</MonsterRequiredLetters>
+    	<MonsterAllLetters>
     	</MonsterAllLetters>
-			
-    	
-			<Stones>
-				
-    		
-				<string spawnId="62">un</string>
-				
-    		
-				<string spawnId="21">up</string>
-				
-    		
-				<string spawnId="22">us</string>
-				
-			
-				<string spawnId="58">ub</string>
-				
-			
-				<string spawnId="9">ug</string>
-				
-			
-				<string spawnId="16">ut</string>
-				
-			
+    	<Stones>
+    		<string spawnId="62">un</string>
+    		<string spawnId="21">up</string>
+    		<string spawnId="22">us</string>
+			<string spawnId="58">ub</string>
+			<string spawnId="9">ug</string>
+			<string spawnId="16">ut</string>
 			</Stones>
-			
-	
-		</Segment>
+	</Segment>
+	<Segment SegmentTime="10" spawnIds="">
 		
-	
-		<Segment SegmentTime="10" spawnIds="">
-			
-		
-		
-			<MonsterRequiredLetters>
-				
-			
-				<string>um</string>
-				
-		
-			</MonsterRequiredLetters>
-			
-	  	
-			<MonsterAllLetters>
+		<MonsterRequiredLetters>
+			<string>um</string>
+		</MonsterRequiredLetters>
+	  	<MonsterAllLetters>
 	  	</MonsterAllLetters>
-			
-	  	
-			<Stones>
-				
-        	
-				<string spawnId="60">um</string>
-				
-        	
-				<string spawnId="25">un</string>
-				
-			
-				<string spawnId="77">ut</string>
-				
-        	
-				<string spawnId="28">ug</string>
-				
-			
-				<string spawnId="80">us</string>
-				
-			
-				<string spawnId="36">up</string>
-				
-			
+	  	<Stones>
+        	<string spawnId="60">um</string>
+        	<string spawnId="25">un</string>
+			<string spawnId="77">ut</string>
+        	<string spawnId="28">ug</string>
+			<string spawnId="80">us</string>
+			<string spawnId="36">up</string>
 			</Stones>
-			
-    
-		</Segment>
+    </Segment>
+	<Segment SegmentTime="10" spawnIds="">
 		
-	
-		<Segment SegmentTime="10" spawnIds="">
-			
-		
-      	
-			<MonsterRequiredLetters>
-				
-			
-				<string>ug</string>
-				
-	  	
-			</MonsterRequiredLetters>
-			
-	  	
-			<MonsterAllLetters>
+      	<MonsterRequiredLetters>
+			<string>ug</string>
+	  	</MonsterRequiredLetters>
+	  	<MonsterAllLetters>
 	  	</MonsterAllLetters>
-			
-	  	
-			<Stones>
-				
-			
-				<string spawnId="11">ug</string>
-				
-	        
-				<string spawnId="13">up</string>
-				
-	        
-				<string spawnId="12">ub</string>
-				
-			
-				<string spawnId="10">ut</string>
-				
-			
-				<string spawnId="20">us</string>
-				
-			
-				<string spawnId="23">un</string>
-				
-			
-				<string spawnId="27">Shield</string>
-				
-			
-				<string bonusScore="275" spawnId="26">BonusLetter</string>
-				
-      	
-			</Stones>
-			
-	
-		</Segment>
+	  	<Stones>
+			<string spawnId="11">ug</string>
+	        <string spawnId="13">up</string>
+	        <string spawnId="12">ub</string>
+			<string spawnId="10">ut</string>
+			<string spawnId="20">us</string>
+			<string spawnId="23">un</string>
+			<string spawnId="27">Shield</string>
+			<string bonusScore="275" spawnId="26">BonusLetter</string>
+      	</Stones>
+	</Segment>
+	<Segment SegmentTime="10" spawnIds="60,25,77,28,80,36,45,66,67">
 		
-	
-		<Segment SegmentTime="10" spawnIds="60,25,77,28,80,36,45,66,67">
-			
-		
-      	
-			<MonsterRequiredLetters>
-				
-			
-				<string>us</string>
-				
-	  	
-			</MonsterRequiredLetters>
-			
-	  	
-			<MonsterAllLetters>
+      	<MonsterRequiredLetters>
+			<string>us</string>
+	  	</MonsterRequiredLetters>
+	  	<MonsterAllLetters>
 	  	</MonsterAllLetters>
-			
-	  	
-			<Stones>
-				
-	        
-				<string>us</string>
-				
-	        
-				<string>ub</string>
-				
-			
-				<string>up</string>
-				
-	        
-				<string>ug</string>
-				
-			
-				<string>un</string>
-				
-			
-				<string>um</string>
-				
-			
+	  	<Stones>
+	        <string>us</string>
+	        <string>ub</string>
+			<string>up</string>
+	        <string>ug</string>
+			<string>un</string>
+			<string>um</string>
 			</Stones>
-			
-    
-		</Segment>
+    </Segment>
+	<Segment SegmentTime="10" spawnIds="62,21,22,58,9,16,17,8">
 		
-	
-		<Segment SegmentTime="10" spawnIds="62,21,22,58,9,16,17,8">
-			
-		
-      	
-			<MonsterRequiredLetters>
-				
-			
-				<string>ut</string>
-				
-	  	
-			</MonsterRequiredLetters>
-			
-	  	
-			<MonsterAllLetters>
+      	<MonsterRequiredLetters>
+			<string>ut</string>
+	  	</MonsterRequiredLetters>
+	  	<MonsterAllLetters>
 	  	</MonsterAllLetters>
-			
-	  	
-			<Stones>
-				
-	        
-				<string>ut</string>
-				
-	        
-				<string>un</string>
-				
-	        
-				<string>up</string>
-				
-			
-				<string>us</string>
-				
-			
-				<string>um</string>
-				
-			
-				<string>un</string>
-				
-			
+	  	<Stones>
+	        <string>ut</string>
+	        <string>un</string>
+	        <string>up</string>
+			<string>us</string>
+			<string>um</string>
+			<string>un</string>
 			</Stones>
-			
-	
-		</Segment>
-		
-  
-	</Segments>
-	
-
+	</Segment>
+  </Segments>
 </XMLLevel>

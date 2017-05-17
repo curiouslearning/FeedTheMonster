@@ -26,7 +26,7 @@ public class RTL {
 		}
 
 		char[] charArray = newText.ToCharArray ();
-		Array.Reverse (charArray);
+		//Array.Reverse (charArray);
 
 		newText = new string (charArray);
 		newText = newText.Replace(RTL.connector.ToString(), "");

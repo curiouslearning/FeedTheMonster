@@ -62,7 +62,7 @@ public class NeededLettersAnimation  {
 			richTextForUI += StringWithColorTags (StringWithBoldTags (StringWithSizeTags (letter, sizeForNeededLetters)), mController.FontColorLetter);
 			break;
 		case MonsterInputType.LetterInWord:
-			for (int i= GameplayController.Instance.CurrentSegment.MonsterAllLetters.Length-1; i>=0; i--) {
+			for (int i=0; i< GameplayController.Instance.CurrentSegment.MonsterAllLetters.Length; i++) { //THIS ARRAY RESPONSIBLE FOR RIGHT-TO-LEFT VS. LEFT-TO-RIGHT TEXT
 				//letter = GameplayController.Instance.CurrentSegment.MonsterAllLetters [i];
 				letter = GameplayController.Instance.CurrentSegment.GetFixAllLetters(i);
 
@@ -88,7 +88,7 @@ public class NeededLettersAnimation  {
 				mLastTimeSine = Time.time;
 			}
 
-			for (int i = GameplayController.Instance.CurrentSegment.MonsterRequiredLetters.Length - 1; i >= 0; i--) {
+			for (int i = 0; i< GameplayController.Instance.CurrentSegment.MonsterRequiredLetters.Length; i++) { //THIS ARRAY RESPONSIBLE FOR RIGHT-TO-LEFT VS. LEFT-TO-RIGHT TEXT
 //				letter = ArabicSupport.ArabicFixer.Fix(GameplayController.Instance.CurrentSegment.MonsterRequiredLetters [i], true, true);
 				letter = GameplayController.Instance.CurrentSegment.GetFixRequiredLetters(i);
 				//letter = RTL.Fix(GameplayController.Instance.CurrentSegment.MonsterRequiredLetters [i]);
@@ -142,7 +142,7 @@ public class NeededLettersAnimation  {
 		string letter;
 
 		if(GameplayController.Instance.CurrentLevel.monsterInputType == MonsterInputType.Word) {
-			for (int i = GameplayController.Instance.CurrentSegment.MonsterRequiredLetters.Length - 1; i >= 0; i--) {
+			for (int i = 0; i< GameplayController.Instance.CurrentSegment.MonsterRequiredLetters.Length; i++) { //THIS ARRAY RESPONSIBLE FOR RIGHT-TO-LEFT VS. LEFT-TO-RIGHT TEXT
 				//letter = ArabicSupport.ArabicFixer.Fix (GameplayController.Instance.CurrentSegment.MonsterRequiredLetters [i], true, true);
 				letter = RTL.Fix (GameplayController.Instance.CurrentSegment.MonsterRequiredLetters [i]);
 				if (i <= lastIndex) {

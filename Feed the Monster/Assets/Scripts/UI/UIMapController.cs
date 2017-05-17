@@ -29,7 +29,7 @@ public class UIMapController : MonoBehaviour {
 		
 		updatePosition ();
 
-		Invoke("ShowStatusPopup", 2f);
+		//Invoke("ShowStatusPopup", 2f);
 
 		Analitics.Instance.treckScreen ("Map");
 	}

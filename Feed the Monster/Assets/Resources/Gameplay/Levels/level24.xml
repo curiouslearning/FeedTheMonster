@@ -11,8 +11,8 @@
 			</MonsterAllLetters>
 			<Stones>
 				<string>c</string>
-				<string> a</string>
-				<string> n</string>
+				<string>a</string>
+				<string>n</string>
 			</Stones>
     </Segment>
 	<Segment SegmentTime="13" spawnIds="90,55,96">
@@ -26,8 +26,8 @@
 		</MonsterAllLetters>
 		<Stones>
 			<string>f</string>
-			<string> i</string>
-			<string> n</string>
+			<string>i</string>
+			<string>n</string>
 		</Stones>
     </Segment>
 	<Segment SegmentTime="13" spawnIds="89,54,95">
@@ -41,8 +41,8 @@
 		</MonsterAllLetters>
 		<Stones>
 			<string>z</string>
-			<string> i</string>
-			<string> p</string>
+			<string>i</string>
+			<string>p</string>
 		</Stones>
     </Segment>
 	<Segment SegmentTime="13" spawnIds="59,93,36">
@@ -56,8 +56,8 @@
 		</MonsterAllLetters>
 		<Stones>
 			<string>m</string>
-			<string> a</string>
-			<string> t</string>
+			<string>a</string>
+			<string>t</string>
 		</Stones>
 	</Segment>
 	<Segment SegmentTime="13" spawnIds="61,94,45">
@@ -71,8 +71,8 @@
 		</MonsterAllLetters>
 		<Stones>
 			<string>l</string>
-			<string> i</string>
-			<string> p</string>
+			<string>i</string>
+			<string>p</string>
 		</Stones>
     </Segment>
   </Segments>

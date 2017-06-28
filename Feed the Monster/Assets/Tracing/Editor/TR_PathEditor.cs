@@ -9,7 +9,7 @@ using System.Collections;
 ///copyright © 2016 IGS. All rights reserved.
 
 [CustomEditor(typeof(TR_Path))]
-public class TR_PathEditor : Editor {
+public class PathEditor : Editor {
 
 	public override void OnInspectorGUI ()
 	{

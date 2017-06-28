@@ -22,7 +22,7 @@ public class LetterTracingGame : BaseMiniGame
 	public List<GameObject> LettersGroup_3;
 	public List<GameObject> LettersGroup_4;
 	public List<GameObject> LettersGroup_5;
-	public List<GameObject> LettersGroup_6;
+	//public List<GameObject> LettersGroup_6;
 
 	public LetterTracingStone[] Stones;
 
@@ -140,9 +140,9 @@ public class LetterTracingGame : BaseMiniGame
 			if(currentGroup >= 5) {
 				newList.AddRange (LettersGroup_5);
 			}
-			if(currentGroup >= 6) {
+			/*if(currentGroup >= 6) {
 				newList.AddRange (LettersGroup_6);
-			}
+			}*/
 		}
 
 		GameObject[] shapes = newList.ToArray ();

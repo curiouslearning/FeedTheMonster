@@ -1058,13 +1058,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0340a2cba2fd61c46af4defaab040a16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  starSoundEffect: {fileID: 8300000, guid: a77db5d1c7c06c646b3301380b005c8c, type: 3}
   WinDialogAnimator: {fileID: 9500008}
-  firstStarFading: {fileID: 9500006}
-  secondStarFading: {fileID: 9500010}
-  thirdStarFading: {fileID: 9500012}
-  levelTitle: {fileID: 11400034}
-  timer: {fileID: 0}
 --- !u!114 &11400052
 MonoBehaviour:
   m_ObjectHideFlags: 1

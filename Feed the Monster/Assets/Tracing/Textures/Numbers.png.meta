@@ -1,7 +1,7 @@
 fileFormatVersion: 2
 guid: e7bc914cf9421914fb818d8c7a955d40
-timeCreated: 1483629585
-licenseType: Free
+timeCreated: 1467378292
+licenseType: Store
 TextureImporter:
   fileIDToRecycleName:
     21300000: Number_1
@@ -14,16 +14,12 @@ TextureImporter:
     21300014: Numbers_5
     21300016: Numbers_6
     21300018: Numbers_7
-    21300020: Numbers_8
-    21300022: Numbers_9
-    21300024: Numbers_10
-    21300026: Numbers_11
-  serializedVersion: 4
+  serializedVersion: 2
   mipmaps:
     mipMapMode: 0
     enableMipMap: 1
-    sRGBTexture: 1
     linearTexture: 0
+    correctGamma: 0
     fadeOut: 0
     borderMipMap: 0
     mipMapFadeDistanceStart: 1
@@ -35,8 +31,10 @@ TextureImporter:
     normalMapFilter: 0
   isReadable: 0
   grayScaleToAlpha: 0
-  generateCubemap: 6
+  generateCubemap: 0
   cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
   seamlessCubemap: 0
   textureFormat: -1
   maxTextureSize: 1024
@@ -47,7 +45,9 @@ TextureImporter:
     wrapMode: 1
   nPOTScale: 0
   lightmap: 0
+  rGBM: 0
   compressionQuality: 50
+  allowsAlphaSplitting: 0
   spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
@@ -55,52 +55,12 @@ TextureImporter:
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 100
-  alphaUsage: 1
   alphaIsTransparency: 1
-  spriteTessellationDetail: -1
   textureType: 8
-  textureShape: 1
-  maxTextureSizeSet: 0
-  compressionQualitySet: 0
-  textureFormatSet: 0
-  platformSettings:
-  - buildTarget: DefaultTexturePlatform
-    maxTextureSize: 1024
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-  - buildTarget: Standalone
-    maxTextureSize: 1024
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-  - buildTarget: iPhone
-    maxTextureSize: 1024
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-  - buildTarget: Android
-    maxTextureSize: 1024
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
+  buildTargetSettings: []
   spriteSheet:
-    serializedVersion: 2
     sprites:
-    - serializedVersion: 2
-      name: Numbers_0
+    - name: Numbers_0
       rect:
         serializedVersion: 2
         x: 27
@@ -110,10 +70,16 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Numbers_1
+      outline:
+      - - {x: -42.5, y: 50}
+        - {x: -50.5, y: 41}
+        - {x: -50.5, y: -39}
+        - {x: -38.5, y: -50}
+        - {x: 31.5, y: -50}
+        - {x: 50.5, y: -43}
+        - {x: 50.5, y: 42}
+        - {x: 34.5, y: 50}
+    - name: Numbers_1
       rect:
         serializedVersion: 2
         x: 147
@@ -123,10 +89,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Numbers_2
+      outline:
+      - - {x: -26, y: 50}
+        - {x: -50, y: 27}
+        - {x: -50, y: -28}
+        - {x: -49, y: -36}
+        - {x: -27, y: -50}
+        - {x: 21, y: -50}
+        - {x: 35, y: -47}
+        - {x: 50, y: -33}
+        - {x: 50, y: 29}
+        - {x: 44, y: 50}
+    - name: Numbers_2
       rect:
         serializedVersion: 2
         x: 265
@@ -136,10 +110,16 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Numbers_3
+      outline:
+      - - {x: -33.5, y: 50}
+        - {x: -50.5, y: 32}
+        - {x: -50.5, y: -42}
+        - {x: -27.5, y: -50}
+        - {x: 36.5, y: -50}
+        - {x: 50.5, y: -38}
+        - {x: 50.5, y: 40}
+        - {x: 24.5, y: 50}
+    - name: Numbers_3
       rect:
         serializedVersion: 2
         x: 381
@@ -149,10 +129,16 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Numbers_4
+      outline:
+      - - {x: -46.5, y: 52}
+        - {x: -50.5, y: 50}
+        - {x: -50.5, y: -40}
+        - {x: -47.5, y: -52}
+        - {x: 28.5, y: -52}
+        - {x: 50.5, y: -28}
+        - {x: 50.5, y: 43}
+        - {x: 23.5, y: 52}
+    - name: Numbers_4
       rect:
         serializedVersion: 2
         x: 27
@@ -160,12 +146,18 @@ TextureImporter:
         width: 101
         height: 101
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Numbers_5
+      outline:
+      - - {x: -48.5, y: 50.5}
+        - {x: -50.5, y: 48.5}
+        - {x: -50.5, y: -23.5}
+        - {x: -34.5, y: -50.5}
+        - {x: 47.5, y: -50.5}
+        - {x: 50.5, y: -43.5}
+        - {x: 50.5, y: 45.5}
+        - {x: 38.5, y: 50.5}
+    - name: Numbers_5
       rect:
         serializedVersion: 2
         x: 150
@@ -175,10 +167,14 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Numbers_6
+      outline:
+      - - {x: -50.5, y: -47.5}
+        - {x: -48.5, y: -50.5}
+        - {x: 50.5, y: -50.5}
+        - {x: 50.5, y: 50.5}
+        - {x: -46.5, y: 50.5}
+        - {x: -50.5, y: 33.5}
+    - name: Numbers_6
       rect:
         serializedVersion: 2
         x: 265
@@ -188,10 +184,14 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Numbers_7
+      outline:
+      - - {x: -50.5, y: 50.5}
+        - {x: -50.5, y: -50.5}
+        - {x: 46.5, y: -50.5}
+        - {x: 50.5, y: -36.5}
+        - {x: 50.5, y: 47.5}
+        - {x: 48.5, y: 50.5}
+    - name: Numbers_7
       rect:
         serializedVersion: 2
         x: 382
@@ -199,62 +199,18 @@ TextureImporter:
         width: 102
         height: 101
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Numbers_8
-      rect:
-        serializedVersion: 2
-        x: 27
-        y: 147
-        width: 101
-        height: 101
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Numbers_9
-      rect:
-        serializedVersion: 2
-        x: 150
-        y: 143
-        width: 101
-        height: 101
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Numbers_10
-      rect:
-        serializedVersion: 2
-        x: 265
-        y: 143
-        width: 101
-        height: 101
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Numbers_11
-      rect:
-        serializedVersion: 2
-        x: 382
-        y: 146
-        width: 101
-        height: 101
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
+      outline:
+      - - {x: -41, y: 50.5}
+        - {x: -51, y: 29.5}
+        - {x: -51, y: -38.5}
+        - {x: -42, y: -49.5}
+        - {x: -36, y: -50.5}
+        - {x: 31, y: -50.5}
+        - {x: 51, y: -26.5}
+        - {x: 51, y: 43.5}
+        - {x: 38, y: 50.5}
     outline: []
   spritePackingTag: 
   userData: 

@@ -11,6 +11,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b835939c0e838634992b0a12c9a2a4bc, type: 3}
   m_Name: MG_Couple_5_1
   m_EditorClassIdentifier: 
-  image1: {fileID: 21300000, guid: 209f8069d41a0b34495a2c17b7ed5e46, type: 3}
-  image2: {fileID: 21300000, guid: 5ae55a1cfe17f0446baa2e61d68da26b, type: 3}
-  matchClip: {fileID: 8300000, guid: 18b496b024808fc44b9ef19a26ba495f, type: 3}
+  image1: {fileID: 21300000, guid: 3c6c7cf31532947c8a6454a2a81cccbb, type: 3}
+  image2: {fileID: 21300000, guid: a2976944b0f8a454aa868c77578ca550, type: 3}
+  matchClip: {fileID: 8300000, guid: 6a4117d4d95c44a3f9e765e1a20e6caa, type: 3}

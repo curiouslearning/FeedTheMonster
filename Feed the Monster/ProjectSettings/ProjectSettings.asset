@@ -10,7 +10,7 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 0
-  companyName: Feed The Monster inc.
+  companyName: Curious Learning
   productName: Feed The Monster
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
@@ -210,8 +210,8 @@ PlayerSettings:
   AndroidTargetDevice: 0
   AndroidSplashScreenScale: 2
   androidSplashScreen: {fileID: 2800000, guid: cb3985fdf6e6b7e47b6ba7e2821763ff, type: 3}
-  AndroidKeystoreName: 
-  AndroidKeyaliasName: 
+  AndroidKeystoreName: eric.keystore
+  AndroidKeyaliasName: eric
   AndroidTVCompatibility: 0
   AndroidIsGame: 1
   androidEnableBanner: 0

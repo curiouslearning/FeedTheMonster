@@ -27,7 +27,7 @@
         	<string spawnId="1">s</string>
         	<string spawnId="87"> p</string>
         	<string spawnId="0"> n</string>
-			<string spawnId="60">MagnetLetter</string>
+			<string bonusScore="200" spawnId="60">BonusLetter</string>
       	</Stones>
     </Segment>
 	<Segment SegmentTime="11" spawnIds="">

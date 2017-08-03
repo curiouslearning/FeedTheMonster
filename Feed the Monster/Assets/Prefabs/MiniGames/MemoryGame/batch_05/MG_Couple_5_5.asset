@@ -13,4 +13,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   image1: {fileID: 21300000, guid: fd65be0b1aa03497894fd560cc45390a, type: 3}
   image2: {fileID: 21300000, guid: cdf204d2d836042e686fbf5bf4bcc7c0, type: 3}
-  matchClip: {fileID: 8300000, guid: 031d386e95b194153a0e1c30f533bb71, type: 3}
+  matchClip: {fileID: 8300000, guid: fb54e4f060ff44c52b7be40ce86d1f04, type: 3}

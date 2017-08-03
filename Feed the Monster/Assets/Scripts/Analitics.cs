@@ -5,8 +5,6 @@ public class Analitics : MonoBehaviour
 {
 	public static Analitics Instance;
 
-	public GoogleAnalyticsV4 googleAnalytics;
-
 
 	void Awake()
 	{
@@ -17,23 +15,21 @@ public class Analitics : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
-		if (googleAnalytics != null) {
-			googleAnalytics.StartSession ();
-		}
+		/*if (Firebase.Analytics.FirebaseAnalytics != null) {
+			Firebase.Analytics.FirebaseAnalytics.StartSession ();
+		}*/
 	}
 
 	void OnDisable() {
-		if (googleAnalytics != null) {
-			googleAnalytics.StopSession ();
-		}
+		/*if (Firebase.Analytics.FirebaseAnalytics != null) {
+			Firebase.Analytics.FirebaseAnalytics.StopSession ();
+		}*/
 	}
 
 
 	public void treckScreen (string screenName)
 	{
-		if (googleAnalytics != null) {
-			googleAnalytics.LogScreen (screenName);
-		}
+		Firebase.Analytics.FirebaseAnalytics.SetCurrentScreen (screenName, null);
 	}
 
 
@@ -44,9 +40,17 @@ public class Analitics : MonoBehaviour
 
 	public void treckEvent (AnaliticsCategory category, string action, string label, long value = 0)
 	{
-		if (googleAnalytics != null) {
-			googleAnalytics.LogEvent (category.ToString(), action, label, value);
-		}
+		Firebase.Analytics.FirebaseAnalytics.LogEvent (category.ToString (), new Firebase.Analytics.Parameter[] {
+			new Firebase.Analytics.Parameter (
+				"action", action
+			),
+			new Firebase.Analytics.Parameter (
+				"label", label
+			),
+			new Firebase.Analytics.Parameter (
+				"value", value
+			)
+		});
 	}
 
 

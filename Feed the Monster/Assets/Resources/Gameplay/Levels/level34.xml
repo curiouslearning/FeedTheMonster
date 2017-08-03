@@ -3,7 +3,6 @@
     <Segment SegmentTime="10" spawnIds="">
       
 	  <MonsterRequiredLetters>
-		<string>t</string>
 	  <string>ug</string></MonsterRequiredLetters>
 	  <MonsterAllLetters>
 		<string>t</string>
@@ -13,12 +12,11 @@
         <string spawnId="14">t</string>
         <string spawnId="74">ug</string>
 		<string spawnId="20">un</string>
-      <string spawnId="20"> ut</string></Stones>
+      <string spawnId="75"> ut</string></Stones>
     </Segment>
 	<Segment SegmentTime="10" spawnIds="">
       
 	  <MonsterRequiredLetters>
-		<string>b</string>
 	  <string>un</string></MonsterRequiredLetters>
 	  <MonsterAllLetters>
 		<string>b</string>
@@ -33,7 +31,6 @@
 	<Segment SegmentTime="10" spawnIds="">
       
 	  <MonsterRequiredLetters>
-		<string>n</string>
 	  <string>ut</string></MonsterRequiredLetters>
 	  <MonsterAllLetters>
 		<string>n</string>
@@ -48,7 +45,6 @@
 	<Segment SegmentTime="10" spawnIds="">
       
 	  <MonsterRequiredLetters>
-		<string>r</string>
 	  <string>ug</string></MonsterRequiredLetters>
 	  <MonsterAllLetters>
 		<string>r</string>
@@ -63,7 +59,6 @@
 	<Segment SegmentTime="10" spawnIds="">
       
 	  <MonsterRequiredLetters>
-		<string>r</string>
 	  <string>un</string></MonsterRequiredLetters>
 	  <MonsterAllLetters>
 		<string>r</string>

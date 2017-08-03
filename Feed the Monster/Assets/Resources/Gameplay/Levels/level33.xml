@@ -13,13 +13,13 @@
 	  <Stones>
         <string spawnId="2">b</string>
         <string spawnId="86">t</string>
-        <string spawnId="89"> n</string>
-		<string spawnId="55"> b</string>
-		<string spawnId="54"> a</string>
-        <string spawnId="3"> i</string>
-		<string spawnId="87"> z</string>
-		<string spawnId="90"> u</string>
-      <string spawnId="22"> l</string></Stones>
+        <string spawnId="89">n</string>
+		<string spawnId="55">b</string>
+		<string spawnId="54">a</string>
+        <string spawnId="3">i</string>
+		<string spawnId="87">z</string>
+		<string spawnId="90">u</string>
+      <string spawnId="22">l</string></Stones>
     </Segment>
 	<Segment SegmentTime="10" spawnIds="">
       
@@ -34,12 +34,12 @@
 	  <Stones>
         <string spawnId="90">n</string>
         <string spawnId="87">c</string>
-        <string spawnId="3"> s</string>
-		<string spawnId="54"> m</string>
-		<string spawnId="55"> p</string>
-        <string spawnId="89"> t</string>
-		<string spawnId="86"> n</string>
-		<string spawnId="2"> f</string>
+        <string spawnId="3">s</string>
+		<string spawnId="54">m</string>
+		<string spawnId="55">p</string>
+        <string spawnId="89">t</string>
+		<string spawnId="86">n</string>
+		<string spawnId="2">f</string>
       </Stones>
     </Segment>
 	<Segment SegmentTime="10" spawnIds="">
@@ -55,12 +55,12 @@
 	  <Stones>
         <string spawnId="81">g</string>
         <string spawnId="3">i</string>
-        <string spawnId="8"> g</string>
-		<string spawnId="90"> z</string>
-		<string spawnId="89"> f</string>
-        <string spawnId="9"> r</string>
-		<string spawnId="2"> c</string>
-		<string spawnId="84"> t</string>
+        <string spawnId="8">g</string>
+		<string spawnId="90">z</string>
+		<string spawnId="89">f</string>
+        <string spawnId="9">r</string>
+		<string spawnId="2">c</string>
+		<string spawnId="84">t</string>
       </Stones>
     </Segment>
 	<Segment SegmentTime="10" spawnIds="">
@@ -76,12 +76,12 @@
 	  <Stones>
         <string spawnId="58">t</string>
         <string spawnId="62">n</string>
-        <string delayIn="0" delayRepet="0" loop="true" spawnId="45,36,45" speed="150"> s</string>
-		<string spawnId="1"> p</string>
-		<string delayIn="0" delayRepet="0" loop="true" spawnId="93,94,93" speed="150"> b</string>
-		<string spawnId="0"> a</string>
-		<string spawnId="13"> m</string>
-		<string spawnId="12"> t</string>
+        <string delayIn="0" delayRepet="0" loop="true" spawnId="45,36,45" speed="150">s</string>
+		<string spawnId="1">p</string>
+		<string delayIn="0" delayRepet="0" loop="true" spawnId="93,94,93" speed="150">b</string>
+		<string spawnId="0">a</string>
+		<string spawnId="13">m</string>
+		<string spawnId="12">t</string>
 		<string bonusScore="275" spawnId="26">BonusLetter</string>
       </Stones>
     </Segment>
@@ -98,11 +98,11 @@
 	  <Stones>
         <string spawnId="84">b</string>
         <string spawnId="2">u</string>
-        <string spawnId="9"> n</string>
-		<string spawnId="89"> l</string>
-		<string spawnId="90"> p</string>
-		<string spawnId="8"> m</string>
-		<string spawnId="3"> i </string>
+        <string spawnId="9">n</string>
+		<string spawnId="89">l</string>
+		<string spawnId="90">p</string>
+		<string spawnId="8">m</string>
+		<string spawnId="3">i</string>
 		<string spawnId="81">g</string>
       </Stones>
     </Segment>

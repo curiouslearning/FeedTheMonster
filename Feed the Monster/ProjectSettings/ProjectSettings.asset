@@ -15,12 +15,12 @@ PlayerSettings:
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13333334, g: 0.17254902, b: 0.21176471, a: 1}
-  m_ShowUnitySplashScreen: 0
-  m_ShowUnitySplashLogo: 0
+  m_ShowUnitySplashScreen: 1
+  m_ShowUnitySplashLogo: 1
   m_SplashScreenOverlayOpacity: 0
   m_SplashScreenAnimation: 0
   m_SplashScreenLogoStyle: 0
-  m_SplashScreenDrawMode: 1
+  m_SplashScreenDrawMode: 0
   m_SplashScreenBackgroundAnimationZoom: 1
   m_SplashScreenLogoAnimationZoom: 1
   m_SplashScreenBackgroundLandscapeAspect: 0.6666667
@@ -38,7 +38,7 @@ PlayerSettings:
     width: 1
     height: 1
   m_SplashScreenLogos:
-  - logo: {fileID: 21300000, guid: f9bbcf1d4e3ad3146b1fc966ad13f922, type: 3}
+  - logo: {fileID: 21300000, guid: e3e782f2e3283478d97a96bc3403bbbb, type: 3}
     duration: 2
   m_SplashScreenBackgroundLandscape: {fileID: 1, guid: 00000000000000000000000000000000,
     type: 0}
@@ -129,7 +129,7 @@ PlayerSettings:
   m_HolographicPauseOnTrackingLoss: 1
   xboxOneDisableKinectGpuReservation: 0
   protectGraphicsMemory: 0
-  AndroidBundleVersionCode: 2
+  AndroidBundleVersionCode: 3
   AndroidMinSdkVersion: 16
   AndroidPreferredInstallLocation: 0
   aotOptions: 
@@ -210,7 +210,7 @@ PlayerSettings:
   AndroidTargetDevice: 0
   AndroidSplashScreenScale: 2
   androidSplashScreen: {fileID: 2800000, guid: bb27f6b4419d6154795b14cc4cdb1782, type: 3}
-  AndroidKeystoreName: egt.keystore
+  AndroidKeystoreName: /Users/ericglickman-tondreau/egt.keystore
   AndroidKeyaliasName: egt
   AndroidTVCompatibility: 0
   AndroidIsGame: 1
@@ -225,7 +225,7 @@ PlayerSettings:
   - m_BuildTarget: 
     m_Icons:
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: 1c9499ce5321b6947baf08863fda95fb, type: 3}
+      m_Icon: {fileID: 2800000, guid: 53f816301d6084e7fa55fac1fb7e6ad8, type: 3}
       m_Width: 128
       m_Height: 128
   m_BuildTargetBatching: []

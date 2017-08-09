@@ -85919,21 +85919,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a90150c7c5944c1dbdae62e756a0d03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  androidTrackingCode: UA-84400946-1
-  IOSTrackingCode: UA-84400946-1
-  otherTrackingCode: UA-84400946-1
-  productName: Feed The Monster
-  bundleIdentifier: com.eduapp4syria.feedthemonsterENGLISH
-  bundleVersion: 1.0.0
-  dispatchPeriod: 5
-  sampleFrequency: 100
-  logLevel: 0
-  anonymizeIP: 1
-  UncaughtExceptionReporting: 0
-  sendLaunchEvent: 0
-  dryRun: 0
-  sessionTimeout: 1800
-  enableAdId: 1
 --- !u!114 &4088
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -101389,7 +101374,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 527fff63940eeb2439611937870aca77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  googleAnalytics: {fileID: 4087}
 --- !u!114 &4647
 MonoBehaviour:
   m_ObjectHideFlags: 0

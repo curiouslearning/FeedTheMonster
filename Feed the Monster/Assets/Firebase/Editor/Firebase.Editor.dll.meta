@@ -2,10 +2,10 @@ fileFormatVersion: 2
 guid: 9f2edbf81053418f879076c05f816dc2
 labels:
 - gvh
-- gvh_teditor
-- gvh_v4.0.2
-timeCreated: 1501252266
-licenseType: Free
+- gvh_targets-editor
+- gvh_version-4.2.0
+timeCreated: 1508512142
+licenseType: Pro
 PluginImporter:
   serializedVersion: 1
   iconMap: {}

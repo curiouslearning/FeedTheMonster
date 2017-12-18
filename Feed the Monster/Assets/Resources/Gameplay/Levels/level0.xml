@@ -3,48 +3,28 @@
     <Segment SegmentTime="11" spawnIds="82,83">
     	
     	<MonsterRequiredLetters>
-    		<string>m</string>
+    		<string>c</string>
     	</MonsterRequiredLetters>
     	<MonsterAllLetters>
     	</MonsterAllLetters>
     	<Stones>
-    		<string>m</string>
-    		</Stones>
+    		<string>n</string>
+    		<string>c</string>
+    	</Stones>
 	</Segment>
 	<Segment SegmentTime="11" spawnIds="21,22">
 		
 		<MonsterRequiredLetters>
-			<string>p</string>
+			<string>a</string>
 		</MonsterRequiredLetters>
 	  	<MonsterAllLetters>
 	  	</MonsterAllLetters>
 	  	<Stones>
-        	<string>p</string>
-        	</Stones>
+        	<string>n</string>
+        	<string>a</string>
+      	</Stones>
     </Segment>
 	<Segment SegmentTime="11" spawnIds="93,94">
-		
-      	<MonsterRequiredLetters>
-			<string>t</string>
-	  	</MonsterRequiredLetters>
-	  	<MonsterAllLetters>
-	  	</MonsterAllLetters>
-	  	<Stones>
-			<string>t</string>
-	        </Stones>
-	</Segment>
-	<Segment SegmentTime="11" spawnIds="54,55">
-		
-      	<MonsterRequiredLetters>
-			<string>n</string>
-	  	</MonsterRequiredLetters>
-	  	<MonsterAllLetters>
-	  	</MonsterAllLetters>
-	  	<Stones>
-	        <string>n</string>
-	        </Stones>
-    </Segment>
-	<Segment SegmentTime="11" spawnIds="25,28,60">
 		
       	<MonsterRequiredLetters>
 			<string>c</string>
@@ -52,8 +32,33 @@
 	  	<MonsterAllLetters>
 	  	</MonsterAllLetters>
 	  	<Stones>
+			<string>p</string>
 	        <string>c</string>
-	        <string bonusScore="100">BonusLetter</string>
+      	</Stones>
+	</Segment>
+	<Segment SegmentTime="11" spawnIds="54,55">
+		
+      	<MonsterRequiredLetters>
+			<string>a</string>
+	  	</MonsterRequiredLetters>
+	  	<MonsterAllLetters>
+	  	</MonsterAllLetters>
+	  	<Stones>
+	        <string>t</string>
+	        <string>a</string>
+      	</Stones>
+    </Segment>
+	<Segment SegmentTime="11" spawnIds="25,28,60">
+		
+      	<MonsterRequiredLetters>
+			<string>t</string>
+	  	</MonsterRequiredLetters>
+	  	<MonsterAllLetters>
+	  	</MonsterAllLetters>
+	  	<Stones>
+	        <string>a</string>
+	        <string>t</string>
+			<string bonusScore="100">BonusLetter</string>
       	</Stones>
 	</Segment>
   </Segments>

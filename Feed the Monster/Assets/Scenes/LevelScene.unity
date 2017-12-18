@@ -86259,7 +86259,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CurrentActive: {fileID: 0}
   CheatButton: {fileID: 36}
-  NumOfLevels: 51
+  NumOfLevels: 77
   DefaultLevelTempletes: {fileID: 11400000, guid: 912abc312cf981b46926d742a5f8a283,
     type: 2}
   LetterPrefab_1:

@@ -29,7 +29,9 @@ public class Analitics : MonoBehaviour
 
 	public void treckScreen (string screenName)
 	{
-		Firebase.Analytics.FirebaseAnalytics.SetCurrentScreen (screenName, null);
+		#if  UNITY_ANDROID 
+			Firebase.Analytics.FirebaseAnalytics.SetCurrentScreen (screenName, null);
+		#endif
 	}
 
 
@@ -40,6 +42,7 @@ public class Analitics : MonoBehaviour
 
 	public void treckEvent (AnaliticsCategory category, string action, string label, long value = 0)
 	{
+		#if UNITY_ANDROID
 		Firebase.Analytics.FirebaseAnalytics.LogEvent (category.ToString (), new Firebase.Analytics.Parameter[] {
 			new Firebase.Analytics.Parameter (
 				"action", action
@@ -51,6 +54,7 @@ public class Analitics : MonoBehaviour
 				"value", value
 			)
 		});
+		#endif
 	}
 
 

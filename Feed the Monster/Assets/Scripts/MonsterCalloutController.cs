@@ -4,6 +4,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using System;
 using System.Collections.Generic;
+using System.Text;
 
 public class MonsterCalloutController : MonoBehaviour {
 	public const int ANIMATION_IDLE = 0, ANIMATION_EATING = 1, ANIMATION_ANGRY = 2, ANIMATION_HAPPY = 3;
@@ -237,9 +238,11 @@ public class MonsterCalloutController : MonoBehaviour {
 		switch (GameplayController.Instance.CurrentLevel.monsterInputType) {
 		case MonsterInputType.Letter:
 		case MonsterInputType.SoundLetter:
-			url = "Sounds/Voice/Letters/" + RTL.Clean(GameplayController.Instance.CurrentSegment.MonsterRequiredLetters [0]);
+			string ltr = GameplayController.Instance.CurrentSegment.MonsterRequiredLetters [0];
+			ltr = ltr.Normalize(NormalizationForm.FormD);
+			url = "Sounds/Voice/Letters/" + RTL.Clean(ltr);
 			voice = Resources.Load (url) as AudioClip;
-//			var ss = Resources.Load (url);
+			//			var ss = Resources.Load (url);
 
 			if (voice != null) {
 				AudioController.Instance.PlaySound (voice, 1, monster.Pitch);
@@ -251,6 +254,7 @@ public class MonsterCalloutController : MonoBehaviour {
 		case MonsterInputType.LetterInWord:
 			//			voice = Resources.Load ("Sounds/Voice/Letters/" + Common.Instance.GetIsolatedForm(GameplayController.Instance.CurrentSegment.MonsterRequiredLetters[0])) as AudioClip;
 			fileName = ArabicBaseForm.Extract (RTL.Clean(GameplayController.Instance.CurrentSegment.MonsterRequiredLetters [0]));
+			fileName  = fileName.Normalize(NormalizationForm.FormD);
 			url = "Sounds/Voice/Letters/" + fileName;
 			voice = Resources.Load (url) as AudioClip;
 			if (voice != null) {
@@ -265,6 +269,7 @@ public class MonsterCalloutController : MonoBehaviour {
 			foreach (string letter in GameplayController.Instance.CurrentSegment.MonsterRequiredLetters) {
 				word += letter;
 			}
+			word = word.Normalize(NormalizationForm.FormD);
 			url = "Sounds/Voice/Words/" + ArabicBaseForm.Extract (RTL.Clean(word));
 
 			voice = Resources.Load (url) as AudioClip;

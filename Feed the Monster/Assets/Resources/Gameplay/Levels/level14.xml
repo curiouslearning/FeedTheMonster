@@ -39,7 +39,7 @@
 	  	</MonsterAllLetters>
 	  	<Stones>
 			<string spawnId="76">s</string>
-	        <string spawnId="73">(z)</string>
+	        <string spawnId="73">z</string>
 	        <string spawnId="7">s</string>
 			<string spawnId="9">p</string>
 			<string spawnId="6">FireWrongLetter</string>
@@ -69,7 +69,7 @@
 	  	</MonsterAllLetters>
 	  	<Stones>
 	        <string spawnId="0">n</string>
-	        <string spawnId="57">(z)</string>
+	        <string spawnId="57">z</string>
 	        <string spawnId="56">n</string>
 			<string spawnId="1">i</string>
 			

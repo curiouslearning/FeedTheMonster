@@ -37,7 +37,7 @@
         <string spawnId="3">r</string>
 		<string spawnId="54">c</string>
 		<string spawnId="55">r</string>
-        <string spawnId="89">(g)</string>
+        <string spawnId="89">g</string>
 		<string spawnId="86">u</string>
 		<string spawnId="2">n</string>
       </Stones>
@@ -75,11 +75,11 @@
 	  </MonsterAllLetters>
 	  <Stones>
         <string spawnId="58">u</string>
-        <string spawnId="62">(g)</string>
+        <string spawnId="62">g</string>
         <string delayIn="0" delayRepet="0" loop="true" spawnId="45,36,45" speed="150">b</string>
 		<string spawnId="1">t</string>
-		<string delayIn="0" delayRepet="0" loop="true" spawnId="93,94,93" speed="150">(g)</string>
-		<string spawnId="0">(g)</string>
+		<string delayIn="0" delayRepet="0" loop="true" spawnId="93,94,93" speed="150">g</string>
+		<string spawnId="0">g</string>
 		<string spawnId="13">t</string>
 		<string spawnId="12">t</string>
 		<string spawnId="27">c</string>
@@ -102,7 +102,7 @@
         <string spawnId="9">c</string>
 		<string spawnId="89">t</string>
 		<string spawnId="90">t</string>
-		<string spawnId="8">(g)</string>
+		<string spawnId="8">g</string>
 		<string spawnId="3">u</string>
 		<string spawnId="81">r</string>
       </Stones>

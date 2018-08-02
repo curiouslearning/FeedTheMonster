@@ -16,7 +16,7 @@
         <string spawnId="65">t</string>
 		<string spawnId="87">c</string>
 		<string spawnId="93">u</string>
-		<string spawnId="36">(g)</string>
+		<string spawnId="36">g</string>
 		<string spawnId="84">n</string>
 		<string spawnId="45">b</string>
       </Stones>
@@ -36,7 +36,7 @@
         <string spawnId="72">u</string>
         <string delayIn="0" delayRepet="0" loop="true" spawnId="11,86,11" speed="150">u</string>
 		<string spawnId="81">b</string>
-		<string delayIn="0" delayRepet="0" loop="true" spawnId="87,12,87" speed="150">(g)</string>
+		<string delayIn="0" delayRepet="0" loop="true" spawnId="87,12,87" speed="150">g</string>
 		<string spawnId="84">b</string>
 		<string spawnId="19">t</string>
 		<string bonusScore="275" spawnId="69">BonusLetter</string>
@@ -54,7 +54,7 @@
 	  </MonsterAllLetters>
 	  <Stones>
         <string>n</string>
-        <string>(g)</string>
+        <string>g</string>
         <string>b</string>
 		<string>u</string>
 		<string>n</string>

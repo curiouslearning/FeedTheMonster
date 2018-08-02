@@ -11,8 +11,8 @@
 	  <string>n</string></MonsterAllLetters>
 	  <Stones>
         <string>l</string>
-        <string>(z)</string>
-        <string>(z)</string>
+        <string>z</string>
+        <string>z</string>
 		<string>s</string>
 		<string>i</string>
 		<string>f</string>
@@ -30,7 +30,7 @@
 	  <Stones>
         <string spawnId="11">n</string>
         <string spawnId="69">n</string>
-        <string spawnId="54">(z)</string>
+        <string spawnId="54">z</string>
 		<string spawnId="12">l</string>
 		<string spawnId="55">p</string>
 		<string spawnId="72">i</string>
@@ -47,10 +47,10 @@
 	  <string>n</string></MonsterAllLetters>
 	  <Stones>
         <string>i</string>
-        <string>(z)</string>
+        <string>z</string>
         <string>n</string>
 		<string>l</string>
-		<string>(z)</string>
+		<string>z</string>
 		<string>p</string>
       </Stones>
     </Segment>
@@ -65,7 +65,7 @@
 	  <string>n</string></MonsterAllLetters>
 	  <Stones>
         <string spawnId="17">i</string>
-        <string spawnId="80">(z)</string>
+        <string spawnId="80">z</string>
         <string spawnId="11">n</string>
 		<string spawnId="77">f</string>
 		<string spawnId="12">s</string>

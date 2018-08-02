@@ -33,7 +33,7 @@
         <string spawnId="18">n</string>
         <string spawnId="11">n</string>
 		<string spawnId="71">f</string>
-		<string spawnId="70">(z)</string>
+		<string spawnId="70">z</string>
         <string spawnId="12">i</string>
       </Stones>
     </Segment>
@@ -71,7 +71,7 @@
         <string>s</string>
         <string>p</string>
 		<string>i</string>
-		<string>(z)</string>
+		<string>z</string>
 		<string>n</string>
       </Stones>
     </Segment>
@@ -88,7 +88,7 @@
 	  <Stones>
         <string>n</string>
         <string>l</string>
-        <string>(z)</string>
+        <string>z</string>
 		<string>l</string>
 		<string>n</string>
 		<string>f</string>

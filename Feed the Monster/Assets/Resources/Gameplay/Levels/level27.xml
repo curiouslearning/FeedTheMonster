@@ -12,7 +12,7 @@
     		<string spawnId="75">n</string>
 			<string spawnId="56">t</string>
     		<string spawnId="5">c</string>
-			<string spawnId="74">(g)</string>
+			<string spawnId="74">g</string>
 			<string spawnId="57">u</string>
     	</Stones>
 	</Segment>
@@ -56,7 +56,7 @@
 	  	<MonsterAllLetters>
 	  	</MonsterAllLetters>
 	  	<Stones>
-	        <string>(g)</string>
+	        <string>g</string>
 	        <string>r</string>
 			<string>t</string>
 	        <string>u</string>

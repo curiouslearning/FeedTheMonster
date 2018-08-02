@@ -8,10 +8,10 @@
     	<MonsterAllLetters>
     	</MonsterAllLetters>
     	<Stones>
-    		<string spawnId="73">(g)</string>
+    		<string spawnId="73">g</string>
     		<string spawnId="27">b</string>
     		<string spawnId="21">n</string>
-			<string spawnId="76">(g)</string>
+			<string spawnId="76">g</string>
 			<string spawnId="22">r</string>
 			<string spawnId="26">u</string>
     	</Stones>
@@ -27,15 +27,15 @@
         	<string>n</string>
         	<string>r</string>
         	<string>u</string>
-			<string>(g)</string>
-			<string>(g)</string>
+			<string>g</string>
+			<string>g</string>
 			<string>t</string>
       	</Stones>
     </Segment>
 	<Segment SegmentTime="10" spawnIds="">
 		
       	<MonsterRequiredLetters>
-			<string>(</string>
+			<string>g</string>
 	  	</MonsterRequiredLetters>
 	  	<MonsterAllLetters>
 	  	</MonsterAllLetters>
@@ -46,9 +46,9 @@
 			<string spawnId="20">u</string>
 			<string delayIn="0" delayRepet="0" loop="true" spawnId="83,67,83" speed="150">t</string>
 			<string spawnId="23">r</string>
-			<string spawnId="15">(</string>
+			<string spawnId="15">g</string>
 			<string bonusScore="275" spawnId="14">BonusLetter</string>
-      	<string spawnId="24">g</string><string spawnId="20">)</string></Stones>
+      	<string spawnId="24">g</string></Stones>
 	</Segment>
 	<Segment SegmentTime="10" spawnIds="73,27,21,76,22,26">
 		

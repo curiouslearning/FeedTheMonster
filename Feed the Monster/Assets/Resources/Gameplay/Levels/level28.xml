@@ -25,9 +25,9 @@
 	  	</MonsterAllLetters>
 	  	<Stones>
         	<string spawnId="19">n</string>
-        	<string spawnId="18">(g)</string>
+        	<string spawnId="18">g</string>
         	<string delayIn="0" delayRepet="0" loop="true" spawnId="11,86,11" speed="125">r</string>
-        	<string delayIn="0" delayRepet="0" loop="true" spawnId="87,12,87" speed="125">(g)</string>
+        	<string delayIn="0" delayRepet="0" loop="true" spawnId="87,12,87" speed="125">g</string>
 			<string spawnId="69">r</string>
 			<string spawnId="72">u</string>
 			<string spawnId="81">b</string>

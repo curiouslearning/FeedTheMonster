@@ -10,7 +10,7 @@
 		<string>u</string>
 	  <string>t</string></MonsterAllLetters>
 	  <Stones>
-        <string spawnId="14">(g)</string>
+        <string spawnId="14">g</string>
         <string spawnId="74">u</string>
 		<string spawnId="20">r</string>
       </Stones>

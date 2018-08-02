@@ -16,7 +16,7 @@
         <string>u</string>
 		<string>u</string>
 		<string>n</string>
-        <string>(g)</string>
+        <string>g</string>
 		<string>c</string>
 		<string>r</string>
       </Stones>
@@ -75,7 +75,7 @@
 	  </MonsterAllLetters>
 	  <Stones>
         <string>n</string>
-        <string>(g)</string>
+        <string>g</string>
         <string>n</string>
 		<string>u</string>
 		<string>b</string>
@@ -95,13 +95,13 @@
 		<string>t</string>
 	  </MonsterAllLetters>
 	  <Stones>
-        <string>(g)</string>
-        <string>(g)</string>
+        <string>g</string>
+        <string>g</string>
         <string>u</string>
 		<string>b</string>
 		<string>t</string>
 		<string>c</string>
-		<string>(g)</string>
+		<string>g</string>
 		<string>r</string>
       </Stones>
     </Segment>

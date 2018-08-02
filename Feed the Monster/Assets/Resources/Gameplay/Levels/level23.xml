@@ -61,7 +61,7 @@
 		<MonsterAllLetters>
 		</MonsterAllLetters>
 		<Stones>
-			<string spawnId="75">(z)</string>
+			<string spawnId="75">z</string>
 			<string spawnId="57">t</string>
 			<string spawnId="56">e</string>
 			<string spawnId="74">n</string>

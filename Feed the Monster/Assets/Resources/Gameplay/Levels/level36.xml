@@ -26,7 +26,7 @@
 		<MonsterAllLetters>
 		</MonsterAllLetters>
 		<Stones>
-			<string spawnId="21">(g)</string>
+			<string spawnId="21">g</string>
 			<string spawnId="89">t</string>
 			<string spawnId="90">e</string>
 			<string spawnId="22">n</string>
@@ -42,7 +42,7 @@
 		<MonsterAllLetters>
 		</MonsterAllLetters>
 		<Stones>
-			<string>(g)</string>
+			<string>g</string>
 			<string>n</string>
 			<string>e</string>
 			<string>t</string>
@@ -58,7 +58,7 @@
 		<MonsterAllLetters>
 		</MonsterAllLetters>
 		<Stones>
-			<string>(g)</string>
+			<string>g</string>
 			<string>n</string>
 			<string>e</string>
 			<string>t</string>

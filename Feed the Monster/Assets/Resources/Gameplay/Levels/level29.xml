@@ -1,7 +1,7 @@
 <XMLLevel CollectableMonster="Larva" HideCallout="5" LettersGroup="3" SegmentTime="10" StoneType="1" monsterInputType="Letter">
   <Segments>
     <Segment SegmentTime="10" spawnIds="">
-    	
+
     	<MonsterRequiredLetters>
     		<string>u</string>
     	</MonsterRequiredLetters>
@@ -11,13 +11,13 @@
     		<string spawnId="73">g</string>
     		<string spawnId="27">b</string>
     		<string spawnId="21">n</string>
-			<string spawnId="76">g</string>
+			<string spawnId="76">y</string>
 			<string spawnId="22">r</string>
 			<string spawnId="26">u</string>
     	</Stones>
 	</Segment>
 	<Segment SegmentTime="10" spawnIds="73,27,21,76,22,26">
-		
+
 		<MonsterRequiredLetters>
 			<string>t</string>
 		</MonsterRequiredLetters>
@@ -33,9 +33,9 @@
       	</Stones>
     </Segment>
 	<Segment SegmentTime="10" spawnIds="">
-		
+
       	<MonsterRequiredLetters>
-			<string>g</string>
+			<string>y</string>
 	  	</MonsterRequiredLetters>
 	  	<MonsterAllLetters>
 	  	</MonsterAllLetters>
@@ -45,13 +45,13 @@
 	        <string delayIn="0" delayRepet="0" loop="true" spawnId="66,82,66" speed="150">r</string>
 			<string spawnId="20">u</string>
 			<string delayIn="0" delayRepet="0" loop="true" spawnId="83,67,83" speed="150">t</string>
-			<string spawnId="23">r</string>
+			<string spawnId="23">y</string>
 			<string spawnId="15">g</string>
 			<string bonusScore="275" spawnId="14">BonusLetter</string>
       	<string spawnId="24">g</string></Stones>
 	</Segment>
 	<Segment SegmentTime="10" spawnIds="73,27,21,76,22,26">
-		
+
       	<MonsterRequiredLetters>
 			<string>t</string>
 	  	</MonsterRequiredLetters>
@@ -63,11 +63,11 @@
 	        <string>u</string>
 			<string>b</string>
 			<string>c</string>
-			<string>t</string>
+			<string>y</string>
       	</Stones>
     </Segment>
 	<Segment SegmentTime="10" spawnIds="">
-		
+
       	<MonsterRequiredLetters>
 			<string>b</string>
 	  	</MonsterRequiredLetters>
@@ -75,7 +75,7 @@
 	  	</MonsterAllLetters>
 	  	<Stones>
 	        <string spawnId="28">n</string>
-	        <string spawnId="25">r</string>
+	        <string spawnId="25">y</string>
 	        <string bonusScore="275" delayIn="0" delayRepet="0" loop="true" spawnId="94,93,94" speed="150">BonusLetter</string>
 			<string spawnId="5">b</string>
 			<string bonusScore="275" delayIn="0" delayRepet="0" loop="true" spawnId="36,45,36" speed="150">BonusLetter</string>

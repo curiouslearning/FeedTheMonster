@@ -1,9 +1,9 @@
 <XMLLevel CollectableMonster="" HideCallout="1" LettersGroup="5" SegmentTime="9" StoneType="1" monsterInputType="Letter">
   <Segments>
     <Segment SegmentTime="9" spawnIds="">
-    	
+
     	<MonsterRequiredLetters>
-    		<string>t</string>
+    		<string>j</string>
     	</MonsterRequiredLetters>
     	<MonsterAllLetters>
     	</MonsterAllLetters>
@@ -13,7 +13,7 @@
     		<string spawnId="62">w</string>
     		<string spawnId="4">w</string>
 			<string spawnId="57">e</string>
-			<string spawnId="91">g</string>
+			<string spawnId="91">j</string>
 			<string spawnId="92">d</string>
 			<string spawnId="2">w</string>
 			<string spawnId="56">t</string>
@@ -21,7 +21,7 @@
     	</Stones>
 	</Segment>
 	<Segment SegmentTime="9" spawnIds="67,74,82,71,70,83,75,66,60">
-		
+
 		<MonsterRequiredLetters>
 			<string>n</string>
 		</MonsterRequiredLetters>
@@ -40,7 +40,7 @@
       	</Stones>
     </Segment>
 	<Segment SegmentTime="9" spawnIds="">
-		
+
       	<MonsterRequiredLetters>
 			<string>g</string>
 	  	</MonsterRequiredLetters>
@@ -51,7 +51,7 @@
 	        <string spawnId="56">e</string>
 	        <string spawnId="2">e</string>
 			<string spawnId="92">n</string>
-			<string spawnId="91">e</string>
+			<string spawnId="91">j</string>
 			<string spawnId="57">d</string>
 			<string spawnId="4">w</string>
 			<string spawnId="62">n</string>
@@ -60,9 +60,9 @@
       	</Stones>
 	</Segment>
 	<Segment SegmentTime="9" spawnIds="67,74,82,71,70,83,75,66,60">
-		
+
       	<MonsterRequiredLetters>
-			<string>d</string>
+			<string>v</string>
 	  	</MonsterRequiredLetters>
 	  	<MonsterAllLetters>
 	  	</MonsterAllLetters>
@@ -73,13 +73,13 @@
 	        <string>w</string>
 			<string>t</string>
 			<string>t</string>
-			<string>e</string>
-			<string>e</string>
+			<string>v</string>
+			<string>j</string>
 			<string>d</string>
       	</Stones>
     </Segment>
 	<Segment SegmentTime="9" spawnIds="58,3,62,4,57,91,92,2,56,5">
-		
+
       	<MonsterRequiredLetters>
 			<string>t</string>
 	  	</MonsterRequiredLetters>
@@ -91,7 +91,7 @@
 	        <string>e</string>
 			<string>g</string>
 			<string>e</string>
-			<string>d</string>
+			<string>v</string>
 			<string>n</string>
 			<string>t</string>
       	</Stones>

@@ -6,6 +6,7 @@ public class UIController : MonoBehaviour {
 	public static UIController Instance;
 
 
+    public Button pausebutton;
 
 	public GameObject SplashPanel;
 	public Button SplashScreenStartButton;
@@ -41,7 +42,7 @@ public class UIController : MonoBehaviour {
 	GameObject mNextPanel;
 	GameObject mOpenPopup;
 
-
+    bool isalreadypaused;
 
 	public GameObject LastPanel {
 		get { 
@@ -96,16 +97,35 @@ public class UIController : MonoBehaviour {
 	}
 	
 
+    public void trypause()
+    {
+        if (!isalreadypaused)
+        {
+            pausebutton.enabled = false;
+            ShowPopup(PausePopup);
+        }
+    }
+
 	public void ShowPopup(GameObject popup)
 	{
-		GameObject oldPopup = mOpenPopup;
+       
+
+        GameObject oldPopup = mOpenPopup;
 
 		if (oldPopup != null)
 			oldPopup.SetActive (false);
+
 		
-		mOpenPopup = popup;
-		popup.SetActive (true);
-	}
+		
+       
+        mOpenPopup = popup;
+        popup.SetActive (true);
+        if (popup == PausePopup)
+        {
+            isalreadypaused = true;
+          //  Debug.Log("set paused");
+        }
+    }
 
 	bool mLoadingScreenRequired = false; 
 
@@ -172,7 +192,13 @@ public class UIController : MonoBehaviour {
 		if (popup == mOpenPopup) {
 			mOpenPopup = null;
 		}
-	}
+     
+            isalreadypaused = false;
+        //    Debug.Log("undo pause");
+            pausebutton.enabled = true;
+        
+
+    }
 
 	public void LevelButtonClick(int levelIndex)
 	{
@@ -189,9 +215,11 @@ public class UIController : MonoBehaviour {
 
 		bool isWin = GameplayController.Instance.CurrentLevelStars > 0;
 
-
-//		if (isWin && GameplayController.Instance.CurrentLevel.CollectableMonster != null && !UserInfo.Instance.HasCollectedFriend(GameplayController.Instance.CurrentLevel.CollectableMonster.name) ) {
-		if (isWin && GameplayController.Instance.CurrentLevel.CollectableMonster != null && !UserInfo.Instance.HasCollectedFriend(GameplayController.Instance.CurrentLevel.CollectableMonster) ) {
+        isalreadypaused = false;
+        //    Debug.Log("undo pause");
+        pausebutton.enabled = true;
+        //		if (isWin && GameplayController.Instance.CurrentLevel.CollectableMonster != null && !UserInfo.Instance.HasCollectedFriend(GameplayController.Instance.CurrentLevel.CollectableMonster.name) ) {
+        if (isWin && GameplayController.Instance.CurrentLevel.CollectableMonster != null && !UserInfo.Instance.HasCollectedFriend(GameplayController.Instance.CurrentLevel.CollectableMonster) ) {
 			ShowPanel (DiscoverNewFriendsPanel);
 			DiscoverNewFriendsPanel.GetComponent<UIDiscoverNewMonsterController> ().SetNextPanelToShow (GamePanel, GameplayController.Instance.CurrentLevelIndex);
 		} else {
@@ -204,7 +232,10 @@ public class UIController : MonoBehaviour {
 	{
 		ConfirmationPopup.mNextPanelToShow = MapPanel;
 		ShowPopup (ConfirmationPopup.gameObject);
-	}
+        isalreadypaused = false;
+        //    Debug.Log("undo pause");
+        pausebutton.enabled = true;
+    }
 
 
 	public void MapClick() // TODO: Resolve Bug - Pausing the game end exiting to map could result in "New Monster Discovered Screen" if enough points were obtained.
@@ -260,7 +291,14 @@ public class UIController : MonoBehaviour {
 	}
 
 
-
+    public void undothepause()
+    {
+        isalreadypaused = true;
+    }
+    public void redothepause()
+    {
+        isalreadypaused = false;
+    }
 
 	public void OnChangeProfile(GameObject nextScreen)
 	{

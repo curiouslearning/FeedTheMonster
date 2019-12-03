@@ -2,20 +2,34 @@
 using UnityEngine.UI;
 using System.Collections;
 using UnityEngine.EventSystems;
+using UnityEngine.Events;
 
 public class InteractiveButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerUpHandler, IPointerDownHandler, IPointerClickHandler {
 
 
 	Button btn;
+    public bool isBackTriggered = false;
+    public UnityEvent backtrigger;
 
-	// Use this for initialization
-	void Start () {
+
+    // Use this for initialization
+    void Start () {
 		btn = gameObject.GetComponent<Button> ();
 	}
 	
 	// Update is called once per frame
 	void Update () {
 	
+        if (isBackTriggered)
+        {
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+
+                btn.onClick.Invoke();
+
+                //    backtrigger.Invoke();
+            }
+        }
 	}
 
 

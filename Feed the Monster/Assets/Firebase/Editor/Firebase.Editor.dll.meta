@@ -3,24 +3,29 @@ guid: 9f2edbf81053418f879076c05f816dc2
 labels:
 - gvh
 - gvh_targets-editor
-- gvh_version-4.2.0
-timeCreated: 1513702504
-licenseType: Pro
+- gvh_version-6.3.0
 PluginImporter:
-  serializedVersion: 1
+  externalObjects: {}
+  serializedVersion: 2
   iconMap: {}
   executionOrder: {}
   isPreloaded: 0
   isOverridable: 0
   platformData:
-    Any:
+  - first:
+      Any: 
+    second:
       enabled: 0
       settings: {}
-    Editor:
+  - first:
+      Editor: Editor
+    second:
       enabled: 1
       settings:
         DefaultValueInitialized: true
-    WindowsStoreApps:
+  - first:
+      Windows Store Apps: WindowsStoreApps
+    second:
       enabled: 0
       settings:
         CPU: AnyCPU

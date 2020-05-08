@@ -29,10 +29,12 @@ public class LevelButtonController : MonoBehaviour {
 	
 	}
 
-	void OnEnable()
+    
+
+    void OnEnable()
 	{
-		UpdateView ();
-	}
+        UpdateView();
+    }
 
 	void OnDisable() {
 		if (levelIndex >= highestOpenLevelIndex && isInited == false) {
@@ -74,7 +76,9 @@ public class LevelButtonController : MonoBehaviour {
 		if (levelOpen >= levelIndex) {
 			Appear ();
 		} else {
-			Invoke ("Appear", .5f + (levelIndex - levelOpen) * .2f);
+            //deal with other pages here
+            int templevelindex = levelIndex % 77;
+			Invoke ("Appear", .5f + (templevelindex - levelOpen) * .2f);
 		}
 
 		if (UIController.Instance.DEBUG_OPEN_ALL_LEVELS_PLAYERPREFS) {

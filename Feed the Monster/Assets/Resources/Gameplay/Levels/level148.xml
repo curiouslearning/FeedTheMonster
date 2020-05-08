@@ -1,0 +1,51 @@
+<XMLLevel CollectableMonster="" HideCallout="4" LettersGroup="16" SegmentTime="11" StoneType="1" monsterInputType="Word">
+  <Segments>
+  		<Segment SegmentTime="10" spawnIds="20,75,15,23,74,14,11,12,60">
+		
+      	<MonsterRequiredLetters>
+			<string>sh</string><string>eep</string></MonsterRequiredLetters>
+	  	<MonsterAllLetters>
+	  	</MonsterAllLetters>
+	  	<Stones>
+			<string>eep</string><string>m</string><string>sh</string><string>ue</string></Stones>
+	</Segment>
+    <Segment SegmentTime="10" spawnIds="20,75,15,23,74,14,11,12,60">
+    	
+    	<MonsterRequiredLetters>
+    		<string>wh</string><string>eel</string></MonsterRequiredLetters>
+    	<MonsterAllLetters>
+    	</MonsterAllLetters>
+    	<Stones>
+    		<string>wh</string><string>tr</string><string>eel</string><string>gl</string></Stones>
+	</Segment>
+	<Segment SegmentTime="10" spawnIds="20,75,15,23,74,14,11,12,60">
+		
+      	<MonsterRequiredLetters>
+			<string>tr</string><string>ee</string></MonsterRequiredLetters>
+	  	<MonsterAllLetters>
+	  	</MonsterAllLetters>
+	  	<Stones>
+	        <string>ee</string><string>l</string><string>tr</string><string>une</string></Stones>
+    </Segment>
+	<Segment SegmentTime="10" spawnIds="20,75,15,23,74,14,11,12,60">
+		
+		<MonsterRequiredLetters>
+			<string>wh</string><string>eat</string></MonsterRequiredLetters>
+	  	<MonsterAllLetters>
+	  	</MonsterAllLetters>
+	  	<Stones>
+        	<string>wh</string><string>h</string><string>eat</string><string>ule</string></Stones>
+    </Segment>
+
+
+	<Segment SegmentTime="10" spawnIds="20,75,15,23,74,14,11,12,60">
+		
+      	<MonsterRequiredLetters>
+			<string>bl</string><string>eak</string></MonsterRequiredLetters>
+	  	<MonsterAllLetters>
+	  	</MonsterAllLetters>
+	  	<Stones>
+	        <string>bl</string><string>an</string><string>eak</string><string>ute</string></Stones>
+	</Segment>
+  </Segments>
+</XMLLevel>

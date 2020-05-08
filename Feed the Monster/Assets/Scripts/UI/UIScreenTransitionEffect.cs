@@ -3,9 +3,12 @@ using System.Collections;
 
 public class UIScreenTransitionEffect : MonoBehaviour {
 
+
+    public bool mapSwap;
+
 	// Use this for initialization
 	void Start () {
-	
+        mapSwap = false;
 	}
 
 	// function start() { }
@@ -13,10 +16,22 @@ public class UIScreenTransitionEffect : MonoBehaviour {
 	void Update () {
 	}
 
-
+    public void mapswapme()
+    {
+        mapSwap = true;
+    }
 
 	public void ChangeScreen(){
-		UIController.Instance.Transition ();
+        if (!mapSwap)
+        {
+            UIController.Instance.Transition();
+        }
+        else
+        {
+            mapSwap = false;
+        }
+       
+
 	}
 
 	public void End(){

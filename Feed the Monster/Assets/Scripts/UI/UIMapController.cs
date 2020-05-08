@@ -6,7 +6,11 @@ public class UIMapController : MonoBehaviour {
 //	public Text ScoreText;
 	public Button btnCollection;
 	public ScrollRect mapScroll;
+    public Transform[] mapPages;
+    public Button pageNext, pagePrevious;
+    public int currentlyActivePage;
 
+    int pagetoswap;
 	bool isStatusPopupShow = false;
 
 	void Awake() {
@@ -20,13 +24,13 @@ public class UIMapController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
+        
 	}
 
 	void OnEnable()
 	{
 		GameplayController.Instance.ReaplaceBackground_SelectMonster = true;
-		
+      
 		updatePosition ();
 
 		//Invoke("ShowStatusPopup", 2f);
@@ -40,6 +44,69 @@ public class UIMapController : MonoBehaviour {
 		CancelInvoke ();
 	}
 
+    public void SwapPageFwd()
+    {
+        SwapMapPage(currentlyActivePage + 1);
+    }
+
+    public void SwapPageBack()
+    {
+        SwapMapPage(currentlyActivePage - 1);
+    }
+
+    public void SwapMapPage()
+    {
+        SwapMapPage(1 - currentlyActivePage);
+    }
+
+
+    public void SwapMapPage(int pageNum)
+    {
+
+        UIController.Instance.ScreenTransitionEffect.SetActive(true);
+        UIController.Instance.ScreenTransitionEffect.SendMessage("mapswapme");
+
+        pageNum = Mathf.Max (0, pageNum);
+        pageNum = Mathf.Min (mapPages.Length - 1, pageNum);
+        pagetoswap = pageNum;
+
+        Invoke("swapInternal", 1f);
+        pagePrevious.interactable = false;
+        pagePrevious.gameObject.SetActive(false);
+        pageNext.interactable = false;
+        pageNext.gameObject.SetActive(false);
+
+    }
+
+    void swapInternal()
+    {
+        mapPages[currentlyActivePage].gameObject.SetActive(false);
+        currentlyActivePage = pagetoswap;
+        mapPages[currentlyActivePage].gameObject.SetActive(true);
+
+        if (currentlyActivePage == 0)
+        {
+            pagePrevious.interactable = false;
+            pagePrevious.gameObject.SetActive(false);
+        }
+        else
+        {
+            pagePrevious.interactable = true;
+            pagePrevious.gameObject.SetActive(true);
+        }
+
+        if (currentlyActivePage == mapPages.Length - 1)
+        {
+            pageNext.interactable = false;
+            pageNext.gameObject.SetActive(false);
+        }
+        else
+        {
+            pageNext.interactable = true;
+            pageNext.gameObject.SetActive(true);
+        }
+    }
+
 	public void updatePosition()
 	{
 //		int sumAllLevelsScore = 0;
@@ -49,6 +116,11 @@ public class UIMapController : MonoBehaviour {
 		highestLevelOpenIndex = UserInfo.Instance.GetHighestOpenLevel ();
 		lastPlayingLevelIndex = UserInfo.Instance.GetLastPlayingLevel ();
 		TutorialController.Instance.EndTutorial (); //Jonathan??
+
+        int snaptolevel = lastPlayingLevelIndex;
+
+        pagetoswap = lastPlayingLevelIndex / 77;
+        swapInternal();
 
 		SnapTo (GameObject.Find ("Pin - Level " + lastPlayingLevelIndex).transform);
 

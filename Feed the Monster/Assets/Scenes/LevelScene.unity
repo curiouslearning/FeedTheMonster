@@ -5341,6 +5341,7 @@ GameObject:
   - component: {fileID: 4648}
   - component: {fileID: 4647}
   - component: {fileID: 4646}
+  - component: {fileID: 472}
   m_Layer: 0
   m_Name: Gameplay
   m_TagString: Untagged
@@ -5472,6 +5473,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc0477104123f204e84623091fa16f50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  curlp: {fileID: 11400000, guid: c7b9ba27d3e22e54f9b68db3eeff4c41, type: 2}
+  uic: {fileID: 4096}
+  gpc: {fileID: 4095}
+  LangPackDataDir: O:/FTM/langpackdata
 --- !u!1 &478
 GameObject:
   m_ObjectHideFlags: 0
@@ -64766,9 +64782,9 @@ MonoBehaviour:
   TitleImage: {fileID: 280}
   TitleSound: {fileID: 8300000, guid: 8f68e84c9f9694c5ca977d8f4634102f, type: 3}
   VictoryImage: {fileID: 1216}
-  VictoryFromAngry: {fileID: 8300000, guid: 0c7ea90baee0f450ba612b333803195f, type: 3}
-  VictoryFromBored: {fileID: 8300000, guid: cece85b430c4040f2bee348ae9c8d7cb, type: 3}
-  VictoryFromSad: {fileID: 8300000, guid: fdd83221faf064cf58a927536acf418d, type: 3}
+  VictoryFromAngry: {fileID: 8300000, guid: 9ee2b1ff5a4e546dbab583dac2674466, type: 3}
+  VictoryFromBored: {fileID: 8300000, guid: 9a41a1b17328c416f84d1d1e90a663f6, type: 3}
+  VictoryFromSad: {fileID: 8300000, guid: 6c0955ad620cd4ab98c833d55a96566e, type: 3}
   firstShowing: 4
   rotateSpeed: 12
   shakeTime: 0.74
@@ -64802,13 +64818,14 @@ MonoBehaviour:
   - {fileID: 11400000, guid: cb46b566099049343b20533c26564629, type: 2}
   - {fileID: 11400000, guid: ab999519584aac543882c9baf99e2ffe, type: 2}
   - {fileID: 11400000, guid: 9d98d9459262a294e9ffc2817080a426, type: 2}
+  - {fileID: 11400000, guid: aee3c9bd81fce2f4a9424f356ac94cf6, type: 2}
   CouplesGroup_3:
   - {fileID: 11400000, guid: 94b9d9dcc368ba747b969a7cad851db3, type: 2}
   - {fileID: 11400000, guid: 35e295315ae00794b837c563deb41a9b, type: 2}
   - {fileID: 11400000, guid: 334051dd8b57a2642a306ba2a1a5f956, type: 2}
   - {fileID: 11400000, guid: 7e81b872c4f4a2f41830b6956b242adb, type: 2}
   - {fileID: 11400000, guid: d0e3517cfbea11843a2e07c320e018fc, type: 2}
-  - {fileID: 11400000, guid: aee3c9bd81fce2f4a9424f356ac94cf6, type: 2}
+  - {fileID: 11400000, guid: ed7a4c0f223a87b4eaefbf1b5a8ac316, type: 2}
   CouplesGroup_4:
   - {fileID: 11400000, guid: ed120dc59d7272f4090274df82ad4083, type: 2}
   - {fileID: 11400000, guid: ac7955f0184764843ba46dcf41d227b1, type: 2}
@@ -64816,9 +64833,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 9d5c27b6b187b5f498789012f25e27fe, type: 2}
   - {fileID: 11400000, guid: 67c64afe35c75ab4b95e4a7d3a58f70e, type: 2}
   - {fileID: 11400000, guid: 4c5f0a9b9fec25f41a0ce57961171caa, type: 2}
-  - {fileID: 11400000, guid: 476543213e0c3884980442e453096011, type: 2}
-  - {fileID: 11400000, guid: c7564c789c005864d9885d0eb0638132, type: 2}
-  - {fileID: 11400000, guid: ed7a4c0f223a87b4eaefbf1b5a8ac316, type: 2}
   CouplesGroup_5:
   - {fileID: 11400000, guid: 485ea706244283948bd3b487040782ba, type: 2}
   - {fileID: 11400000, guid: d1123d8a38d04f4449399482feeb37ac, type: 2}
@@ -64833,7 +64847,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 75802e398dd96a34ab932fb329f1d201, type: 2}
   - {fileID: 11400000, guid: afe7ab48de93527499652ca1ddfa9b23, type: 2}
   - {fileID: 11400000, guid: d48d796d942851e48b97e4ee2614527f, type: 2}
-  - {fileID: 11400000, guid: c7353d4c758a14803b8191b500ce6943, type: 2}
   FlipParticle: {fileID: 1685696854863294, guid: 198b8377da5357b4e97ac5ed0ca71e7d,
     type: 2}
   MatchParticle: {fileID: 1710243577141352, guid: 450751791dd3c0c4c9091d55d06bb53f,
@@ -65269,6 +65282,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1726720a7580e234396474286824b7ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pausebutton: {fileID: 4173}
   SplashPanel: {fileID: 75}
   SplashScreenStartButton: {fileID: 4093}
   MapPanel: {fileID: 1459602466}
@@ -81226,7 +81240,7 @@ MonoBehaviour:
         m_MethodName: ShowPanel
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgument: {fileID: 1459602466}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -85531,10 +85545,26 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 1018955976181754, guid: 83112a0b6d9fd8448890a1e9065ef13f, type: 2}
-      propertyPath: m_Name
-      value: Panel - Map
-      objectReference: {fileID: 0}
+    - target: {fileID: 114447368202499778, guid: 83112a0b6d9fd8448890a1e9065ef13f,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 4096}
+    - target: {fileID: 114447368202499778, guid: 83112a0b6d9fd8448890a1e9065ef13f,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 64}
+    - target: {fileID: 114241689239612630, guid: 83112a0b6d9fd8448890a1e9065ef13f,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 4096}
+    - target: {fileID: 114241689239612630, guid: 83112a0b6d9fd8448890a1e9065ef13f,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 25}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 83112a0b6d9fd8448890a1e9065ef13f, type: 2}
   m_IsPrefabParent: 0

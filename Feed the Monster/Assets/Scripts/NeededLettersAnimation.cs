@@ -1,10 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using System.Collections.Generic;
+using System.Text;
 
 public class NeededLettersAnimation  {
 
-	Text mTarget;
+    Image imTarget;
+    Text mTarget;
 	int mDefaultSize;
 	int mPopSize;
 	float mTimeStarted;
@@ -15,8 +18,15 @@ public class NeededLettersAnimation  {
 
 	MonsterCalloutController mController;
 
+    public NeededLettersAnimation(Image target, MonsterCalloutController controller)
+    {
+        imTarget = target;
+        mController = controller;
+        //mDefaultSize = mTarget.fontSize;
+        mPopSize = (int)(mDefaultSize * 1.25f);
+    }
 
-	public NeededLettersAnimation(Text target, MonsterCalloutController controller)
+    public NeededLettersAnimation(Text target, MonsterCalloutController controller)
 	{
 		mTarget = target;
 		mController = controller;
@@ -34,7 +44,22 @@ public class NeededLettersAnimation  {
 		mRunning = true;
 	}
 
-	void Update()
+    void loadCharImage(string CharName)
+    {
+        string url;
+        Sprite res;
+        CharName = CharName.Normalize(NormalizationForm.FormD);
+        url = "charimg/" + CharName;
+        res = Resources.Load<Sprite>(url);
+        imTarget.sprite = res;
+        imTarget.enabled = true;
+        if (res == null)
+        {
+            Debug.Log("Can't load character image: " + url);
+        }
+    }
+
+    void Update()
 	{
 		float lerpRate = Mathf.Abs(Mathf.Sin((Time.time - mLastTimeSine) * 3f));
 
@@ -104,9 +129,17 @@ public class NeededLettersAnimation  {
 			mLastIndex = currentIndex;
 			break;
 		}
-
-		if (mTarget != null)
-			mTarget.text = richTextForUI;
+        if (LangPackParser.IsImgRenderer)
+        {
+            if (imTarget != null)
+                loadCharImage(richTextForUI);
+        }
+        else
+        {
+            if (mTarget != null)
+                mTarget.text = richTextForUI;
+        }
+		
 	}
 
 	string StringWithSizeTags(string str, int size)
@@ -151,7 +184,7 @@ public class NeededLettersAnimation  {
 					richTextForUI += StringWithColorTags (StringWithBoldTags (StringWithSizeTags (letter, mDefaultSize)), mController.FontColorWordBold);
 				}
 			}
-			if (mTarget != null) {
+			if (mTarget != null && !LangPackParser.IsImgRenderer) {
 				mTarget.text = richTextForUI;
 			}
 			lastIndex++;

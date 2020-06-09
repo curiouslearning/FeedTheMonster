@@ -22,8 +22,9 @@ public class MonsterCalloutController : MonoBehaviour {
 
 	public bool IsMouseOver { get;  set; }
 	public Text text;
+    public Image itext;
 
-	public HoleButtonController holeButtonController;
+    public HoleButtonController holeButtonController;
 
 
 	public AudioClip[] SoundCorrectAnswers;
@@ -104,6 +105,8 @@ public class MonsterCalloutController : MonoBehaviour {
 		if(HidePartical != null) {
 			HidePartical.SetActive (false);
 		}
+        if (LangPackParser.IsImgRenderer)
+            itext.enabled = false;
 	}
 
 	public void OnEatDone()
@@ -139,7 +142,7 @@ public class MonsterCalloutController : MonoBehaviour {
 			if (playImage) {
 				playImage.color = Color.Lerp (playImage.color, new Color (1, 1, 1, 0), Time.deltaTime * 5);
 			}
-
+            itext.gameObject.SetActive(false);
 			text.gameObject.SetActive(false);//color  = Color.Lerp( text.color , GameplayController.Instance.CurrentLevel.BubbleLetterFontColorDefault * new Color (1, 1, 1, 0), Time.deltaTime*10);
 		}
 	}
@@ -319,8 +322,15 @@ public class MonsterCalloutController : MonoBehaviour {
 		switch (GameplayController.Instance.CurrentLevel.monsterInputType) {
 		case MonsterInputType.Letter:
 			Invoke ("PlayCalloutSound", 0.5f);
-
-			mNeededLettersAnimation = new NeededLettersAnimation (text, this);
+                if (LangPackParser.IsImgRenderer)
+                {
+                    mNeededLettersAnimation = new NeededLettersAnimation(itext, this);
+                }
+                else
+                {
+                    mNeededLettersAnimation = new NeededLettersAnimation(text, this);
+                }
+			
 			timeToEndShow = 1f;
 			mNeededLettersAnimation.Show (timeToEndShow);
 			break;
@@ -340,17 +350,30 @@ public class MonsterCalloutController : MonoBehaviour {
 			break;
 		case MonsterInputType.LetterInWord:
 			Invoke ("PlayCalloutSound", 0.5f);
-			mNeededLettersAnimation = new NeededLettersAnimation (text, this);
-			timeToEndShow = 1.2f;
+                if (LangPackParser.IsImgRenderer)
+                {
+                    mNeededLettersAnimation = new NeededLettersAnimation(itext, this);
+                }
+                else
+                {
+                    mNeededLettersAnimation = new NeededLettersAnimation(text, this);
+                }
+                timeToEndShow = 1.2f;
 			mNeededLettersAnimation.Show (timeToEndShow);
 			break;
 
 		case MonsterInputType.Word:
 			Invoke ("PlayCalloutSound", 0.5f);
-			
-			mNeededLettersAnimation = new NeededLettersAnimation (text, this);
-//			timeToEndShow = GameplayController.Instance.CurrentSegment.MonsterRequiredLetters.Length;
-			timeToEndShow = 1.5f;
+
+                if (LangPackParser.IsImgRenderer)
+                {
+                    mNeededLettersAnimation = new NeededLettersAnimation(itext, this);
+                }
+                else
+                {
+                    mNeededLettersAnimation = new NeededLettersAnimation(text, this);
+                }//			timeToEndShow = GameplayController.Instance.CurrentSegment.MonsterRequiredLetters.Length;
+                timeToEndShow = 1.5f;
 			mNeededLettersAnimation.Show (timeToEndShow);
 			break;
 
@@ -375,9 +398,15 @@ public class MonsterCalloutController : MonoBehaviour {
 					}
 				}
 			}
-			mNeededLettersAnimation = new NeededLettersAnimation (text, this);
-//			timeToEndShow = GameplayController.Instance.CurrentSegment.MonsterRequiredLetters.Length;
-			timeToEndShow = 1.5f;
+                if (LangPackParser.IsImgRenderer)
+                {
+                    mNeededLettersAnimation = new NeededLettersAnimation(itext, this);
+                }
+                else
+                {
+                    mNeededLettersAnimation = new NeededLettersAnimation(text, this);
+                }//			timeToEndShow = GameplayController.Instance.CurrentSegment.MonsterRequiredLetters.Length;
+                timeToEndShow = 1.5f;
 			mNeededLettersAnimation.Show (timeToEndShow);
 			break;
 		}

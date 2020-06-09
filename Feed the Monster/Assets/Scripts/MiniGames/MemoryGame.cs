@@ -262,27 +262,25 @@ public class MemoryGame : BaseMiniGame {
 	{
 		int currentGroup = 1;
 
-		if (UserInfo.Instance != null) {
-			currentGroup = UserInfo.Instance.GetLastLetterGroup ();
-		}
+        currentGroup = Random.Range(2, 7);
 		List<MemoryGameCouple> newList = new List<MemoryGameCouple>();
 
-		if(currentGroup >= 1) {
+		if(currentGroup == 1) {
 			newList.AddRange (CouplesGroup_1);
 		}
-		if(currentGroup >= 2) {
+		if(currentGroup == 2) {
 			newList.AddRange (CouplesGroup_2);
 		}
-		if(currentGroup >= 3) {
+		if(currentGroup == 3) {
 			newList.AddRange (CouplesGroup_3);
 		}
-		if(currentGroup >= 4) {
+		if(currentGroup == 4) {
 			newList.AddRange (CouplesGroup_4);
 		}
-		if(currentGroup >= 5) {
+		if(currentGroup == 5) {
 			newList.AddRange (CouplesGroup_5);
 		}
-		if(currentGroup >= 6) {
+		if(currentGroup == 6) {
 			newList.AddRange (CouplesGroup_6);
 		}
 		Couples = newList.ToArray ();

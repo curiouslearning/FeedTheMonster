@@ -79,7 +79,14 @@ public class MiniGameController : MonoBehaviour
 			currentGame = MonsterPetting;
 			break;
 		case GameType.LetterTracing:
-			currentGame = LetterTracing;
+                if (LangPackParser.HasTracingGame)
+                {
+                    currentGame = LetterTracing;
+                }
+                else
+                {
+                    currentGame = MonsterPetting;
+                }
 			break;
 		case GameType.MemoryGame:
 			currentGame = MemoryGame;

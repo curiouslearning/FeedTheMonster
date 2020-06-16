@@ -64,8 +64,13 @@ public class LangPackParser : MonoBehaviour {
         doParse(curlp);
     }
 
-     void doParse(LangPack nlp)
+    void doParse(LangPack nlp)
     {
+        
+
+
+    }
+    void realparse(LangPack nlp) { 
         UnityEditor.PlayerSettings.productName = nlp.ApplicationName;
         
         myloc = Application.dataPath;
@@ -133,7 +138,7 @@ public class LangPackParser : MonoBehaviour {
            
         }
 
-        //referenced arts
+        //referenced arts   
         string fbartsfrom = fromloc + "art/feedbacks/";
 
         foreach (string sfile in System.IO.Directory.GetFiles(fbartsfrom))
@@ -158,7 +163,12 @@ public class LangPackParser : MonoBehaviour {
 
 
 
-        //string memgameassetbase = myloc + "/Prefabs/MiniGame/MemoryGame/";
+        //deal with google-services.json here
+
+        //deal with version number and version code
+
+        PlayerSettings.bundleVersion = nlp.VersionNumber.ToString();
+        PlayerSettings.Android.bundleVersionCode = nlp.VersionNumber;
 
 
         //refresh assets

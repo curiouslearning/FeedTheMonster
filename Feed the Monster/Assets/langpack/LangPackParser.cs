@@ -74,7 +74,7 @@ public class LangPackParser : MonoBehaviour {
         UnityEditor.PlayerSettings.productName = nlp.ApplicationName;
         
         myloc = Application.dataPath;
-        fromloc = LangPackDataDir + "/" + nlp.LangCode + "/";
+        fromloc = LangPackDataDir + nlp.LangCode + "/";
         Debug.Log("parsing " + nlp.ApplicationName +  " from " + fromloc + " into " + myloc);
         gpc.NumOfLevels = nlp.NumLevels;
 
@@ -165,10 +165,14 @@ public class LangPackParser : MonoBehaviour {
 
         //deal with google-services.json here
 
+
+
         //deal with version number and version code
 
         PlayerSettings.bundleVersion = nlp.VersionNumber.ToString();
         PlayerSettings.Android.bundleVersionCode = nlp.VersionNumber;
+
+        //edit gradle script here
 
 
         //refresh assets

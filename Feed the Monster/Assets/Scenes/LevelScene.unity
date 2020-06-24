@@ -5487,7 +5487,7 @@ MonoBehaviour:
   curlp: {fileID: 11400000, guid: c7b9ba27d3e22e54f9b68db3eeff4c41, type: 2}
   uic: {fileID: 4096}
   gpc: {fileID: 4095}
-  LangPackDataDir: O:/FTM/langpackdata
+  LangPackDataDir: O:/FTM/lpd/ftm-languagepacks/
 --- !u!1 &478
 GameObject:
   m_ObjectHideFlags: 0

@@ -517,6 +517,7 @@ public class LetterController : MonoBehaviour
 		if (State == LetterState.Disapear) {
 			return;
 		}
+        if (charspot != null)
         charspot.enabled = false;
         State = LetterState.Disapear;
 		GetComponent<Animation> ().Play ("DisapearAnimation");
@@ -549,6 +550,7 @@ public class LetterController : MonoBehaviour
 		text.enabled = enable;
 		MainImage.enabled = enable;
 		OutlineImage.enabled = enable;
+        if (charspot != null)
         charspot.enabled = enable;
     }
 

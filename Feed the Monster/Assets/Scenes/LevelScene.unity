@@ -5484,10 +5484,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc0477104123f204e84623091fa16f50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  curlp: {fileID: 11400000, guid: c7b9ba27d3e22e54f9b68db3eeff4c41, type: 2}
-  uic: {fileID: 4096}
-  gpc: {fileID: 4095}
-  LangPackDataDir: O:/FTM/lpd/ftm-languagepacks/
+  curlp:
+    LanguageName: FTMdefault
+    ApplicationName: Feed The Monster
+    VersionNumber: 1
+    ImageBasedRendering: 0
+    NumLevels: 154
+    HasTracingGame: 1
+  uicontroller: {fileID: 4096}
+  gameplaycontroller: {fileID: 4095}
 --- !u!1 &478
 GameObject:
   m_ObjectHideFlags: 0
@@ -62216,9 +62221,9 @@ MonoBehaviour:
   Title_Angry: {fileID: 21300000, guid: 0d54ba7ffdf81497f8c567eeaf837044, type: 3}
   Title_Bored: {fileID: 21300000, guid: 39925f0d5bbd24d9284589450aee81ad, type: 3}
   Title_Sad: {fileID: 21300000, guid: 59953fac3d3c1490baa21018b0a085fa, type: 3}
-  Sound_Angry: {fileID: 8300000, guid: ae051f8a8da9c44a888478917cb2c853, type: 3}
-  Sound_Bored: {fileID: 8300000, guid: 9e11e0648e0844f5cae1f4dcc00e2b72, type: 3}
-  Sound_Sad: {fileID: 8300000, guid: d4c8c358246e94734bf224e470263753, type: 3}
+  Sound_Angry: {fileID: 8300000, guid: 9b10cb3314b608441a32e9d56c01a73c, type: 3}
+  Sound_Bored: {fileID: 8300000, guid: 5c151770ae214c946af3ba71f832e21f, type: 3}
+  Sound_Sad: {fileID: 8300000, guid: 222fe28596d3d3343918ffc3d73ad0d8, type: 3}
   SadMonster_m1e4: {fileID: 1000010523479964, guid: 54430236950c36e4aaa4567450749765,
     type: 2}
   SadMonster_m2e4: {fileID: 1000011703380614, guid: 7d6ab90f58eb657449515191c62c40fa,
@@ -64459,7 +64464,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GameOver: 0
   TitleImage: {fileID: 919}
-  TitleSound: {fileID: 8300000, guid: 932935af4ff004beab6580a2712b1637, type: 3}
+  TitleSound: {fileID: 8300000, guid: e1cb7a69a1b02214f9270f97391660ce, type: 3}
   VictoryImage: {fileID: 210}
   VictoryFromAngry: {fileID: 8300000, guid: 9ee2b1ff5a4e546dbab583dac2674466, type: 3}
   VictoryFromBored: {fileID: 8300000, guid: 9a41a1b17328c416f84d1d1e90a663f6, type: 3}
@@ -65103,7 +65108,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CurrentActive: {fileID: 0}
   CheatButton: {fileID: 36}
-  NumOfLevels: 150
+  NumOfLevels: 154
   DefaultLevelTempletes: {fileID: 11400000, guid: 912abc312cf981b46926d742a5f8a283,
     type: 2}
   LetterPrefab_1:
@@ -65283,6 +65288,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pausebutton: {fileID: 4173}
+  mapController: {fileID: 1459602468}
   SplashPanel: {fileID: 75}
   SplashScreenStartButton: {fileID: 4093}
   MapPanel: {fileID: 1459602466}
@@ -66041,7 +66047,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 61afe9f29b53642b8bb1336c65772512, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 59953fac3d3c1490baa21018b0a085fa, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -78522,7 +78528,7 @@ MonoBehaviour:
         m_MethodName: ShowPanel
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgument: {fileID: 1459602466}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -85438,11 +85444,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
+--- !u!224 &1241297670 stripped
+RectTransform:
+  m_PrefabParentObject: {fileID: 224803054674685974, guid: 83112a0b6d9fd8448890a1e9065ef13f,
+    type: 2}
+  m_PrefabInternal: {fileID: 1505728774}
 --- !u!1 &1459602466 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1018955976181754, guid: 83112a0b6d9fd8448890a1e9065ef13f,
     type: 2}
   m_PrefabInternal: {fileID: 1505728774}
+--- !u!114 &1459602468 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114190284304699968, guid: 83112a0b6d9fd8448890a1e9065ef13f,
+    type: 2}
+  m_PrefabInternal: {fileID: 1505728774}
+  m_Script: {fileID: 11500000, guid: 0d44d056b7903eb42894b5abfeb395d5, type: 3}
 --- !u!224 &1459602471 stripped
 RectTransform:
   m_PrefabParentObject: {fileID: 224708906018643634, guid: 83112a0b6d9fd8448890a1e9065ef13f,
@@ -85455,6 +85472,21 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 3634}
     m_Modifications:
+    - target: {fileID: 114190284304699968, guid: 83112a0b6d9fd8448890a1e9065ef13f,
+        type: 2}
+      propertyPath: RealPages.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114190284304699968, guid: 83112a0b6d9fd8448890a1e9065ef13f,
+        type: 2}
+      propertyPath: singlepage.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114190284304699968, guid: 83112a0b6d9fd8448890a1e9065ef13f,
+        type: 2}
+      propertyPath: doublepages.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 224708906018643634, guid: 83112a0b6d9fd8448890a1e9065ef13f,
         type: 2}
       propertyPath: m_LocalPosition.x
@@ -85565,6 +85597,26 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
       value: 
       objectReference: {fileID: 25}
+    - target: {fileID: 114190284304699968, guid: 83112a0b6d9fd8448890a1e9065ef13f,
+        type: 2}
+      propertyPath: RealPages.Array.data[0]
+      value: 
+      objectReference: {fileID: 1241297670}
+    - target: {fileID: 114190284304699968, guid: 83112a0b6d9fd8448890a1e9065ef13f,
+        type: 2}
+      propertyPath: doublepages.Array.data[0]
+      value: 
+      objectReference: {fileID: 1241297670}
+    - target: {fileID: 114190284304699968, guid: 83112a0b6d9fd8448890a1e9065ef13f,
+        type: 2}
+      propertyPath: singlepage.Array.data[0]
+      value: 
+      objectReference: {fileID: 1241297670}
+    - target: {fileID: 114190284304699968, guid: 83112a0b6d9fd8448890a1e9065ef13f,
+        type: 2}
+      propertyPath: doublepages.Array.data[1]
+      value: 
+      objectReference: {fileID: 1999595402}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 83112a0b6d9fd8448890a1e9065ef13f, type: 2}
   m_IsPrefabParent: 0
@@ -85586,3 +85638,8 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!224 &1999595402 stripped
+RectTransform:
+  m_PrefabParentObject: {fileID: 224317027220996724, guid: 83112a0b6d9fd8448890a1e9065ef13f,
+    type: 2}
+  m_PrefabInternal: {fileID: 1505728774}

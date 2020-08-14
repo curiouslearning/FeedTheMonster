@@ -142,6 +142,7 @@ public class MonsterCalloutController : MonoBehaviour {
 			if (playImage) {
 				playImage.color = Color.Lerp (playImage.color, new Color (1, 1, 1, 0), Time.deltaTime * 5);
 			}
+            if (itext != null)
             itext.gameObject.SetActive(false);
 			text.gameObject.SetActive(false);//color  = Color.Lerp( text.color , GameplayController.Instance.CurrentLevel.BubbleLetterFontColorDefault * new Color (1, 1, 1, 0), Time.deltaTime*10);
 		}

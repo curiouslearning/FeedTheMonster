@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 using System.IO;
+using System;
 
 public class LangPackParser : MonoBehaviour {
 
     public  LangPack curlp;
-    public UIController uic;
-    public  GameplayController gpc;
-    public string LangPackDataDir;
-    string myloc, fromloc;
+    public UIController uicontroller;
+    public  GameplayController gameplaycontroller;
+    string myloc, fromloc, langpackdir;
     static LangPackParser s_Instance;
 
     // A static property that finds or creates an instance of the manager object and returns it.
@@ -22,7 +22,8 @@ public class LangPackParser : MonoBehaviour {
             {
                 // FindObjectOfType() returns the first AManager object in the scene.
                 s_Instance = FindObjectOfType(typeof(LangPackParser)) as LangPackParser;
-                s_Instance.gpc = s_Instance.GetComponent<GameplayController>();
+                s_Instance.gameplaycontroller = s_Instance.GetComponent<GameplayController>();
+                s_Instance.uicontroller = s_Instance.GetComponent<UIController>();
             }
 
             // If it is still null, create a new instance
@@ -34,6 +35,7 @@ public class LangPackParser : MonoBehaviour {
             return s_Instance;
         }
     }
+
 
 
     public static bool IsImgRenderer
@@ -53,40 +55,58 @@ public class LangPackParser : MonoBehaviour {
     }
 
 
-    [MenuItem("LangPacks/ParseTest")]
+    [MenuItem("LangPacks/Parse LangPack")]
     static void ParseTest()
     {
-        instance.doParse();
+        string path = EditorUtility.OpenFolderPanel("Select LangPack Folder", "", "");
+        Debug.Log("path: " + path);
+        instance.doParse(path);
+
+
     }
 
-     void doParse()
-    {
-        doParse(curlp);
-    }
-
-    void doParse(LangPack nlp)
+     void doParse(string lppath)
     {
         
-
+        langpackdir = lppath;
+        parseInternal();
+       
 
     }
-    void realparse(LangPack nlp) { 
+
+    
+    void parseInternal() {
+
+        //parse from settings file
+        try
+        {
+            string path = langpackdir+"/settings.json";
+        StreamReader reader = new StreamReader(path);
+        string jsontext = reader.ReadToEnd();
+
+        curlp = JsonUtility.FromJson<LangPack>(jsontext);
+
+        LangPack nlp = curlp;
+
         UnityEditor.PlayerSettings.productName = nlp.ApplicationName;
         
         myloc = Application.dataPath;
-        fromloc = LangPackDataDir + nlp.LangCode + "/";
+        fromloc = langpackdir + "/";
+
+        
+
         Debug.Log("parsing " + nlp.ApplicationName +  " from " + fromloc + " into " + myloc);
-        gpc.NumOfLevels = nlp.NumLevels;
+        gameplaycontroller.NumOfLevels = nlp.NumLevels;
 
         //deal with 77 levels
         if (nlp.NumLevels <= 77)
         {
-
+            uicontroller.mapController.RealPages = uicontroller.mapController.singlepage;
         }
         //deal with larger
         else
         {
-
+            uicontroller.mapController.RealPages = uicontroller.mapController.doublepages;
         }
 
         string resourceloc = myloc + "/Resources/";
@@ -163,8 +183,7 @@ public class LangPackParser : MonoBehaviour {
 
 
 
-        //deal with google-services.json here
-
+     
 
 
         //deal with version number and version code
@@ -177,6 +196,17 @@ public class LangPackParser : MonoBehaviour {
 
         //refresh assets
         AssetDatabase.Refresh();
+
+
+        }
+        catch (Exception e)
+        {
+            // Let the user know what went wrong.
+            Debug.Log("The langpack could not be read:");
+            Debug.Log(e.Message);
+            return;
+        }
+
     }
 
 

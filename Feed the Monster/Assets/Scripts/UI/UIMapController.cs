@@ -6,7 +6,7 @@ public class UIMapController : MonoBehaviour {
 //	public Text ScoreText;
 	public Button btnCollection;
 	public ScrollRect mapScroll;
-    public Transform[] mapPages;
+    public Transform[] RealPages, singlepage, doublepages;
     public Button pageNext, pagePrevious;
     public int currentlyActivePage;
 
@@ -29,6 +29,14 @@ public class UIMapController : MonoBehaviour {
 
 	void OnEnable()
 	{
+        if (LangPackParser.instance.curlp.NumLevels > 77)
+        {
+            RealPages = doublepages;
+        }
+        else
+        {
+            RealPages = singlepage;
+        }
 		GameplayController.Instance.ReaplaceBackground_SelectMonster = true;
       
 		updatePosition ();
@@ -67,7 +75,7 @@ public class UIMapController : MonoBehaviour {
         UIController.Instance.ScreenTransitionEffect.SendMessage("mapswapme");
 
         pageNum = Mathf.Max (0, pageNum);
-        pageNum = Mathf.Min (mapPages.Length - 1, pageNum);
+        pageNum = Mathf.Min (RealPages.Length - 1, pageNum);
         pagetoswap = pageNum;
 
         Invoke("swapInternal", 1f);
@@ -80,9 +88,9 @@ public class UIMapController : MonoBehaviour {
 
     void swapInternal()
     {
-        mapPages[currentlyActivePage].gameObject.SetActive(false);
+        RealPages[currentlyActivePage].gameObject.SetActive(false);
         currentlyActivePage = pagetoswap;
-        mapPages[currentlyActivePage].gameObject.SetActive(true);
+        RealPages[currentlyActivePage].gameObject.SetActive(true);
 
         if (currentlyActivePage == 0)
         {
@@ -95,7 +103,7 @@ public class UIMapController : MonoBehaviour {
             pagePrevious.gameObject.SetActive(true);
         }
 
-        if (currentlyActivePage == mapPages.Length - 1)
+        if (currentlyActivePage == RealPages.Length - 1)
         {
             pageNext.interactable = false;
             pageNext.gameObject.SetActive(false);

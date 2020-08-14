@@ -266,7 +266,7 @@ MonoBehaviour:
   OpenParticale: {fileID: 1817691170898002}
   CloseBox: {fileID: 1980200870832314}
   title: {fileID: 114864237320827236}
-  titleSound: {fileID: 8300000, guid: 6e750ac2fcf5f40bda18c6405dbd773f, type: 3}
+  titleSound: {fileID: 8300000, guid: b1c41ae14bc3d8545964db2d4eae7da9, type: 3}
   backSound: {fileID: 8300000, guid: 31dfef4da34b93e4aaf90d8e12dcd0b2, type: 3}
 --- !u!114 &114608244013280502
 MonoBehaviour:

@@ -7,7 +7,7 @@ public class UIController : MonoBehaviour {
 
 
     public Button pausebutton;
-
+    public UIMapController mapController;
     public GameObject SplashPanel;
 	public Button SplashScreenStartButton;
 	public GameObject MapPanel;

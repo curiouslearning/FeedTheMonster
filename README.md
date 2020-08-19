@@ -1,22 +1,22 @@
 # Feed The Monster Core
 
-This repository contains the code for the core Feed the Monster Unity app, including all language-independent gameplay code and assets. The following documentation will cover how to create and build your own localization of Feed The Monster. 
+This repository contains the code for the core Feed the Monster Unity app, including all language-independent gameplay code and assets. The following documentation will cover how to create and build your own localization of Feed The Monster.
 
 For pedagogical tips on getting started or registering interest in localizing to a specific language, please [contact us](https://www.curiouslearning.org/contact).
 
-**Development environment:** 
+**Development environment:**
 Unity 2017.4.19f1
 
-**Supplementary plug-ins:** 
+**Supplementary plug-ins:**
 Unity Firebase SDK version 6.3.0
 
-**Related repositories:** 
+**Related repositories:**
 1. [Language packs](https://github.com/curiouslearning/ftm-languagepacks)
 1. [Automation scripts](https://github.com/curiouslearning/ftm-automation)
 
-# Generating a level generation (levelgen) file from a scope and sequence
+# Generating levels from a levelgen.csv file
+The [Level Generation code](https://github.com/curiouslearning/ftm-automation/tree/master/level_generation) section of the automation scripts repository contains instructions on how to format a comma-separated value file defining the content to be taught on each level, and how to use the python script that generates the individual level xml files from this levelgen.
 
-// To Do -- describe the process of taking a scope and sequence document and applying it to creating a levelgen
 
 # Applying a Language Pack
 
@@ -39,7 +39,7 @@ In addition to this standard Firebase collected data, there is also code written
 
 If additional data collection would be helpful for further study or improvement of Feed The Monster, feel free to supplement with additional Firebase event collection functions.
 
-To create your own long-term storage for Feed The Monster data, first create a new [Firebase project](https://firebase.google.com/). When creating the first app, select that it is a Unity app. Fill out all fields including what the app package name will be when posted to the Google Play Store. 
+To create your own long-term storage for Feed The Monster data, first create a new [Firebase project](https://firebase.google.com/). When creating the first app, select that it is a Unity app. Fill out all fields including what the app package name will be when posted to the Google Play Store.
 
 It is highly recommended if there will be multiple Feed The Monster apps created that they all funnel to the same long-term storage. Each Firebase project can hold up to 25 apps.
 

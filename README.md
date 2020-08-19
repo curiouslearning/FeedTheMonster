@@ -2,9 +2,17 @@
 
 This repository contains the code for the core Feed the Monster Unity app, including all language-independent gameplay code and assets. 
 
-**Development environment:** Unity 2017.4.19f1
+**Development environment:** 
+Unity 2017.4.19f1
 
-**Supplementary plug-ins:** Unity Firebase SDK version 6.3.0
+**Supplementary plug-ins:** 
+Unity Firebase SDK version 6.3.0
+
+**Related repositories** 
+1. [Language packs](https://github.com/curiouslearning/ftm-languagepacks)
+1. [Automation scripts](https://github.com/curiouslearning/ftm-automation)
+
+This documentation will cover how to create and build your own localization of Feed The Monster. For pedagogical tips on getting started or registering interest in localizing to a specific language, please [contact us](https://www.curiouslearning.org/contact).
 
 # Generating a level generation (levelgen) file from a scope and sequence
 
@@ -48,7 +56,7 @@ Before launching the app to the Play Store, also make sure to lockdown your Fire
 
 # Posting to the Google Play Store
 
-// To Do -- how to post to the Google Play Store and receive access to past Feed The Monster data
+If you would like to: receive past data on other Feed The Monster localizations, receive a template Data Studio visualization for easily analyzing Feed The Monster data, receive helpful distribution tips in getting Feed The Monster out to those most in need, contribute your localization's data to existing Feed The Monster data, or contribute your localization for inclusion in a network of literacy learning applications, please [contact us](https://www.curiouslearning.org/contact).
 
 
 # Eduapp4syria

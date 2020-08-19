@@ -2,7 +2,8 @@
 
 This repository contains the code for the core Feed the Monster Unity app, including all language-independent gameplay code and assets. 
 
-**Development environment:** Unity 2017.4.19f1 
+**Development environment:** Unity 2017.4.19f1
+
 **Supplementary plug-ins:** Unity Firebase SDK version 6.3.0
 
 # Generating a level generation (levelgen) file from a scope and sequence
@@ -15,7 +16,7 @@ Language Pack data files, which contain the language-specific content, as well a
 https://github.com/curiouslearning/ftm-languagepacks/tree/langpacks
 
 1. Download the folder for the language you wish to build to a directory on your computer outside the Feed The Monster core project.
-1. Add your google-services.json file with your Firebase project information to the Assets directory of the Feed The Monster core project. If you have not already created a google-services.json file for your group of languages, see the ["Data flow from app events to storage"](#data-flow-from-app-events-to-storage) section.
+1. Add your google-services.json file with your Firebase project information to the Assets directory of the Feed The Monster core project. If you have not already created a google-services.json file for your group of languages, see the [following section](#data-flow-from-app-events-to-storage).
 1. Open the Feed the Monster core project in a supported Unity version, with a selected build target of Android.
 1. From the Unity menu toolbar item LangPacks, click Parse LangPack. This will open up a folder selection dialog window.
 1. Select the location of the langpack folder you downloaded in step 1. This step might take a few minutes as the Unity asset database updates with the language-specific content.

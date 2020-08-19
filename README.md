@@ -8,7 +8,7 @@ Unity 2017.4.19f1
 **Supplementary plug-ins:** 
 Unity Firebase SDK version 6.3.0
 
-**Related repositories** 
+**Related repositories:** 
 1. [Language packs](https://github.com/curiouslearning/ftm-languagepacks)
 1. [Automation scripts](https://github.com/curiouslearning/ftm-automation)
 

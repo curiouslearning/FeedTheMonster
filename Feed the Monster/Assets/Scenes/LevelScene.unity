@@ -83135,6 +83135,9 @@ MonoBehaviour:
   LetterPrefab_2:
   - {fileID: 169574, guid: 81654197b7a212d44af0a14326dbda4b, type: 3}
   - {fileID: 169574, guid: 6b374927e11363b4e9a10d5f21f224f3, type: 3}
+  FeedbackBase:
+  - {fileID: 1883663276120570023, guid: 63a5b0e3f4888bd46b5eb9a09779e3b5, type: 3}
+  - {fileID: 1883663276120570023, guid: 981ef6f7320d8104c92822253d1bf936, type: 3}
   LettersLocations:
   - {fileID: 37}
   - {fileID: 68}

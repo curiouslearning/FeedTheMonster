@@ -1,6 +1,6 @@
 # Feed The Monster Core
 
-This repository contains the code for the core Feed the Monster app unity app, including all language-independent gameplay code and assets. Feed the Monster is built in Unity 2017.4.19f1, and uses the Unity Firebase plugin version 6.3.0
+This repository contains the code for the core Feed the Monster app unity app, including all language-independent gameplay code and assets. Feed the Monster is built in Unity 2019.4.8f1, and uses the Unity Firebase plugin version 6.3.0
 
 # Applying a Language Pack
 

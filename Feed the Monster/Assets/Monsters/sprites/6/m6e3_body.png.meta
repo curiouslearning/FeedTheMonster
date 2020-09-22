@@ -1,31 +1,72 @@
 fileFormatVersion: 2
 guid: 9a4f89b3cbeca499d832ba3a05d2fd97
-timeCreated: 1486054566
-licenseType: Free
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: m6e3_body
-    21300002: m6e3_hand_1a
-    21300004: m6e3_hand_1b
-    21300006: m6e3_hand_2
-    21300008: m6e3_tongue
-    21300010: m6e3_arm1
-    21300012: m6e3_arm2
-    21300014: m6e3_brow2
-    21300016: m6e3_brow1
-    21300018: m6e3_helmet_back
-    21300020: m6e3_helmet_feather_1
-    21300022: m6e3_helmet_feather_2
-    21300024: m6e3_helmet_feather_3
-    21300026: m6e3_helmet_feather_4
-    21300028: m6e3_helmet_feather_5
-    21300030: m6e3_helmet_feather_6
-    21300032: m6e3_leg1
-    21300034: m6e3_leg2
-    21300036: m6e3_helmet_front
-    21300038: m6e3_leg_plaster
-    21300040: m6e3_shadow
-  serializedVersion: 4
+  internalIDToNameTable:
+  - first:
+      213: 21300000
+    second: m6e3_body
+  - first:
+      213: 21300002
+    second: m6e3_hand_1a
+  - first:
+      213: 21300004
+    second: m6e3_hand_1b
+  - first:
+      213: 21300006
+    second: m6e3_hand_2
+  - first:
+      213: 21300008
+    second: m6e3_tongue
+  - first:
+      213: 21300010
+    second: m6e3_arm1
+  - first:
+      213: 21300012
+    second: m6e3_arm2
+  - first:
+      213: 21300014
+    second: m6e3_brow2
+  - first:
+      213: 21300016
+    second: m6e3_brow1
+  - first:
+      213: 21300018
+    second: m6e3_helmet_back
+  - first:
+      213: 21300020
+    second: m6e3_helmet_feather_1
+  - first:
+      213: 21300022
+    second: m6e3_helmet_feather_2
+  - first:
+      213: 21300024
+    second: m6e3_helmet_feather_3
+  - first:
+      213: 21300026
+    second: m6e3_helmet_feather_4
+  - first:
+      213: 21300028
+    second: m6e3_helmet_feather_5
+  - first:
+      213: 21300030
+    second: m6e3_helmet_feather_6
+  - first:
+      213: 21300032
+    second: m6e3_leg1
+  - first:
+      213: 21300034
+    second: m6e3_leg2
+  - first:
+      213: 21300036
+    second: m6e3_helmet_front
+  - first:
+      213: 21300038
+    second: m6e3_leg_plaster
+  - first:
+      213: 21300040
+    second: m6e3_shadow
+  externalObjects: {}
+  serializedVersion: 11
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -33,6 +74,8 @@ TextureImporter:
     linearTexture: 0
     fadeOut: 0
     borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
     mipMapFadeDistanceStart: 1
     mipMapFadeDistanceEnd: 3
   bumpmap:
@@ -41,6 +84,8 @@ TextureImporter:
     heightScale: 0.25
     normalMapFilter: 0
   isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -48,10 +93,13 @@ TextureImporter:
   textureFormat: 1
   maxTextureSize: 2048
   textureSettings:
+    serializedVersion: 2
     filterMode: -1
     aniso: -1
-    mipBias: -1
-    wrapMode: 1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -60,49 +108,68 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
   textureType: 8
   textureShape: 1
+  singleChannelComponent: 0
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  applyGammaDecoding: 1
   platformSettings:
-  - buildTarget: DefaultTexturePlatform
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
+    resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
-  - buildTarget: Standalone
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: Standalone
     maxTextureSize: 2048
+    resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
-  - buildTarget: iPhone
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: iPhone
     maxTextureSize: 2048
+    resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
-  - buildTarget: Android
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: Android
     maxTextureSize: 2048
+    resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -118,7 +185,15 @@ TextureImporter:
       pivot: {x: 0.49102, y: 0.07775078}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 02305410000000000800000000000000
+      internalID: 21300000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: m6e3_hand_1a
       rect:
@@ -131,7 +206,15 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.918301}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 22305410000000000800000000000000
+      internalID: 21300002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: m6e3_hand_1b
       rect:
@@ -144,7 +227,15 @@ TextureImporter:
       pivot: {x: 0.4999994, y: 0.8966648}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 42305410000000000800000000000000
+      internalID: 21300004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: m6e3_hand_2
       rect:
@@ -157,7 +248,15 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.9162926}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 62305410000000000800000000000000
+      internalID: 21300006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: m6e3_tongue
       rect:
@@ -170,7 +269,15 @@ TextureImporter:
       pivot: {x: 0.500001, y: 0.93593}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 82305410000000000800000000000000
+      internalID: 21300008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: m6e3_arm1
       rect:
@@ -183,7 +290,15 @@ TextureImporter:
       pivot: {x: 0.18678938, y: 0.8697071}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: a2305410000000000800000000000000
+      internalID: 21300010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: m6e3_arm2
       rect:
@@ -196,7 +311,15 @@ TextureImporter:
       pivot: {x: 0.905652, y: 0.9192895}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: c2305410000000000800000000000000
+      internalID: 21300012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: m6e3_brow2
       rect:
@@ -209,7 +332,15 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: e2305410000000000800000000000000
+      internalID: 21300014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: m6e3_brow1
       rect:
@@ -222,7 +353,15 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 03305410000000000800000000000000
+      internalID: 21300016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: m6e3_helmet_back
       rect:
@@ -235,7 +374,15 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 23305410000000000800000000000000
+      internalID: 21300018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: m6e3_helmet_feather_1
       rect:
@@ -248,7 +395,15 @@ TextureImporter:
       pivot: {x: 0.10143433, y: 0.023724062}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 43305410000000000800000000000000
+      internalID: 21300020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: m6e3_helmet_feather_2
       rect:
@@ -261,7 +416,15 @@ TextureImporter:
       pivot: {x: 0.019902723, y: 0.020747868}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 63305410000000000800000000000000
+      internalID: 21300022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: m6e3_helmet_feather_3
       rect:
@@ -274,7 +437,15 @@ TextureImporter:
       pivot: {x: 0.0041452083, y: 0.022893172}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 83305410000000000800000000000000
+      internalID: 21300024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: m6e3_helmet_feather_4
       rect:
@@ -287,7 +458,15 @@ TextureImporter:
       pivot: {x: 0.00355081, y: 0.017500687}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: a3305410000000000800000000000000
+      internalID: 21300026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: m6e3_helmet_feather_5
       rect:
@@ -300,7 +479,15 @@ TextureImporter:
       pivot: {x: -0.011594519, y: 0.008987694}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: c3305410000000000800000000000000
+      internalID: 21300028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: m6e3_helmet_feather_6
       rect:
@@ -313,7 +500,15 @@ TextureImporter:
       pivot: {x: 0.02733815, y: 0.07420044}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: e3305410000000000800000000000000
+      internalID: 21300030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: m6e3_leg1
       rect:
@@ -326,7 +521,15 @@ TextureImporter:
       pivot: {x: 0.49999928, y: 0.84967643}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 04305410000000000800000000000000
+      internalID: 21300032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: m6e3_leg2
       rect:
@@ -339,7 +542,15 @@ TextureImporter:
       pivot: {x: 0.47820693, y: 0.71209437}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 24305410000000000800000000000000
+      internalID: 21300034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: m6e3_helmet_front
       rect:
@@ -352,7 +563,15 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 44305410000000000800000000000000
+      internalID: 21300036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: m6e3_leg_plaster
       rect:
@@ -365,7 +584,15 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 64305410000000000800000000000000
+      internalID: 21300038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: m6e3_shadow
       rect:
@@ -378,9 +605,28 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 84305410000000000800000000000000
+      internalID: 21300040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
   spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

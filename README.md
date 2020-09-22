@@ -1,11 +1,12 @@
 # Feed The Monster Core
 
+
 This repository contains the code for the core Feed the Monster Unity app, including all language-independent gameplay code and assets. The following documentation will cover how to create and build your own localization of Feed The Monster.
 
 For pedagogical tips on getting started or registering interest in localizing to a specific language, please [contact us](https://www.curiouslearning.org/contact).
 
 **Development environment:**
-Unity 2017.4.19f1
+Unity 2019.4.8f1
 
 **Supplementary plug-ins:**
 Unity Firebase SDK version 6.3.0
@@ -16,7 +17,6 @@ Unity Firebase SDK version 6.3.0
 
 # Generating levels from a levelgen.csv file
 The [Level Generation code](https://github.com/curiouslearning/ftm-automation/tree/master/level_generation) section of the automation scripts repository contains instructions on how to format a comma-separated value file defining the content to be taught on each level, and how to use the python script that generates the individual level xml files from this levelgen.
-
 
 # Applying a Language Pack
 

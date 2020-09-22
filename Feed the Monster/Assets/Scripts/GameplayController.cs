@@ -107,7 +107,7 @@ public class GameplayController : MonoBehaviour {
 	public GameObject[] LetterPrefab_1;
 	public GameObject[] LetterPrefab_2;
 
-
+    public GameObject[] FeedbackBase;
 
 	public GameObject[] LettersLocations;
 	public GameObject LettersPanel;
@@ -1109,8 +1109,13 @@ public class GameplayController : MonoBehaviour {
 
 	void PlayPositive()
 	{
-		string fileName = AudioController.Instance.PlayFeedback ("positive");
-		ShowPositive (fileName);
+        //string fileName = AudioController.Instance.PlayFeedback ("positive");
+        //ShowPositive (fileName);
+        FeedbackInstance nf = Instantiate(FeedbackBase[Random.Range(0,FeedbackBase.Length)], UIController.Instance.GamePanel.transform).GetComponent<FeedbackInstance>();
+        AudioController.Instance.PlaySound(nf.fsound);
+
+
+
 	}
 
 	void ShowPositive(string fileName)

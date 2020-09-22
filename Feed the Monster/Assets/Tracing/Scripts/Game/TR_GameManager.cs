@@ -175,7 +175,7 @@ public class TR_GameManager : MonoBehaviour
 
 		if (Input.GetMouseButtonDown (0)) {
 			if (!shape.completed) {
-				brightEffect.GetComponent<ParticleEmitter> ().emit = true;
+                brightEffect.GetComponent<ParticleSystem>().Play();
 			}
 			
 			hit2d = Physics2D.Raycast (GetCurrentPlatformClickPosition (GameplayController.Instance.canvasCamera), Vector2.zero);
@@ -191,7 +191,7 @@ public class TR_GameManager : MonoBehaviour
 				}
 			}
 		} else if (Input.GetMouseButtonUp (0)) {
-			brightEffect.GetComponent<ParticleEmitter> ().emit = false;
+            brightEffect.GetComponent<ParticleSystem>().Stop();
 			DisableHand ();
 			shape.Invoke ("EnableTracingHand", 1);
 			ResetPath ();
@@ -634,7 +634,7 @@ public class TR_GameManager : MonoBehaviour
 	private void OnShapeComplete ()
 	{
 		DisableHand ();
-		brightEffect.GetComponent<ParticleEmitter> ().emit = false;
+		brightEffect.GetComponent<ParticleSystem> ().Stop();
 
 		Animator shapeAnimator = shape.GetComponent<Animator> ();
 		shapeAnimator.SetBool (shape.name, false);

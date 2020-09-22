@@ -1,27 +1,48 @@
 fileFormatVersion: 2
 guid: e7bc914cf9421914fb818d8c7a955d40
-timeCreated: 1467378292
-licenseType: Store
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: Number_1
-    21300002: Number_2
-    21300004: Numbers_0
-    21300006: Numbers_1
-    21300008: Numbers_2
-    21300010: Numbers_3
-    21300012: Numbers_4
-    21300014: Numbers_5
-    21300016: Numbers_6
-    21300018: Numbers_7
-  serializedVersion: 2
+  internalIDToNameTable:
+  - first:
+      213: 21300000
+    second: Number_1
+  - first:
+      213: 21300002
+    second: Number_2
+  - first:
+      213: 21300004
+    second: Numbers_0
+  - first:
+      213: 21300006
+    second: Numbers_1
+  - first:
+      213: 21300008
+    second: Numbers_2
+  - first:
+      213: 21300010
+    second: Numbers_3
+  - first:
+      213: 21300012
+    second: Numbers_4
+  - first:
+      213: 21300014
+    second: Numbers_5
+  - first:
+      213: 21300016
+    second: Numbers_6
+  - first:
+      213: 21300018
+    second: Numbers_7
+  externalObjects: {}
+  serializedVersion: 11
   mipmaps:
     mipMapMode: 0
     enableMipMap: 1
+    sRGBTexture: 1
     linearTexture: 0
-    correctGamma: 0
     fadeOut: 0
     borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
     mipMapFadeDistanceStart: 1
     mipMapFadeDistanceEnd: 3
   bumpmap:
@@ -30,37 +51,61 @@ TextureImporter:
     heightScale: 0.25
     normalMapFilter: 0
   isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
   grayScaleToAlpha: 0
-  generateCubemap: 0
+  generateCubemap: 6
   cubemapConvolution: 0
-  cubemapConvolutionSteps: 7
-  cubemapConvolutionExponent: 1.5
   seamlessCubemap: 0
   textureFormat: -1
   maxTextureSize: 1024
   textureSettings:
+    serializedVersion: 2
     filterMode: -1
     aniso: 16
-    mipBias: -1
-    wrapMode: 1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
   nPOTScale: 0
   lightmap: 0
-  rGBM: 0
   compressionQuality: 50
-  allowsAlphaSplitting: 0
   spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
   alphaIsTransparency: 1
+  spriteTessellationDetail: -1
   textureType: 8
-  buildTargetSettings: []
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 1024
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
+    serializedVersion: 2
     sprites:
-    - name: Numbers_0
+    - serializedVersion: 2
+      name: Numbers_0
       rect:
         serializedVersion: 2
         x: 27
@@ -70,16 +115,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -42.5, y: 50}
-        - {x: -50.5, y: 41}
-        - {x: -50.5, y: -39}
-        - {x: -38.5, y: -50}
-        - {x: 31.5, y: -50}
-        - {x: 50.5, y: -43}
-        - {x: 50.5, y: 42}
-        - {x: 34.5, y: 50}
-    - name: Numbers_1
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42305410000000000800000000000000
+      internalID: 21300004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Numbers_1
       rect:
         serializedVersion: 2
         x: 147
@@ -89,18 +136,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -26, y: 50}
-        - {x: -50, y: 27}
-        - {x: -50, y: -28}
-        - {x: -49, y: -36}
-        - {x: -27, y: -50}
-        - {x: 21, y: -50}
-        - {x: 35, y: -47}
-        - {x: 50, y: -33}
-        - {x: 50, y: 29}
-        - {x: 44, y: 50}
-    - name: Numbers_2
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62305410000000000800000000000000
+      internalID: 21300006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Numbers_2
       rect:
         serializedVersion: 2
         x: 265
@@ -110,16 +157,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -33.5, y: 50}
-        - {x: -50.5, y: 32}
-        - {x: -50.5, y: -42}
-        - {x: -27.5, y: -50}
-        - {x: 36.5, y: -50}
-        - {x: 50.5, y: -38}
-        - {x: 50.5, y: 40}
-        - {x: 24.5, y: 50}
-    - name: Numbers_3
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82305410000000000800000000000000
+      internalID: 21300008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Numbers_3
       rect:
         serializedVersion: 2
         x: 381
@@ -129,16 +178,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -46.5, y: 52}
-        - {x: -50.5, y: 50}
-        - {x: -50.5, y: -40}
-        - {x: -47.5, y: -52}
-        - {x: 28.5, y: -52}
-        - {x: 50.5, y: -28}
-        - {x: 50.5, y: 43}
-        - {x: 23.5, y: 52}
-    - name: Numbers_4
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2305410000000000800000000000000
+      internalID: 21300010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Numbers_4
       rect:
         serializedVersion: 2
         x: 27
@@ -148,16 +199,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -48.5, y: 50.5}
-        - {x: -50.5, y: 48.5}
-        - {x: -50.5, y: -23.5}
-        - {x: -34.5, y: -50.5}
-        - {x: 47.5, y: -50.5}
-        - {x: 50.5, y: -43.5}
-        - {x: 50.5, y: 45.5}
-        - {x: 38.5, y: 50.5}
-    - name: Numbers_5
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2305410000000000800000000000000
+      internalID: 21300012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Numbers_5
       rect:
         serializedVersion: 2
         x: 150
@@ -167,14 +220,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -50.5, y: -47.5}
-        - {x: -48.5, y: -50.5}
-        - {x: 50.5, y: -50.5}
-        - {x: 50.5, y: 50.5}
-        - {x: -46.5, y: 50.5}
-        - {x: -50.5, y: 33.5}
-    - name: Numbers_6
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2305410000000000800000000000000
+      internalID: 21300014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Numbers_6
       rect:
         serializedVersion: 2
         x: 265
@@ -184,14 +241,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -50.5, y: 50.5}
-        - {x: -50.5, y: -50.5}
-        - {x: 46.5, y: -50.5}
-        - {x: 50.5, y: -36.5}
-        - {x: 50.5, y: 47.5}
-        - {x: 48.5, y: 50.5}
-    - name: Numbers_7
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03305410000000000800000000000000
+      internalID: 21300016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Numbers_7
       rect:
         serializedVersion: 2
         x: 382
@@ -201,18 +262,29 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -41, y: 50.5}
-        - {x: -51, y: 29.5}
-        - {x: -51, y: -38.5}
-        - {x: -42, y: -49.5}
-        - {x: -36, y: -50.5}
-        - {x: 31, y: -50.5}
-        - {x: 51, y: -26.5}
-        - {x: 51, y: 43.5}
-        - {x: 38, y: 50.5}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23305410000000000800000000000000
+      internalID: 21300018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
   spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

@@ -77,7 +77,7 @@ public class TR_WinDialog : MonoBehaviour
 	private IEnumerator ShowEffectCouroutine (Transform fadingStar)
 	{
 		yield return new WaitForSeconds (0.5f);
-		fadingStar.Find ("Effect").GetComponent<ParticleEmitter> ().emit = true;
+        fadingStar.Find("Effect").GetComponent<ParticleSystem>().Play();
 	}
 
 	public enum StarsNumber

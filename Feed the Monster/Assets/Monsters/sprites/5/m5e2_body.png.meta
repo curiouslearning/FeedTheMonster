@@ -1,34 +1,81 @@
 fileFormatVersion: 2
 guid: b2457145eb1cf48f8835dd62256a8f66
-timeCreated: 1484506018
-licenseType: Free
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: m5e2_body_top
-    21300002: m5e2_cheek
-    21300004: m5e2_body_2
-    21300006: m5e2_dots
-    21300008: m5e2_leaf1
-    21300010: m5e2_body_bottom
-    21300012: m5e2_hair_1_2
-    21300014: m5e2_hair1_1
-    21300016: m5e2_hair_2_1
-    21300018: m5e2_leaf2
-    21300020: m5e2_brow1
-    21300022: m5e2_brow2
-    21300024: m5e2_hair_2_2
-    21300026: m5e2_butter1
-    21300028: m5e2_butter2
-    21300030: m5e2_butter3
-    21300032: m5e2_leaf3
-    21300034: m5e2_shadow
-    21300036: m5e2_leaf2_shad
-    21300038: m5e2_leaf3_shad
-    21300040: m5e2_butter2a
-    21300042: m5e2_butter1a
-    21300044: m5e2_hair-2_3
-    21300046: m5e2_mouth_tongue
-  serializedVersion: 4
+  internalIDToNameTable:
+  - first:
+      213: 21300000
+    second: m5e2_body_top
+  - first:
+      213: 21300002
+    second: m5e2_cheek
+  - first:
+      213: 21300004
+    second: m5e2_body_2
+  - first:
+      213: 21300006
+    second: m5e2_dots
+  - first:
+      213: 21300008
+    second: m5e2_leaf1
+  - first:
+      213: 21300010
+    second: m5e2_body_bottom
+  - first:
+      213: 21300012
+    second: m5e2_hair_1_2
+  - first:
+      213: 21300014
+    second: m5e2_hair1_1
+  - first:
+      213: 21300016
+    second: m5e2_hair_2_1
+  - first:
+      213: 21300018
+    second: m5e2_leaf2
+  - first:
+      213: 21300020
+    second: m5e2_brow1
+  - first:
+      213: 21300022
+    second: m5e2_brow2
+  - first:
+      213: 21300024
+    second: m5e2_hair_2_2
+  - first:
+      213: 21300026
+    second: m5e2_butter1
+  - first:
+      213: 21300028
+    second: m5e2_butter2
+  - first:
+      213: 21300030
+    second: m5e2_butter3
+  - first:
+      213: 21300032
+    second: m5e2_leaf3
+  - first:
+      213: 21300034
+    second: m5e2_shadow
+  - first:
+      213: 21300036
+    second: m5e2_leaf2_shad
+  - first:
+      213: 21300038
+    second: m5e2_leaf3_shad
+  - first:
+      213: 21300040
+    second: m5e2_butter2a
+  - first:
+      213: 21300042
+    second: m5e2_butter1a
+  - first:
+      213: 21300044
+    second: m5e2_hair-2_3
+  - first:
+      213: 21300046
+    second: m5e2_mouth_tongue
+  externalObjects: {}
+  serializedVersion: 11
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -36,6 +83,8 @@ TextureImporter:
     linearTexture: 0
     fadeOut: 0
     borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
     mipMapFadeDistanceStart: 1
     mipMapFadeDistanceEnd: 3
   bumpmap:
@@ -44,6 +93,8 @@ TextureImporter:
     heightScale: 0.25
     normalMapFilter: 0
   isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -51,10 +102,13 @@ TextureImporter:
   textureFormat: -1
   maxTextureSize: 2048
   textureSettings:
+    serializedVersion: 2
     filterMode: -1
     aniso: 16
-    mipBias: -1
-    wrapMode: 1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -63,49 +117,68 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
   textureType: 8
   textureShape: 1
+  singleChannelComponent: 0
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  applyGammaDecoding: 1
   platformSettings:
-  - buildTarget: DefaultTexturePlatform
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
+    resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
-  - buildTarget: Standalone
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: Standalone
     maxTextureSize: 2048
+    resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
-  - buildTarget: iPhone
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: iPhone
     maxTextureSize: 2048
+    resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
-  - buildTarget: Android
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: Android
     maxTextureSize: 2048
+    resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -121,7 +194,15 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 02305410000000000800000000000000
+      internalID: 21300000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: m5e2_cheek
       rect:
@@ -134,7 +215,15 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 22305410000000000800000000000000
+      internalID: 21300002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: m5e2_body_2
       rect:
@@ -147,7 +236,15 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 42305410000000000800000000000000
+      internalID: 21300004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: m5e2_dots
       rect:
@@ -160,7 +257,15 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 62305410000000000800000000000000
+      internalID: 21300006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: m5e2_leaf1
       rect:
@@ -173,7 +278,15 @@ TextureImporter:
       pivot: {x: 0.948281, y: 0.049959257}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 82305410000000000800000000000000
+      internalID: 21300008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: m5e2_body_bottom
       rect:
@@ -186,7 +299,15 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: a2305410000000000800000000000000
+      internalID: 21300010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: m5e2_hair_1_2
       rect:
@@ -199,7 +320,15 @@ TextureImporter:
       pivot: {x: 0.9469154, y: 0.9671375}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: c2305410000000000800000000000000
+      internalID: 21300012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: m5e2_hair1_1
       rect:
@@ -212,7 +341,15 @@ TextureImporter:
       pivot: {x: 0.93316466, y: 0.048787434}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: e2305410000000000800000000000000
+      internalID: 21300014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: m5e2_hair_2_1
       rect:
@@ -225,7 +362,15 @@ TextureImporter:
       pivot: {x: 0.9459058, y: 0.042184226}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 03305410000000000800000000000000
+      internalID: 21300016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: m5e2_leaf2
       rect:
@@ -238,7 +383,15 @@ TextureImporter:
       pivot: {x: 0.95857126, y: 0.050175592}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 23305410000000000800000000000000
+      internalID: 21300018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: m5e2_brow1
       rect:
@@ -251,7 +404,15 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 43305410000000000800000000000000
+      internalID: 21300020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: m5e2_brow2
       rect:
@@ -264,7 +425,15 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 63305410000000000800000000000000
+      internalID: 21300022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: m5e2_hair_2_2
       rect:
@@ -277,7 +446,15 @@ TextureImporter:
       pivot: {x: 0.9478706, y: 0.1613114}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 83305410000000000800000000000000
+      internalID: 21300024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: m5e2_butter1
       rect:
@@ -290,7 +467,15 @@ TextureImporter:
       pivot: {x: 0.5911161, y: 0.043030027}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: a3305410000000000800000000000000
+      internalID: 21300026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: m5e2_butter2
       rect:
@@ -303,7 +488,15 @@ TextureImporter:
       pivot: {x: 0.4757665, y: 0.06926838}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: c3305410000000000800000000000000
+      internalID: 21300028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: m5e2_butter3
       rect:
@@ -316,7 +509,15 @@ TextureImporter:
       pivot: {x: 0.45186177, y: 0.65070385}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: e3305410000000000800000000000000
+      internalID: 21300030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: m5e2_leaf3
       rect:
@@ -329,7 +530,15 @@ TextureImporter:
       pivot: {x: 0.0036664691, y: 0.01870642}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 04305410000000000800000000000000
+      internalID: 21300032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: m5e2_shadow
       rect:
@@ -342,7 +551,15 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 24305410000000000800000000000000
+      internalID: 21300034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: m5e2_leaf2_shad
       rect:
@@ -355,7 +572,15 @@ TextureImporter:
       pivot: {x: 0.91637504, y: 0.1218406}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 44305410000000000800000000000000
+      internalID: 21300036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: m5e2_leaf3_shad
       rect:
@@ -368,7 +593,15 @@ TextureImporter:
       pivot: {x: 0.14655049, y: 0.08839609}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 64305410000000000800000000000000
+      internalID: 21300038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: m5e2_butter2a
       rect:
@@ -381,7 +614,15 @@ TextureImporter:
       pivot: {x: 0.48130283, y: 0.96199024}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 84305410000000000800000000000000
+      internalID: 21300040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: m5e2_butter1a
       rect:
@@ -394,7 +635,15 @@ TextureImporter:
       pivot: {x: 0.5672209, y: 0.9596024}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: a4305410000000000800000000000000
+      internalID: 21300042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: m5e2_hair-2_3
       rect:
@@ -407,7 +656,15 @@ TextureImporter:
       pivot: {x: 0.9841283, y: 0.77367884}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: c4305410000000000800000000000000
+      internalID: 21300044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: m5e2_mouth_tongue
       rect:
@@ -420,9 +677,28 @@ TextureImporter:
       pivot: {x: 0.4999996, y: 0.92486113}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: e4305410000000000800000000000000
+      internalID: 21300046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
   spritePackingTag: Monster_5_2
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

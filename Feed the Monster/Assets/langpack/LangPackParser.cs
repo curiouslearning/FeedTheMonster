@@ -55,13 +55,14 @@ public class LangPackParser : MonoBehaviour {
     }
 
 
-    [MenuItem("LangPacks/Parse LangPack")]
+    //[MenuItem("LangPacks/Parse LangPack")]
     static void ParseTest()
     {
+#if UNITY_EDITOR
         string path = EditorUtility.OpenFolderPanel("Select LangPack Folder", "", "");
         Debug.Log("path: " + path);
         instance.doParse(path);
-
+#endif
 
     }
 
@@ -76,7 +77,7 @@ public class LangPackParser : MonoBehaviour {
 
     
     void parseInternal() {
-
+#if UNITY_EDITOR
         //parse from settings file
         try
         {
@@ -206,7 +207,7 @@ public class LangPackParser : MonoBehaviour {
             Debug.Log(e.Message);
             return;
         }
-
+#endif
     }
 
 

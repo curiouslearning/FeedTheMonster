@@ -1,4 +1,4 @@
-<XMLLevel CollectableMonster="" HideCallout="-1" LettersGroup="18" SegmentTime="11" StoneType="1" monsterInputType="Word">
+<XMLLevel CollectableMonster="" HideCallout="-1" LettersGroup="18" SegmentTime="11" StoneType="1" monsterInputType="SoundWord">
   <Segments>
     <Segment SegmentTime="10" spawnIds="20,75,15,23,74,14,11,12,60">
     	

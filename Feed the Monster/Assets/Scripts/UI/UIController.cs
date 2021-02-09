@@ -72,7 +72,10 @@ public class UIController : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKeyDown (KeyCode.Escape)) {
+
+        GamePanel.transform.parent.GetComponent<RectTransform>().localScale = (Camera.main.aspect < .501f) ? new Vector3((1f-((.501f - Camera.main.aspect)*4f)), 1f, 1f) : Vector3.one;
+
+        if (Input.GetKeyDown (KeyCode.Escape)) {
 			//			Application.Quit(); 
 		}
 	}

@@ -6,8 +6,9 @@ public class UIController : MonoBehaviour {
 	public static UIController Instance;
 
 
-
-	public GameObject SplashPanel;
+    public Button pausebutton;
+    public RectTransform crc;
+    public GameObject SplashPanel;
 	public Button SplashScreenStartButton;
 	public GameObject MapPanel;
 	public GameObject GamePanel;
@@ -42,8 +43,9 @@ public class UIController : MonoBehaviour {
 	GameObject mOpenPopup;
 
 
+    bool isalreadypaused;
 
-	public GameObject LastPanel {
+    public GameObject LastPanel {
 		get { 
 			return mLastPanel;
 		}
@@ -58,8 +60,9 @@ public class UIController : MonoBehaviour {
 		Instance = this;
 		Application.runInBackground = false;
 		Input.multiTouchEnabled = false;
+        pausebutton = GamePanel.transform.Find("Button - Pause").GetComponent<Button>();
 
-		HideAllPanels();
+        HideAllPanels();
 	}
 
 	// Use this for initialization
@@ -72,7 +75,16 @@ public class UIController : MonoBehaviour {
 		if (Input.GetKeyDown (KeyCode.Escape)) {
 			//			Application.Quit(); 
 		}
-	}
+        if (Camera.main.aspect < .49f)
+        {
+            crc.localScale = new Vector3(.8f, 1f, 1f);
+
+        }
+        else
+        {
+            crc.localScale = Vector3.one;
+        }
+    }
 
 
 	void Init()
@@ -94,9 +106,18 @@ public class UIController : MonoBehaviour {
 	{
 		ShowPanel (MapPanel);
 	}
-	
 
-	public void ShowPopup(GameObject popup)
+    public void trypause()
+    {
+        if (!isalreadypaused)
+        {
+            pausebutton.enabled = false;
+            ShowPopup(PausePopup);
+        }
+    }
+
+
+    public void ShowPopup(GameObject popup)
 	{
 		GameObject oldPopup = mOpenPopup;
 
@@ -105,7 +126,12 @@ public class UIController : MonoBehaviour {
 		
 		mOpenPopup = popup;
 		popup.SetActive (true);
-	}
+        if (popup == PausePopup)
+        {
+            isalreadypaused = true;
+            //  Debug.Log("set paused");
+        }
+    }
 
 	bool mLoadingScreenRequired = false; 
 
@@ -172,7 +198,10 @@ public class UIController : MonoBehaviour {
 		if (popup == mOpenPopup) {
 			mOpenPopup = null;
 		}
-	}
+        isalreadypaused = false;
+        //    Debug.Log("undo pause");
+        pausebutton.enabled = true;
+    }
 
 	public void LevelButtonClick(int levelIndex)
 	{
@@ -204,7 +233,10 @@ public class UIController : MonoBehaviour {
 	{
 		ConfirmationPopup.mNextPanelToShow = MapPanel;
 		ShowPopup (ConfirmationPopup.gameObject);
-	}
+        isalreadypaused = false;
+        //    Debug.Log("undo pause");
+        pausebutton.enabled = true;
+    }
 
 
 	public void MapClick() // TODO: Resolve Bug - Pausing the game end exiting to map could result in "New Monster Discovered Screen" if enough points were obtained.
@@ -259,10 +291,17 @@ public class UIController : MonoBehaviour {
 
 	}
 
+    public void undothepause()
+    {
+        isalreadypaused = true;
+    }
+    public void redothepause()
+    {
+        isalreadypaused = false;
+    }
 
 
-
-	public void OnChangeProfile(GameObject nextScreen)
+    public void OnChangeProfile(GameObject nextScreen)
 	{
 		/*
 		if (mCurrentPanel == MapPanel) {

@@ -1,7 +1,7 @@
 <XMLLevel CollectableMonster="" HideCallout="4" LettersGroup="6" SegmentTime="11" StoneType="1" monsterInputType="Letter">
   <Segments>
     <Segment SegmentTime="11" spawnIds="20,75,15,23,74,14,11,12,60">
-      
+
 	  <MonsterRequiredLetters>
 		<string>c</string>
 	  </MonsterRequiredLetters>
@@ -14,7 +14,7 @@
       </Stones>
     </Segment>
 	<Segment SegmentTime="11" spawnIds="20,75,15,23,74,14,11,12,60">
-      
+
 	  <MonsterRequiredLetters>
 		<string>b</string>
 	  </MonsterRequiredLetters>
@@ -22,12 +22,12 @@
 	  </MonsterAllLetters>
 	  <Stones>
         <string spawnId="4">n</string>
-        <string spawnId="54">i</string>
+        <string spawnId="54">b</string>
 		<string spawnId="58">s</string>
       </Stones>
     </Segment>
 	<Segment SegmentTime="11" spawnIds="20,75,15,23,74,14,11,12,60">
-      
+
 	  <MonsterRequiredLetters>
 		<string>u</string>
 	  </MonsterRequiredLetters>
@@ -40,7 +40,7 @@
       </Stones>
     </Segment>
 	<Segment SegmentTime="11" spawnIds="20,75,15,23,74,14,11,12,60">
-      
+
 	  <MonsterRequiredLetters>
 		<string>b</string>
 	  </MonsterRequiredLetters>
@@ -53,7 +53,7 @@
       </Stones>
     </Segment>
 	<Segment SegmentTime="11" spawnIds="20,75,15,23,74,14,11,12,60">
-      
+
 	  <MonsterRequiredLetters>
 		<string>g</string>
 	  </MonsterRequiredLetters>

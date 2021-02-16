@@ -397,7 +397,8 @@ public class GameplayController : MonoBehaviour {
 	{
 		Instance = this;
 		_levels = new Level[NumOfLevels];
-	}
+       
+    }
 
 	public void SetState(GameState state)
 	{

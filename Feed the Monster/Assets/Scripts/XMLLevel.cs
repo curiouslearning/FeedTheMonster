@@ -20,8 +20,20 @@ public class XMLLevel {
 	[XmlAttribute("ShuffleSegment")]
 	public bool ShuffleSegment;
 
+    [XmlAttribute("mainskill")]
+    public string MainSkill;
 
-	[XmlAttribute("LevelTemplete")]
+    [XmlAttribute("subskill")]
+    public string SubSkill;
+
+    [XmlAttribute("subskillAmt")]
+    public string subskillamt;
+
+
+
+
+
+    [XmlAttribute("LevelTemplete")]
 	public string LevelTemplete;
 
 	[XmlAttribute("SegmentTime")]
@@ -120,6 +132,9 @@ public class XMLLevel {
 		level.lettersGroup = xmlLevel.LettersGroup;
 		level.monsterInputType = xmlLevel.monsterInputType;
 		level.hideCallout = xmlLevel.HideCallout;
+        level.LevelSkill = xmlLevel.MainSkill;
+        level.LevelSubskill = xmlLevel.SubSkill;
+        level.LevelSubskillAmt = xmlLevel.subskillamt;
 		level.shuffleSegment = xmlLevel.ShuffleSegment;
 		level.SegmentTime = (xmlLevel.SegmentTime > 0f) ? xmlLevel.SegmentTime : GameplaySettings.CountdownDefault;
 		level.StoneType = xmlLevel.StoneType;

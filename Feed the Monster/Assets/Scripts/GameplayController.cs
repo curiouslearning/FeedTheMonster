@@ -465,6 +465,8 @@ public class GameplayController : MonoBehaviour {
 			CurrentLevel.ShuffleSegments ();
 		}
 
+        Debug.Log(CurrentLevel.LevelSubskill);
+
 //		Debug.Log ("Load Level " + levelIndex);
 		SetState(GameState.LoadLevel);
 		mGameplayPosition.LevelScore = 0;

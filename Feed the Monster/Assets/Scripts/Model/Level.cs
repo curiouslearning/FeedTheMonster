@@ -10,6 +10,9 @@ public class Level : ScriptableObject {
 	public Monster CollectableMonster;
 	public MonsterInputType monsterInputType;
 
+    public string LevelSkill, LevelSubskill;
+    public string LevelSubskillAmt;
+
 	public int lettersGroup;
 
 	public int hideCallout;

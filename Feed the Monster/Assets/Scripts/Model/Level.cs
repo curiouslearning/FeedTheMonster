@@ -11,7 +11,7 @@ public class Level : ScriptableObject {
 	public MonsterInputType monsterInputType;
 
     public string LevelSkill, LevelSubskill;
-    public string LevelSubskillAmt;
+    public float LevelSubskillAmt;
 
 	public int lettersGroup;
 

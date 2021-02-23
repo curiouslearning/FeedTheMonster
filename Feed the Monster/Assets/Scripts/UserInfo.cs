@@ -34,6 +34,8 @@ public class UserInfo : MonoBehaviour {
 		LastPlayingLevel,
 		LastMonsterIndex,
 		LastPettingZoneTutorial,
+        LevelSubskillEarned,
+        SubskillValue
 
 	}
 
@@ -91,6 +93,11 @@ public class UserInfo : MonoBehaviour {
 			return str + "LastPlayingLevel";
 		case Keys.LastPettingZoneTutorial:
 			return str + "LastPettingZoneTutorial";
+        case Keys.LevelSubskillEarned:
+            return str + "LevelSubskillEarned";
+        case Keys.SubskillValue:
+            return str + "SubskillValue";
+
 		}
 		return str;
 	}
@@ -244,6 +251,33 @@ public class UserInfo : MonoBehaviour {
 			return CollectedFriends.Length;
 		}
 	}
+
+    public void SetSubskillValue(string SubSkill, float value)
+    {
+        PlayerPrefs.SetFloat(getPrefsKey(Keys.SubskillValue, SubSkill), value);
+        Save();
+    }
+
+    public void SetEarnedSubskill(int levelIndex)
+    {
+        PlayerPrefs.SetInt(getPrefsKey(Keys.LevelSubskillEarned, levelIndex.ToString()), 1);
+        Save();
+    }
+
+    public bool HasEarnedSubskill (int levelIndex)
+    {
+        if (PlayerPrefs.GetInt(getPrefsKey(Keys.LevelSubskillEarned, levelIndex.ToString()),0) == 1)
+        {
+            return true;
+        }
+        return false;
+    }
+
+
+    public float GetSubskillValue(string Subskill)
+    {
+        return PlayerPrefs.GetFloat(getPrefsKey(Keys.SubskillValue, Subskill), 0);
+    }
 
 	public void SetHighestOpenLevel(int levelIndex)
 	{

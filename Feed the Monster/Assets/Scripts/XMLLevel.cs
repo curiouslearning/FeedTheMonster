@@ -27,7 +27,7 @@ public class XMLLevel {
     public string SubSkill;
 
     [XmlAttribute("subskillAmt")]
-    public string subskillamt;
+    public float subskillamt;
 
 
 
@@ -133,7 +133,8 @@ public class XMLLevel {
 		level.monsterInputType = xmlLevel.monsterInputType;
 		level.hideCallout = xmlLevel.HideCallout;
         level.LevelSkill = xmlLevel.MainSkill;
-        level.LevelSubskill = xmlLevel.SubSkill;
+        level.LevelSubskill = xmlLevel.SubSkill.ToLower();
+        Analitics.Instance.TryAddNewSubskill(level.LevelSubskill);
         level.LevelSubskillAmt = xmlLevel.subskillamt;
 		level.shuffleSegment = xmlLevel.ShuffleSegment;
 		level.SegmentTime = (xmlLevel.SegmentTime > 0f) ? xmlLevel.SegmentTime : GameplaySettings.CountdownDefault;

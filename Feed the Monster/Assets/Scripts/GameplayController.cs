@@ -465,7 +465,7 @@ public class GameplayController : MonoBehaviour {
 			CurrentLevel.ShuffleSegments ();
 		}
 
-        Debug.Log(CurrentLevel.LevelSubskill);
+       // Debug.Log(CurrentLevel.LevelSubskill);
 
 //		Debug.Log ("Load Level " + levelIndex);
 		SetState(GameState.LoadLevel);
@@ -1252,6 +1252,12 @@ public class GameplayController : MonoBehaviour {
 
 		if (stars > 0)
 		{
+
+            if (stars > 1)
+            {
+                Analitics.Instance.TryImproveSubskill(CurrentLevelIndex, CurrentLevel.LevelSubskill, CurrentLevel.LevelSubskillAmt);
+            }
+
 			UserInfo.Instance.SetLastLetterGroup(CurrentLevel.lettersGroup);
 			PlayWinImageAnimation ();
 			if (CurrentLevelIndex == 0) {

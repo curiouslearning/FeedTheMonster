@@ -1,14 +1,58 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class Analitics : MonoBehaviour
 {
 	public static Analitics Instance;
 
+        public List<string> ListOfSubskills;
+
+
+
+
+    public void TryAddNewSubskill(string SSN)
+    {
+        string subskillname = SSN.ToLower();
+        if (!ListOfSubskills.Contains(subskillname))
+        {
+            ListOfSubskills.Add(subskillname);
+        }
+    }
+
+
+    public void TryImproveSubskill(int levelnum, string SSN, float amt)
+    {
+        if (!UserInfo.Instance.HasEarnedSubskill(levelnum))
+        {
+            UserInfo.Instance.SetEarnedSubskill(levelnum);
+            ImproveSubskill(SSN, amt);
+
+        }
+    }
+
+    public void ImproveSubskill(string SSN, float amt)
+    {
+        float value = UserInfo.Instance.GetSubskillValue(SSN);
+        value = value + amt;
+        value = Mathf.Min(value, 100f);
+        UserInfo.Instance.SetSubskillValue(SSN, value);
+        ReportSubskillIncrease(SSN);
+    }
+
+
+    public void ReportSubskillIncrease(string SSN)
+    {
+        float value = UserInfo.Instance.GetSubskillValue(SSN);
+        Debug.Log("improving " + SSN + " to " + value);
+    }
+
+
 
 	void Awake()
 	{
 		Instance = this;
+
 	}
 
 

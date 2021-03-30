@@ -8,8 +8,10 @@ public class Analitics : MonoBehaviour
 
         public List<string> ListOfSubskills;
 
-
-
+    public int numsessions;
+    public float sessionstart, avgsession, totalplaytime;
+    public double sessionend;
+    public System.DateTime m_StartTime;
 
     public void TryAddNewSubskill(string SSN)
     {
@@ -45,15 +47,45 @@ public class Analitics : MonoBehaviour
     {
         float value = UserInfo.Instance.GetSubskillValue(SSN);
         Debug.Log("improving " + SSN + " to " + value);
+        treckEvent(AnaliticsCategory.SubSkills, UsersController.Instance.CurrentProfileId + "_IncreaseSubskill_" + SSN,SSN,value);
+
     }
 
+    public void ReportTimeTracking()
+    {
+        string pt = UsersController.Instance.CurrentProfileId + "_total_playtime";
 
+        treckEvent(AnaliticsCategory.TimeTracking, pt, pt, totalplaytime);
+    }
+
+    public void startTimeTracking(int uid)
+    {
+        if (PlayerPrefs.HasKey(uid + "_numSessions"))
+        {
+
+            numsessions = PlayerPrefs.GetInt(uid + "_numSessions");
+            totalplaytime = PlayerPrefs.GetFloat(uid + "_totalPlayTime");
+
+        }
+        else
+        {
+            numsessions = 0;
+            totalplaytime = 0f;
+        }
+       
+        m_StartTime = System.DateTime.Now;
+        Debug.Log(m_StartTime);
+
+    }
 
 	void Awake()
 	{
 		Instance = this;
 
-	}
+       
+
+
+    }
 
 
 	// Use this for initialization
@@ -65,10 +97,21 @@ public class Analitics : MonoBehaviour
 	}
 
 	void OnDisable() {
-		/*if (Firebase.Analytics.FirebaseAnalytics != null) {
+        /*if (Firebase.Analytics.FirebaseAnalytics != null) {
 			Firebase.Analytics.FirebaseAnalytics.StopSession ();
 		}*/
-	}
+
+
+        var uid = UsersController.Instance.CurrentProfileId;
+       var timeSpan = System.DateTime.Now.Subtract(m_StartTime);
+       Debug.Log("current session " + (float)timeSpan.TotalSeconds);
+
+        totalplaytime += (float)timeSpan.TotalSeconds;
+        numsessions += 1;
+        PlayerPrefs.SetInt(uid + "_numSessions", numsessions);
+        PlayerPrefs.SetFloat(uid + "_total_playtime", totalplaytime);
+       
+    }
 
 
 	public void treckScreen (string screenName)
@@ -84,7 +127,24 @@ public class Analitics : MonoBehaviour
 		treckEvent (category, action.ToString (), label, value);
 	}
 
-	public void treckEvent (AnaliticsCategory category, string action, string label, long value = 0)
+    public void treckEvent(AnaliticsCategory category, string action, string label, float value)
+    {
+
+        Firebase.Analytics.FirebaseAnalytics.LogEvent(category.ToString(), new Firebase.Analytics.Parameter[] {
+            new Firebase.Analytics.Parameter (
+                "action", action
+            ),
+            new Firebase.Analytics.Parameter (
+                "label", label
+            ),
+            new Firebase.Analytics.Parameter (
+                "value", value
+            )
+        });
+
+    }
+
+    public void treckEvent (AnaliticsCategory category, string action, string label, long value = 0)
 	{
 		#if UNITY_ANDROID
 		Firebase.Analytics.FirebaseAnalytics.LogEvent (category.ToString (), new Firebase.Analytics.Parameter[] {

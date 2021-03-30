@@ -12,6 +12,7 @@ public enum AnaliticsAction
 
 	SelectMonster,
 
+
 	Start,
 	End,
 	Open

@@ -55,6 +55,7 @@ public class LangPackParser : MonoBehaviour {
     }
 
 
+#if UNITY_EDITOR
     [MenuItem("LangPacks/Parse LangPack")]
     static void ParseTest()
     {
@@ -208,6 +209,7 @@ public class LangPackParser : MonoBehaviour {
         }
 
     }
+#endif
 
 
 }

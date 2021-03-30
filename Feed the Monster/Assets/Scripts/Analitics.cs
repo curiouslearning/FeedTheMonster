@@ -116,14 +116,14 @@ public class Analitics : MonoBehaviour
         PlayerPrefs.SetInt(uid + "_numSessions", numsessions);
         PlayerPrefs.SetFloat(uid + "_totalPlayTime", totalplaytime);
 
-        float sincelasthours = 0f;
+        float sincelastdays = 0f;
 
         if (PlayerPrefs.HasKey(uid + "_LastPlayed"))
         {
             lastplayed = System.DateTime.Parse(PlayerPrefs.GetString(uid + "_LastPlayed"));
            var sincelast = System.DateTime.Now.Subtract(lastplayed);
-            sincelasthours = (float)sincelast.TotalHours;
-            Debug.Log("since last play:" + sincelasthours + "hours");
+            sincelastdays = (float)sincelast.TotalDays;
+            Debug.Log("since last play:" + sincelastdays + "days");
         }
 
 

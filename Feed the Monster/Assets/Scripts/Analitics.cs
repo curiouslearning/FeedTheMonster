@@ -12,6 +12,7 @@ public class Analitics : MonoBehaviour
     public float sessionstart, avgsession, totalplaytime;
     public double sessionend;
     public System.DateTime m_StartTime;
+    public System.DateTime lastplayed;
 
     public void TryAddNewSubskill(string SSN)
     {
@@ -53,7 +54,7 @@ public class Analitics : MonoBehaviour
 
     public void ReportTimeTracking()
     {
-        string pt = UsersController.Instance.CurrentProfileId + "_total_playtime";
+        string pt = UsersController.Instance.CurrentProfileId + "_totalPlayTime";
 
         treckEvent(AnaliticsCategory.TimeTracking, pt, pt, totalplaytime);
     }
@@ -71,6 +72,7 @@ public class Analitics : MonoBehaviour
         {
             numsessions = 0;
             totalplaytime = 0f;
+            
         }
        
         m_StartTime = System.DateTime.Now;
@@ -104,12 +106,30 @@ public class Analitics : MonoBehaviour
 
         var uid = UsersController.Instance.CurrentProfileId;
        var timeSpan = System.DateTime.Now.Subtract(m_StartTime);
-       Debug.Log("current session " + (float)timeSpan.TotalSeconds);
+       Debug.Log("current session (" + numsessions + ")" + (float)timeSpan.TotalSeconds);
 
         totalplaytime += (float)timeSpan.TotalSeconds;
         numsessions += 1;
+        Debug.Log("total playtime: " + totalplaytime);
+        avgsession = totalplaytime / numsessions;
+        Debug.Log("Average: " + avgsession);
         PlayerPrefs.SetInt(uid + "_numSessions", numsessions);
-        PlayerPrefs.SetFloat(uid + "_total_playtime", totalplaytime);
+        PlayerPrefs.SetFloat(uid + "_totalPlayTime", totalplaytime);
+
+        float sincelasthours = 0f;
+
+        if (PlayerPrefs.HasKey(uid + "_LastPlayed"))
+        {
+            lastplayed = System.DateTime.Parse(PlayerPrefs.GetString(uid + "_LastPlayed"));
+           var sincelast = System.DateTime.Now.Subtract(lastplayed);
+            sincelasthours = (float)sincelast.TotalHours;
+            Debug.Log("since last play:" + sincelasthours + "hours");
+        }
+
+
+        PlayerPrefs.SetString(uid + "_LastPlayed", System.DateTime.Now.ToString());
+
+        
        
     }
 

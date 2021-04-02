@@ -1,10 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
+using Firebase;
+using Firebase.Messaging;
+using Firebase.Analytics;
+using Facebook;
 
 public class Analitics : MonoBehaviour
 {
 	public static Analitics Instance;
-
+	public bool isReady = false;
 
 	void Awake()
 	{
@@ -15,6 +19,23 @@ public class Analitics : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
+		#if UNITY_ANDROID
+		FirebaseApp.CheckAndFixDependenciesAsync().ContinueWith(task =>
+		{
+			var dependencyStatus = task.Result;
+			if (dependencyStatus == Firebase.DependencyStatus.Available)
+			{
+				var app = FirebaseApp.DefaultInstance;
+				Instance.isReady = true;
+
+			}
+			else
+			{
+				Debug.LogError(System.String.Format(
+					"Could not resolve all Firebase dependencies: {0}", dependencyStatus));
+			}
+		});
+		#endif
 		/*if (Firebase.Analytics.FirebaseAnalytics != null) {
 			Firebase.Analytics.FirebaseAnalytics.StartSession ();
 		}*/
@@ -30,7 +51,7 @@ public class Analitics : MonoBehaviour
 	public void treckScreen (string screenName)
 	{
 		#if  UNITY_ANDROID 
-			Firebase.Analytics.FirebaseAnalytics.SetCurrentScreen (screenName, null);
+			FirebaseAnalytics.SetCurrentScreen (screenName, null);
 		#endif
 	}
 
@@ -43,7 +64,7 @@ public class Analitics : MonoBehaviour
 	public void treckEvent (AnaliticsCategory category, string action, string label, long value = 0)
 	{
 		#if UNITY_ANDROID
-		Firebase.Analytics.FirebaseAnalytics.LogEvent (category.ToString (), new Firebase.Analytics.Parameter[] {
+		FirebaseAnalytics.LogEvent (category.ToString (), new Firebase.Analytics.Parameter[] {
 			new Firebase.Analytics.Parameter (
 				"action", action
 			),
@@ -56,7 +77,5 @@ public class Analitics : MonoBehaviour
 		});
 		#endif
 	}
-
-
 
 }

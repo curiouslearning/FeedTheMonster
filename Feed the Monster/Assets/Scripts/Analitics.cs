@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 using Firebase;
 using Firebase.Messaging;
 using Firebase.Analytics;
@@ -8,6 +9,8 @@ using Facebook.Unity;
 public class Analitics : MonoBehaviour
 {
 	public static Analitics Instance;
+	private delegate void DeferredEvent();
+	private DeferredEvent deferred;
 	public UINotificationPopup popup;
 	public bool isReady = false;
 	int isFirstOpen = 1;
@@ -34,6 +37,7 @@ public class Analitics : MonoBehaviour
 			{
 				var app = FirebaseApp.DefaultInstance;
 				Instance.isReady = true;
+				deferred.Invoke(); // log events that were captured before initialization
 				Debug.Log("successfully initialized firebase");
 			}
 			else
@@ -80,6 +84,14 @@ public class Analitics : MonoBehaviour
 	public void treckEvent (AnaliticsCategory category, string action, string label, long value = 0)
 	{
 		#if UNITY_ANDROID
+		if(!isReady) //defer events that fire before Firebase is initialized
+        {
+			deferred += () =>
+			{
+				treckEvent(category, action, label, value);
+			};
+			return;
+        }
 		FirebaseAnalytics.LogEvent (category.ToString (), new Firebase.Analytics.Parameter[] {
 			new Firebase.Analytics.Parameter (
 				"action", action
@@ -129,10 +141,28 @@ public class Analitics : MonoBehaviour
 		Debug.Log("received result");
 		if(!string.IsNullOrEmpty(result.TargetUrl))
         {
-			popup.updateText("Deep Link: ", result.TargetUrl);
 			Debug.Log("received Deep link URL: ");
 			Debug.Log(result.TargetUrl);
+			Parameter[] parameters = parseDeepLink(result.TargetUrl);
+			FirebaseAnalytics.LogEvent("fb_deferred_install", parameters);
         }
+    }
+
+	Parameter[] parseDeepLink(string url)
+    {
+		string prefix = "feedthemonster://";
+		char paramParseChar = '/';
+		char valParseChar = '=';
+		string cleanUrl = url.Replace(prefix, "");
+		string[] split_url = cleanUrl.Split(paramParseChar);
+		List<Parameter> paramList = new List<Parameter>();
+		for (int i=0; i < split_url.Length; i++)
+        {
+			string[] vals = split_url[i].Split(valParseChar);
+            paramList.Add(new Parameter(vals[0], vals[1]));
+        }
+		return paramList.ToArray();
+
     }
 
 }

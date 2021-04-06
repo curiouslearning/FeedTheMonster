@@ -7,13 +7,20 @@ public class CloudMessageReceiver : MonoBehaviour
 {
     public static CloudMessageReceiver Instance;
     private bool initialized = false;
+    private string token;
+    public UINotificationPopup popupTray;
     void Awake()
     {
         Instance = this;
     }
     void Start()
     {
-       
+        
+    }
+
+    public void displayTestNotification()
+    {
+        displayMessageToGUI("Test Title", "This is the test notification body");
     }
 
     // Update is called once per frame
@@ -28,14 +35,57 @@ public class CloudMessageReceiver : MonoBehaviour
     }
 
 
-    public void OnTokenReceived(object sender, TokenReceivedEventArgs token)
+    private void OnTokenReceived(object sender, TokenReceivedEventArgs token)
     {
+        this.token = token.Token;
         Debug.Log("Received Registration Token: " + token.Token);
     }
 
-    public void OnMessageReceived(object sender, MessageReceivedEventArgs e)
+    private void OnMessageReceived(object sender, MessageReceivedEventArgs e)
     {
         Debug.Log("Received a new message from: " + e.Message.From);
+        FirebaseNotification notif = e.Message.Notification;
+        if (notif == null)
+        {
+            return;
+        }
+        if(notif.Title != null)
+        {
+            Debug.Log("Title: " + notif.Title);
+
+        }
+        if (notif.Body != null)
+        {
+            Debug.Log("Body: " + notif.Body);
+        }
+        if (Application.isFocused)
+        {
+            displayMessageToGUI(notif.Title, notif.Body);
+        }
     }
 
+    public void subscribeToTopicList(List<string> topicList)
+    {
+        foreach (string topic in topicList)
+        {
+            FirebaseMessaging.SubscribeAsync(topic);
+        }
+    }
+
+    public void unsubscribeFromTopic(string topic)
+    {
+        FirebaseMessaging.UnsubscribeAsync(topic);
+    }
+
+    private void displayMessageToGUI(string title, string body)
+    {
+        popupTray.updateText(title, body);
+        UIController.Instance.ShowPopup(popupTray.gameObject);
+    }
+
+    public void OnDestroy()
+    {
+        FirebaseMessaging.MessageReceived -= OnMessageReceived;
+        FirebaseMessaging.TokenReceived -= OnTokenReceived;
+    }
 }

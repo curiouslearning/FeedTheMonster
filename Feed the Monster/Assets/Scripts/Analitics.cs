@@ -13,7 +13,7 @@ public class Analitics : MonoBehaviour
 	private DeferredEvent deferred;
 	public UINotificationPopup popup;
 	public bool isReady = false;
-	int isFirstOpen = 1;
+	private const int MAXUSERPROPERTIES = 25;
 
 	void Awake()
     {
@@ -118,7 +118,7 @@ public class Analitics : MonoBehaviour
 			FB.Init(() =>
 			{
 				FB.ActivateApp();
-				isFirstOpen = PlayerPrefs.GetInt("isFirst");
+				int isFirstOpen = PlayerPrefs.GetInt("isFirst");
 				if (isFirstOpen == 0)
 				{
 					Debug.Log("first open");
@@ -141,27 +141,41 @@ public class Analitics : MonoBehaviour
 		Debug.Log("received result");
 		if(!string.IsNullOrEmpty(result.TargetUrl))
         {
-			Debug.Log("received Deep link URL: ");
-			Debug.Log(result.TargetUrl);
-			Parameter[] parameters = parseDeepLink(result.TargetUrl);
-			FirebaseAnalytics.LogEvent("fb_deferred_install", parameters);
+            Debug.Log("received Deep link URL: ");
+            Debug.Log(result.TargetUrl);
+			setDeepLinkUserProperty(result);
         }
     }
 
-	Parameter[] parseDeepLink(string url)
+	private void setDeepLinkUserProperty(IAppLinkResult result)
+    {
+		List<string[]> parameters = parseDeepLink(result.TargetUrl);
+		for (int i=0; i < parameters.Count; i++)
+        {
+			if (i > MAXUSERPROPERTIES) break; //Firebase will not accept more properties
+			string[] vals = parameters[i];
+			FirebaseAnalytics.SetUserProperty(vals[0], vals[1]);
+			Debug.Log(string.Format("User Property \"{0}\" set to \"{1}\"", vals[0], vals[1]));
+        }
+    }
+
+    List<string[]> parseDeepLink(string url)
     {
 		string prefix = "feedthemonster://";
 		char paramParseChar = '/';
 		char valParseChar = '=';
-		string cleanUrl = url.Replace(prefix, "");
+		string cleanUrl = url.Replace(prefix, "").TrimStart().TrimEnd();
 		string[] split_url = cleanUrl.Split(paramParseChar);
-		List<Parameter> paramList = new List<Parameter>();
+		List<string[]> paramList = new List<string[]>();
 		for (int i=0; i < split_url.Length; i++)
         {
 			string[] vals = split_url[i].Split(valParseChar);
-            paramList.Add(new Parameter(vals[0], vals[1]));
+			if(vals[0] != null && vals[1] != null)
+            {
+				paramList.Add(vals);
+            }
         }
-		return paramList.ToArray();
+		return paramList;
 
     }
 

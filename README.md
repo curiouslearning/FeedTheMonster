@@ -6,14 +6,21 @@ This repository contains the code for the core Feed the Monster Unity app, inclu
 For pedagogical tips on getting started or registering interest in localizing to a specific language, please [contact us](https://www.curiouslearning.org/contact).
 
 **Development environment:**
+
 Unity 2019.4.8f1
 
 **Supplementary plug-ins:**
+
 Unity Firebase SDK version 6.3.0
 
+Unity Facebook SDK version v9.0.0
+
+TextMeshPro
+
 **Related repositories:**
+
 1. [Language packs](https://github.com/curiouslearning/ftm-languagepacks)
-1. [Automation scripts](https://github.com/curiouslearning/ftm-automation)
+2. [Automation scripts](https://github.com/curiouslearning/ftm-automation)
 
 # Generating levels from a levelgen.csv file
 The [Level Generation code](https://github.com/curiouslearning/ftm-automation/tree/master/level_generation) section of the automation scripts repository contains instructions on how to format a comma-separated value file defining the content to be taught on each level, and how to use the python script that generates the individual level xml files from this levelgen.
@@ -49,10 +56,51 @@ Finally, in the Firebase project you have just created, click on the "Events" se
 
 Before launching the app to the Play Store, also make sure to lockdown your Firebase key.
 
-# Updating the Firebase SDK
+# Install and Update Uncommitted SDKS
+Due to file size and other constraints, various sdks required for the repository to function properly are not pushed to the repo and must be installed locally. Additionally, setting up the Facebook and Firebase SDKs to communicate correctly without build errors requires additional steps.
 
-// To Do -- tips on updating the Firebase SDK
+## Install and update Firebase Analytics and Cloud Messaging SDKs
 
+1. Download the most recent version of the [Unity Firebase SDK](https://firebase.google.com/docs/unity/setup#add-sdks) and extract to a convenient location
+2. Follow the instructions in the linked webpage to import the FirebaseAnalytics SDK.
+3. Repeat the process for the FirebaseCloudMessaging SDK.
+
+## Install and update Facebook Unity SDK
+
+1. Download the [Facebook Unity SDK](https://developers.facebook.com/docs/unity/) and extract to a convenient location
+2. From the Unity Editor, navigate to `Assets > Import Package` and select `Custom Package...`
+3. In the file browser window, navigate to the directory you just extracted and select the Facebook SDK's .unitypackage file.
+4. In the Editor window that displays the contents of the package _DESELECT THE_ `/PlayServicesResolver/` _DIRECTORY TO PREVENT IMPORT OFTHE OUTDATED DEPENDENCY MANAGER_
+5. Import all other package contents as normal
+
+[**ON FIRST INSTALL OF FIREBASE AND FACEBOOK SDKs ONLY**]
+1. When both packages are successfully imported, navigate to `Assets > External Dependency Manager > Android Resolver > Settings` to open the EDM settings menu for Android
+2. Uncheck "Auto-Resolve" and "Resolve on Build"
+3. Check "Patch AndroidManifest.xml"
+4. Check "Patch mainTemplate.gradle"
+5. Check "Use Jetifier"
+6. Check "Patch gradleTemplate.properties"
+7. Click "OK"
+
+[**Repeat steps 9-10 whenever a new package is installed**]
+
+9. Add all necessary packages and/or dependencies
+10. Go to `Assets > External Dependency Resolver > Android Resolver` and select `Force Resolve`
+11. Edit `Assets/Plugins/Android/AndroidManifest.xml` with the tags below
+12. Edit `Assets/Plugins/Android/gradleTemplate.properties` with the lines below
+
+Changes to AndroidManifest.xml:
+
+1. The `<manifest>`  tag should be edited as follows: `<manifest xmlns:android="http://shcemas.android.com/apk/res/android" package="com.unity3d.player" xmlns:tools="http://schemas.android.com/tools">`
+
+2. The `<application>` tag should be edited as follows: `<application tools:replace="android:appComponentFactory" android:appComponentFactory="placeHolder">`
+
+Changes to gradleTemplate.properties:
+
+1. Add the following lines:
+   
+    `android.useAndroidX=true
+    android.enableJetifier=true`
 
 # Posting to the Google Play Store
 

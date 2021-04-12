@@ -151,7 +151,7 @@ public class XMLLevel {
 //		if (templete != null) {
 			level.LoadTemplete (GameplayController.Instance.DefaultLevelTempletes);
 //		}
-		Debug.Log ("LoadLevel" + levelPath);
+		//Debug.Log ("LoadLevel" + levelPath);
 	}
 
 	int calcWordMaxScore(Level level) {

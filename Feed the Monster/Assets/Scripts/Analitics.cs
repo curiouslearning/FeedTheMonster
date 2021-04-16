@@ -106,6 +106,30 @@ public class Analitics : MonoBehaviour
 		#endif
 	}
 
+	public void logNotification(FirebaseMessage message)
+    {
+		if(!isReady)
+        {
+			deferred += () =>
+			{
+				logNotification(message);
+			};
+			return;
+        }
+		FirebaseAnalytics.LogEvent("notification_received", new Parameter[]
+		{
+			new Parameter(
+				"message_id", message.MessageId
+				),
+			new Parameter(
+				"message_type", message.MessageType
+				),
+			new Parameter (
+				"notif_opened", message.NotificationOpened.ToString()
+				),
+		});
+    }
+
 	private void activateFacebook()
 	{
 		#if UNITY_ANDROID && !UNITY_EDITOR
@@ -157,6 +181,11 @@ public class Analitics : MonoBehaviour
 			FirebaseAnalytics.SetUserProperty(vals[0], vals[1]);
 			Debug.Log(string.Format("User Property \"{0}\" set to \"{1}\"", vals[0], vals[1]));
         }
+    }
+
+	public void setUserProperty(string prop, string val)
+    {
+		FirebaseAnalytics.SetUserProperty(prop, val);
     }
 
     List<string[]> parseDeepLink(string url)

@@ -58,10 +58,8 @@ public class CloudMessageReceiver : MonoBehaviour
         {
             Debug.Log("Body: " + notif.Body);
         }
-        /*if (Application.isFocused) // messaging for while someone is playing
-        {
-            displayMessageToGUI(notif.Title, notif.Body);
-        }*/
+        Analitics.Instance.setUserProperty("received_notification", "true");
+        Analitics.Instance.logNotification(e.Message);
     }
 
     public void subscribeToTopicList(List<string> topicList)

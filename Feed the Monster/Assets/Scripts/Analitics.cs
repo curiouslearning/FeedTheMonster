@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using Firebase;
 using Firebase.Messaging;
 using Firebase.Analytics;
-using Facebook.Unity;
 
 public class Analitics : MonoBehaviour
 {
@@ -19,10 +18,6 @@ public class Analitics : MonoBehaviour
     {
         Instance = this;
 		// we need to explicitly exclude the editor to prevent Player crashes
-#if UNITY_ANDROID && !UNITY_EDITOR
-		activateFacebook();
-		
-#endif
 	}
 
 	// Use this for initialization
@@ -46,7 +41,7 @@ public class Analitics : MonoBehaviour
 					"Could not resolve all Firebase dependencies: {0}", dependencyStatus));
 			}
 		});
-		
+
 		#endif
 		/*if (Firebase.Analytics.FirebaseAnalytics != null) {
 			Firebase.Analytics.FirebaseAnalytics.StartSession ();
@@ -57,7 +52,7 @@ public class Analitics : MonoBehaviour
     {
         if (!pauseStatus)
         {
-			activateFacebook();
+
         }
     }
 
@@ -128,59 +123,6 @@ public class Analitics : MonoBehaviour
 				"notif_opened", message.NotificationOpened.ToString()
 				),
 		});
-    }
-
-	private void activateFacebook()
-	{
-		#if UNITY_ANDROID && !UNITY_EDITOR
-		if (FB.IsInitialized)
-		{
-			FB.ActivateApp();
-		}
-		else
-		{
-			FB.Init(() =>
-			{
-				FB.ActivateApp();
-				int isFirstOpen = PlayerPrefs.GetInt("isFirst");
-				if (isFirstOpen == 0)
-				{
-					Debug.Log("first open");
-					FB.Mobile.FetchDeferredAppLinkData(FbDeepLinkCallback);
-					PlayerPrefs.SetInt("isFirst", 1);
-				}
-				else
-				{
-					FB.GetAppLink(FbDeepLinkCallback);
-				}
-
-
-			});
-		}
-		#endif
-	}
-
-	void FbDeepLinkCallback(IAppLinkResult result)
-    {
-		Debug.Log("received result");
-		if(!string.IsNullOrEmpty(result.TargetUrl))
-        {
-            Debug.Log("received Deep link URL: ");
-            Debug.Log(result.TargetUrl);
-			setDeepLinkUserProperty(result);
-        }
-    }
-
-	private void setDeepLinkUserProperty(IAppLinkResult result)
-    {
-		List<string[]> parameters = parseDeepLink(result.TargetUrl);
-		for (int i=0; i < parameters.Count; i++)
-        {
-			if (i > MAXUSERPROPERTIES) break; //Firebase will not accept more properties
-			string[] vals = parameters[i];
-			FirebaseAnalytics.SetUserProperty(vals[0], vals[1]);
-			Debug.Log(string.Format("User Property \"{0}\" set to \"{1}\"", vals[0], vals[1]));
-        }
     }
 
 	public void setUserProperty(string prop, string val)

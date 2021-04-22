@@ -13,10 +13,12 @@ public class Analitics : MonoBehaviour
 	public UINotificationPopup popup;
 	public bool isReady = false;
 	private const int MAXUSERPROPERTIES = 25;
+	AndroidJavaObject activity;
 
 	void Awake()
     {
         Instance = this;
+
 		// we need to explicitly exclude the editor to prevent Player crashes
 	}
 
@@ -25,6 +27,7 @@ public class Analitics : MonoBehaviour
 	{
 
 		#if UNITY_ANDROID && !UNITY_EDITOR
+		/*
 		FirebaseApp.CheckAndFixDependenciesAsync().ContinueWith(task =>
 		{
 			var dependencyStatus = task.Result;
@@ -41,11 +44,11 @@ public class Analitics : MonoBehaviour
 					"Could not resolve all Firebase dependencies: {0}", dependencyStatus));
 			}
 		});
-
+		*/
+		AndroidJavaClass playerClass = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
+		activity = playerClass.GetStatic<AndroidJavaObject>("currentActivity");
 		#endif
-		/*if (Firebase.Analytics.FirebaseAnalytics != null) {
-			Firebase.Analytics.FirebaseAnalytics.StartSession ();
-		}*/
+
 	}
 
     private void OnApplicationPause(bool pauseStatus)
@@ -57,9 +60,7 @@ public class Analitics : MonoBehaviour
     }
 
     void OnDisable() {
-		/*if (Firebase.Analytics.FirebaseAnalytics != null) {
-			Firebase.Analytics.FirebaseAnalytics.StopSession ();
-		}*/
+
 	}
 
 
@@ -68,36 +69,23 @@ public class Analitics : MonoBehaviour
 		#if  UNITY_ANDROID && !UNITY_EDITOR
 			FirebaseAnalytics.SetCurrentScreen (screenName, null);
 		#endif
+
+		#if  UNITY_ANDROID
+			activity.Call("tagScreen", new object[1] {screenName});
+		#endif
+
 	}
 
 
 	public void treckEvent (AnaliticsCategory category, AnaliticsAction action, string label, long value = 0)
 	{
-		treckEvent (category, action.ToString (), label, value);
+		treckEvent (category, action.ToString(), label, value);
 	}
 
 	public void treckEvent (AnaliticsCategory category, string action, string label, long value = 0)
 	{
 		#if UNITY_ANDROID
-		if(!isReady) //defer events that fire before Firebase is initialized
-        {
-			deferred += () =>
-			{
-				treckEvent(category, action, label, value);
-			};
-			return;
-        }
-		FirebaseAnalytics.LogEvent (category.ToString (), new Firebase.Analytics.Parameter[] {
-			new Firebase.Analytics.Parameter (
-				"action", action
-			),
-			new Firebase.Analytics.Parameter (
-				"label", label
-			),
-			new Firebase.Analytics.Parameter (
-				"value", value
-			)
-		});
+			activity.Call("logEvent", new object[4] {category.ToString(), action, label, value.ToString()});
 		#endif
 	}
 
@@ -129,25 +117,4 @@ public class Analitics : MonoBehaviour
     {
 		FirebaseAnalytics.SetUserProperty(prop, val);
     }
-
-    List<string[]> parseDeepLink(string url)
-    {
-		string prefix = "feedthemonster://";
-		char paramParseChar = '/';
-		char valParseChar = '=';
-		string cleanUrl = url.Replace(prefix, "").TrimStart().TrimEnd();
-		string[] split_url = cleanUrl.Split(paramParseChar);
-		List<string[]> paramList = new List<string[]>();
-		for (int i=0; i < split_url.Length; i++)
-        {
-			string[] vals = split_url[i].Split(valParseChar);
-			if(vals[0] != null && vals[1] != null)
-            {
-				paramList.Add(vals);
-            }
-        }
-		return paramList;
-
-    }
-
 }

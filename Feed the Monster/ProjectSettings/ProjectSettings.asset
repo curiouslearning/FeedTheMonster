@@ -12,7 +12,7 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 0
-  companyName: Curious Learning
+  companyName: Library For All
   productName: Feed The Monster
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
@@ -170,7 +170,7 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
-    Android: com.eduapp4syria.feedthemonsterENGLISH
+    Android: au.org.libraryforall.feedthemonster.english
     Standalone: unity.Curious Learning.Feed The Monster
     Tizen: com.eduapp4syria.feedthemonsterENGLISH
     iPhone: com.eduapp4syria.feedthemonsterENGLISH
@@ -262,7 +262,7 @@ PlayerSettings:
   AndroidEnableTango: 0
   androidEnableBanner: 0
   androidUseLowAccuracyLocation: 0
-  androidUseCustomKeystore: 1
+  androidUseCustomKeystore: 0
   m_AndroidBanners:
   - width: 320
     height: 180

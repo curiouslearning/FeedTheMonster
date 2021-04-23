@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.Android;
 using System.Collections;
 using System.Collections.Generic;
 using Firebase;
@@ -13,7 +14,7 @@ public class Analitics : MonoBehaviour
 	public UINotificationPopup popup;
 	public bool isReady = false;
 	private const int MAXUSERPROPERTIES = 25;
-	AndroidJavaObject activity;
+	AndroidJavaObject logger;
 
 	void Awake()
     {
@@ -45,8 +46,19 @@ public class Analitics : MonoBehaviour
 			}
 		});
 		*/
-		AndroidJavaClass playerClass = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
-		activity = playerClass.GetStatic<AndroidJavaObject>("currentActivity");
+		if (!Permission.HasUserAuthorizedPermission(Permission.ExternalStorageRead))
+		{
+			Permission.RequestUserPermission(Permission.ExternalStorageRead);
+		}
+		if (!Permission.HasUserAuthorizedPermission(Permission.ExternalStorageWrite))
+		{
+			Permission.RequestUserPermission(Permission.ExternalStorageWrite);
+		}
+		AndroidJavaClass activityClass = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
+		AndroidJavaObject activity = activityClass.GetStatic<AndroidJavaObject>("currentActivity");
+		AndroidJavaObject context = activity.Call<AndroidJavaObject>("getApplicationContext");
+		AndroidJavaClass loggerClass = new AndroidJavaClass("au.org.libraryforall.logger.Logger");
+		logger = loggerClass.CallStatic<AndroidJavaObject>("getInstance", new object[2] {"FeedTheMonster", context});
 		#endif
 
 	}
@@ -71,7 +83,7 @@ public class Analitics : MonoBehaviour
 		#endif
 
 		#if  UNITY_ANDROID
-			activity.Call("tagScreen", new object[1] {screenName});
+			logger.Call("tagScreen", new object[1] {screenName});
 		#endif
 
 	}
@@ -85,7 +97,7 @@ public class Analitics : MonoBehaviour
 	public void treckEvent (AnaliticsCategory category, string action, string label, long value = 0)
 	{
 		#if UNITY_ANDROID
-			activity.Call("logEvent", new object[4] {category.ToString(), action, label, value.ToString()});
+			logger.Call("logEvent", new object[4] {category.ToString(), action, label, (double) value});
 		#endif
 	}
 

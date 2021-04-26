@@ -55,10 +55,10 @@ public class LangPackParser : MonoBehaviour {
     }
 
 
-    [MenuItem("LangPacks/Parse LangPack")]
+   // [MenuItem("LangPacks/Parse LangPack")]
     static void ParseTest()
     {
-        string path = EditorUtility.OpenFolderPanel("Select LangPack Folder", "", "");
+        string path = null;// EditorUtility.OpenFolderPanel("Select LangPack Folder", "", "");
         Debug.Log("path: " + path);
         instance.doParse(path);
 
@@ -76,7 +76,7 @@ public class LangPackParser : MonoBehaviour {
 
     
     void parseInternal() {
-
+        /*
         //parse from settings file
         try
         {
@@ -205,7 +205,7 @@ public class LangPackParser : MonoBehaviour {
             Debug.Log("The langpack could not be read:");
             Debug.Log(e.Message);
             return;
-        }
+        }*/
 
     }
 

@@ -48,16 +48,11 @@ public class Analitics : MonoBehaviour
     {
         float value = UserInfo.Instance.GetSubskillValue(SSN);
         Debug.Log("improving " + SSN + " to " + value);
-        treckEvent(AnaliticsCategory.SubSkills, UsersController.Instance.CurrentProfileId + "_IncreaseSubskill_" + SSN,SSN,value);
+        trackwithuserids(AnaliticsCategory.SubSkills, AnaliticsAction.SubskillIncrease,SSN,value,UsersController.Instance.CurrentProfileId);
 
     }
 
-    public void ReportTimeTracking()
-    {
-        string pt = UsersController.Instance.CurrentProfileId + "_totalPlayTime";
-
-        treckEvent(AnaliticsCategory.TimeTracking, pt, pt, totalplaytime);
-    }
+   
 
     public void startTimeTracking(int uid)
     {
@@ -104,15 +99,27 @@ public class Analitics : MonoBehaviour
 		}*/
 
 
+ 
+    }
+
+
+    private void OnApplicationPause(bool pause)
+    {
+        if (pause)
+        dotimetracking();
+    }
+
+    public void dotimetracking()
+    {
         var uid = UsersController.Instance.CurrentProfileId;
-       var timeSpan = System.DateTime.Now.Subtract(m_StartTime);
-       Debug.Log("current session (" + numsessions + ")" + (float)timeSpan.TotalSeconds);
+        var timeSpan = System.DateTime.Now.Subtract(m_StartTime);
+        // Debug.Log("current session (" + numsessions + ")" + (float)timeSpan.TotalSeconds);
 
         totalplaytime += (float)timeSpan.TotalSeconds;
         numsessions += 1;
-        Debug.Log("total playtime: " + totalplaytime);
+        // Debug.Log("total playtime: " + totalplaytime);
         avgsession = totalplaytime / numsessions;
-        Debug.Log("Average: " + avgsession);
+        //  Debug.Log("Average: " + avgsession);
         PlayerPrefs.SetInt(uid + "_numSessions", numsessions);
         PlayerPrefs.SetFloat(uid + "_totalPlayTime", totalplaytime);
 
@@ -121,31 +128,62 @@ public class Analitics : MonoBehaviour
         if (PlayerPrefs.HasKey(uid + "_LastPlayed"))
         {
             lastplayed = System.DateTime.Parse(PlayerPrefs.GetString(uid + "_LastPlayed"));
-           var sincelast = System.DateTime.Now.Subtract(lastplayed);
+            var sincelast = System.DateTime.Now.Subtract(lastplayed);
             sincelastdays = (float)sincelast.TotalDays;
-            Debug.Log("since last play:" + sincelastdays + "days");
+            //  Debug.Log("since last play:" + sincelastdays + "days");
         }
 
 
         PlayerPrefs.SetString(uid + "_LastPlayed", System.DateTime.Now.ToString());
 
-        
-       
+        ReportTimeTracking(uid, avgsession, totalplaytime, sincelastdays);
+    }
+
+    public void ReportTimeTracking(int uid, float avgplaytime, float totalplaytime, float dayssincelast)
+    {
+
+
+        trackwithuserids(AnaliticsCategory.TimeTracking, AnaliticsAction.AvgSession,"average_session" ,avgsession, uid);
+        trackwithuserids(AnaliticsCategory.TimeTracking, AnaliticsAction.TotalPlaytime, "total_playtime" , totalplaytime, uid);
+        trackwithuserids(AnaliticsCategory.TimeTracking, AnaliticsAction.DaysSinceLast, "days_since_last", dayssincelast, uid);
     }
 
 
-	public void treckScreen (string screenName)
+    public void treckScreen (string screenName)
 	{
 		#if  UNITY_ANDROID 
 			Firebase.Analytics.FirebaseAnalytics.SetCurrentScreen (screenName, null);
 		#endif
 	}
 
+    public void trackwithuserids(AnaliticsCategory category, AnaliticsAction action, string label, float value, int userid)
+    {
+        Firebase.Analytics.FirebaseAnalytics.LogEvent(category.ToString(), new Firebase.Analytics.Parameter[] {
+            new Firebase.Analytics.Parameter (
+                "action", action.ToString()
+            ),
+            new Firebase.Analytics.Parameter (
+                "label", label
+            ),
+            new Firebase.Analytics.Parameter (
+                "value", value
+            ),
+            new Firebase.Analytics.Parameter(
+                "userid", userid
+            )
+
+        });
+    }
+
 
 	public void treckEvent (AnaliticsCategory category, AnaliticsAction action, string label, long value = 0)
 	{
 		treckEvent (category, action.ToString (), label, value);
 	}
+    public void treckEvent(AnaliticsCategory category, AnaliticsAction action, string label, float value)
+    {
+        treckEvent(category, action.ToString(), label, value);
+    }
 
     public void treckEvent(AnaliticsCategory category, string action, string label, float value)
     {

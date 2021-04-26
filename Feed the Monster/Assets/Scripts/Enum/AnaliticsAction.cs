@@ -16,7 +16,8 @@ public enum AnaliticsAction
 	Start,
 	End,
 	Open,
-        SubskillIncrease,
+
+    SubskillIncrease,
 
     TotalPlaytime,
     AvgSession,

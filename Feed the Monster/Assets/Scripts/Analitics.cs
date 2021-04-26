@@ -48,7 +48,7 @@ public class Analitics : MonoBehaviour
     {
         float value = UserInfo.Instance.GetSubskillValue(SSN);
         Debug.Log("improving " + SSN + " to " + value);
-        trackwithuserids(AnaliticsCategory.SubSkills, AnaliticsAction.SubskillIncrease,SSN,value,UsersController.Instance.CurrentProfileId);
+        treckEvent(AnaliticsCategory.SubSkills, AnaliticsAction.SubskillIncrease,SSN,value);
 
     }
 
@@ -143,9 +143,9 @@ public class Analitics : MonoBehaviour
     {
 
 
-        trackwithuserids(AnaliticsCategory.TimeTracking, AnaliticsAction.AvgSession,"average_session" ,avgsession, uid);
-        trackwithuserids(AnaliticsCategory.TimeTracking, AnaliticsAction.TotalPlaytime, "total_playtime" , totalplaytime, uid);
-        trackwithuserids(AnaliticsCategory.TimeTracking, AnaliticsAction.DaysSinceLast, "days_since_last", dayssincelast, uid);
+        treckEvent(AnaliticsCategory.TimeTracking, AnaliticsAction.AvgSession,"average_session" ,avgsession);
+        treckEvent(AnaliticsCategory.TimeTracking, AnaliticsAction.TotalPlaytime, "total_playtime" , totalplaytime);
+        treckEvent(AnaliticsCategory.TimeTracking, AnaliticsAction.DaysSinceLast, "days_since_last", dayssincelast);
     }
 
 

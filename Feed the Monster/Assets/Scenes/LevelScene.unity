@@ -5775,12 +5775,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   curlp:
-    LanguageName: FTMdefault
-    ApplicationName: Feed The Monster
+    LanguageName: NEPALI
+    ApplicationName: "\u0930\u093E\u0915\u094D\u0937\u0938\u0932\u093E\u0908 \u0916\u0941\u0935\u093E\u0909
+      !"
     VersionNumber: 1
-    ImageBasedRendering: 0
+    ImageBasedRendering: 1
     NumLevels: 154
-    HasTracingGame: 1
+    HasTracingGame: 0
   uicontroller: {fileID: 4096}
   gameplaycontroller: {fileID: 4095}
 --- !u!114 &473
@@ -78389,7 +78390,7 @@ MonoBehaviour:
   GameFailMusic: {fileID: 8300000, guid: d9e6671c2414c784eab09fa7bcf1c42e, type: 3}
   GameLostFanfare: {fileID: 8300000, guid: fa62a551c3b125f4b829c0a5fd8595fe, type: 3}
   GameWonFanfare: {fileID: 8300000, guid: eb0188a951d327a45adcbfa38e711263, type: 3}
-  SoundEvolve: {fileID: 8300000, guid: b0efec2e9c95342c4afa824596b4ef1f, type: 3}
+  SoundEvolve: {fileID: 8300000, guid: b6be49bef61617a42bb47de7e24b09f1, type: 3}
   SoundScoreCount: {fileID: 8300000, guid: e304589b7b107b349b203d699f2ca5d4, type: 3}
   SoundBarFull: {fileID: 8300000, guid: 42b5ff3aa958df648b6aaedd9bcce607, type: 3}
 --- !u!114 &3864
@@ -79491,7 +79492,7 @@ MonoBehaviour:
   monsterBar: {fileID: 4098}
   ButtonPrevious: {fileID: 1149}
   ButtonNext: {fileID: 1201}
-  InstructionSound: {fileID: 8300000, guid: 09028648c8ad44dd1b76c437a979542e, type: 3}
+  InstructionSound: {fileID: 8300000, guid: ea8294613b7f9f0419c4a7c822ce479e, type: 3}
   TouchController: {fileID: 4224}
 --- !u!114 &3922
 MonoBehaviour:
@@ -80069,9 +80070,9 @@ MonoBehaviour:
   Title_Angry: {fileID: 21300000, guid: 0d54ba7ffdf81497f8c567eeaf837044, type: 3}
   Title_Bored: {fileID: 21300000, guid: 39925f0d5bbd24d9284589450aee81ad, type: 3}
   Title_Sad: {fileID: 21300000, guid: 59953fac3d3c1490baa21018b0a085fa, type: 3}
-  Sound_Angry: {fileID: 8300000, guid: 9b10cb3314b608441a32e9d56c01a73c, type: 3}
-  Sound_Bored: {fileID: 8300000, guid: 5c151770ae214c946af3ba71f832e21f, type: 3}
-  Sound_Sad: {fileID: 8300000, guid: 222fe28596d3d3343918ffc3d73ad0d8, type: 3}
+  Sound_Angry: {fileID: 8300000, guid: a26b67c3237c5024096c722f53148e50, type: 3}
+  Sound_Bored: {fileID: 8300000, guid: 5aea8167f0e6b9645b42e2d43aad4c43, type: 3}
+  Sound_Sad: {fileID: 8300000, guid: 65323ef4dbd66c24f9ecc6d5cf55cc5c, type: 3}
   SadMonster_m1e4: {fileID: 1000010523479964, guid: 54430236950c36e4aaa4567450749765,
     type: 3}
   SadMonster_m2e4: {fileID: 1000011703380614, guid: 7d6ab90f58eb657449515191c62c40fa,
@@ -81937,7 +81938,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5996e848dd6dd95469423bf25979bd27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TitleSound: {fileID: 8300000, guid: 1cb1260406d1d44ef8186b3de02e57fb, type: 3}
+  TitleSound: {fileID: 8300000, guid: 8f8bad8e8be2b7747a794c0ff8aea5f4, type: 3}
   profiles:
   - {fileID: 4512}
   - {fileID: 4886}
@@ -82112,7 +82113,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fdfab411e49e6943929952cffd569eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MonsterDiscoveredSound: {fileID: 8300000, guid: 7d4b7eb875ccb48909da5f5c520d15a3,
+  MonsterDiscoveredSound: {fileID: 8300000, guid: cf94f713b4ec4204b9112fd6ff5b349f,
     type: 3}
   FirstHolder: {fileID: 43}
 --- !u!114 &4060
@@ -82473,11 +82474,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GameOver: 0
   TitleImage: {fileID: 919}
-  TitleSound: {fileID: 8300000, guid: e1cb7a69a1b02214f9270f97391660ce, type: 3}
+  TitleSound: {fileID: 8300000, guid: fd7a80805d491384f831e824693335dd, type: 3}
   VictoryImage: {fileID: 210}
-  VictoryFromAngry: {fileID: 8300000, guid: 9ee2b1ff5a4e546dbab583dac2674466, type: 3}
-  VictoryFromBored: {fileID: 8300000, guid: 9a41a1b17328c416f84d1d1e90a663f6, type: 3}
-  VictoryFromSad: {fileID: 8300000, guid: 6c0955ad620cd4ab98c833d55a96566e, type: 3}
+  VictoryFromAngry: {fileID: 8300000, guid: 09a36832cc78e4c48a722f860f4c0bb0, type: 3}
+  VictoryFromBored: {fileID: 8300000, guid: 28d4cc5482482cb469a8f405d9c4fdc7, type: 3}
+  VictoryFromSad: {fileID: 8300000, guid: 8739f3700b9e13645b31e4f21ae81576, type: 3}
   Cheering: {fileID: 8300000, guid: a99d68238e065df4eba486a3754cb0c0, type: 3}
   PettingZones: {fileID: 1035}
   NeededPats: 5
@@ -82682,7 +82683,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mNextPanelToShow: {fileID: 0}
-  sndRUShure: {fileID: 8300000, guid: e2bcb6c3ea51b4ed2b48722cdf4340e0, type: 3}
+  sndRUShure: {fileID: 8300000, guid: fe7abc05a930f604d8b550fd8f8b3093, type: 3}
 --- !u!114 &4085
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -83141,7 +83142,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CurrentActive: {fileID: 0}
   CheatButton: {fileID: 36}
-  NumOfLevels: 150
+  NumOfLevels: 154
   DefaultLevelTempletes: {fileID: 11400000, guid: 912abc312cf981b46926d742a5f8a283,
     type: 2}
   LetterPrefab_1:
@@ -83343,9 +83344,9 @@ MonoBehaviour:
   PuzzleCountdown: {fileID: 4083}
   LevelEndPopup: {fileID: 385932676}
   ScreenTransitionEffect: {fileID: 51}
-  DEBUG_ADD_ALL_MONSTERS: 1
+  DEBUG_ADD_ALL_MONSTERS: 0
   DEBUG_CLEAR_PLAYERPREFS: 0
-  DEBUG_OPEN_ALL_LEVELS_PLAYERPREFS: 1
+  DEBUG_OPEN_ALL_LEVELS_PLAYERPREFS: 0
   DEBUG_USU_ONLINE_XMLS: 0
   ClickSound: {fileID: 8300000, guid: 2851a9ddacf9d0045b8ca3a5f55b2213, type: 3}
 --- !u!114 &4097
@@ -99433,7 +99434,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 19b98b7e04a0d46ec83ad88d1e75c616, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ddb004bae3e21474eb2db4ba9453ab83, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1

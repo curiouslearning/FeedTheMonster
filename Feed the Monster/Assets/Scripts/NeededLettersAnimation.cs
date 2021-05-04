@@ -48,8 +48,8 @@ public class NeededLettersAnimation  {
     {
         string url;
         Sprite res;
-        CharName = CharName.Normalize(NormalizationForm.FormD);
-        url = "charimg/" + CharName;
+        //CharName = CharName.Normalize(NormalizationForm.FormD);
+        url = "charimg/" + CharName ;
         res = Resources.Load<Sprite>(url);
         imTarget.sprite = res;
         imTarget.enabled = true;
@@ -81,11 +81,17 @@ public class NeededLettersAnimation  {
 		case MonsterInputType.Letter:
 //			letter = GameplayController.Instance.CurrentSegment.MonsterRequiredLetters [0];
 			letter = GameplayController.Instance.CurrentSegment.GetFixRequiredLetters(0);
-//			letter = ArabicSupport.ArabicFixer.Fix(letter, true, true);
-//			letter = RTL.Fix(letter);
-
-			richTextForUI += StringWithColorTags (StringWithBoldTags (StringWithSizeTags (letter, sizeForNeededLetters)), mController.FontColorLetter);
-			break;
+                //			letter = ArabicSupport.ArabicFixer.Fix(letter, true, true);
+                //			letter = RTL.Fix(letter);
+                if (!LangPackParser.IsImgRenderer)
+                {
+                    richTextForUI += StringWithColorTags(StringWithBoldTags(StringWithSizeTags(letter, sizeForNeededLetters)), mController.FontColorLetter);
+                }
+                else
+                {
+                    richTextForUI = letter;
+                }
+                    break;
 		case MonsterInputType.LetterInWord:
 			for (int i=0; i< GameplayController.Instance.CurrentSegment.MonsterAllLetters.Length; i++) { //THIS ARRAY RESPONSIBLE FOR RIGHT-TO-LEFT VS. LEFT-TO-RIGHT TEXT
 				//letter = GameplayController.Instance.CurrentSegment.MonsterAllLetters [i];

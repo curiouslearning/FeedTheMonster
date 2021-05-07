@@ -18,11 +18,6 @@ public class Analitics : MonoBehaviour
 	void Awake()
     {
         Instance = this;
-		// we need to explicitly exclude the editor to prevent Player crashes
-#if UNITY_ANDROID && !UNITY_EDITOR
-		activateFacebook();
-		
-#endif
 	}
 
 	// Use this for initialization
@@ -30,6 +25,7 @@ public class Analitics : MonoBehaviour
 	{
 
 		#if UNITY_ANDROID && !UNITY_EDITOR
+		Debug.Log("beginning Firebase Initialization Process");
 		FirebaseApp.CheckAndFixDependenciesAsync().ContinueWith(task =>
 		{
 			var dependencyStatus = task.Result;
@@ -70,6 +66,14 @@ public class Analitics : MonoBehaviour
 
 	public void treckScreen (string screenName)
 	{
+		if(!isReady)
+        {
+			deferred += () =>
+			{
+				treckScreen(screenName);
+			};
+			return;
+        }
 		#if  UNITY_ANDROID && !UNITY_EDITOR
 			FirebaseAnalytics.SetCurrentScreen (screenName, null);
 		#endif
@@ -141,13 +145,15 @@ public class Analitics : MonoBehaviour
 		{
 			FB.Init(() =>
 			{
+				Debug.Log("initializing FB SDK");
 				FB.ActivateApp();
 				int isFirstOpen = PlayerPrefs.GetInt("isFirst");
-				if (isFirstOpen == 0)
+				Debug.Log("is first open: " + isFirstOpen.ToString());
+				if (isFirstOpen == 1)
 				{
 					Debug.Log("first open");
 					FB.Mobile.FetchDeferredAppLinkData(FbDeepLinkCallback);
-					PlayerPrefs.SetInt("isFirst", 1);
+					PlayerPrefs.SetInt("isFirst", 0);
 				}
 				else
 				{
@@ -162,18 +168,27 @@ public class Analitics : MonoBehaviour
 
 	void FbDeepLinkCallback(IAppLinkResult result)
     {
-		Debug.Log("received result");
+		Debug.Log("received result: " + result.RawResult);
+		Debug.LogFormat("Target URL: {0}", result.TargetUrl);
+		Debug.LogFormat("URL: {0}", result.Url);
+		string url = "";
 		if(!string.IsNullOrEmpty(result.TargetUrl))
         {
-            Debug.Log("received Deep link URL: ");
-            Debug.Log(result.TargetUrl);
-			setDeepLinkUserProperty(result);
+			url = result.TargetUrl;
+        } else if (!string.IsNullOrEmpty(result.Url))
+        {
+			url = result.Url;
+        }
+		if(!string.IsNullOrEmpty(url))
+        {
+			Debug.Log("received Deep link URL: " + url);
+			setDeepLinkUserProperty(url);
         }
     }
 
-	private void setDeepLinkUserProperty(IAppLinkResult result)
+	private void setDeepLinkUserProperty(string result)
     {
-		List<string[]> parameters = parseDeepLink(result.TargetUrl);
+		List<string[]> parameters = parseDeepLink(result);
 		for (int i=0; i < parameters.Count; i++)
         {
 			if (i > MAXUSERPROPERTIES) break; //Firebase will not accept more properties
@@ -185,6 +200,14 @@ public class Analitics : MonoBehaviour
 
 	public void setUserProperty(string prop, string val)
     {
+		if(!isReady)
+        {
+			deferred += () =>
+			{
+				setUserProperty(prop, val);
+			};
+			return;
+        }
 		FirebaseAnalytics.SetUserProperty(prop, val);
     }
 

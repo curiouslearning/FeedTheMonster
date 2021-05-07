@@ -42,11 +42,27 @@ public class Analitics : MonoBehaviour
 					"Could not resolve all Firebase dependencies: {0}", dependencyStatus));
 			}
 		});
-		
+		reportAdId();
 		#endif
 		/*if (Firebase.Analytics.FirebaseAnalytics != null) {
 			Firebase.Analytics.FirebaseAnalytics.StartSession ();
 		}*/
+	}
+
+	private void reportAdId ()
+    {
+		string advertisingID = "";
+		bool limitAdvertising = false;
+
+		AndroidJavaClass up = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
+		AndroidJavaObject currentActivity = up.GetStatic<AndroidJavaObject>("currentActivity");
+		AndroidJavaClass client = new AndroidJavaClass("com.google.android.gms.ads.identifier.AdvertisingIdClient");
+		AndroidJavaObject adInfo = client.CallStatic<AndroidJavaObject>("getAdvertisingIdInfo", currentActivity);
+
+		advertisingID = adInfo.Call<string>("getId").ToString();
+		Debug.Log("Device ad ID: " + advertisingID);
+		limitAdvertising = (adInfo.Call<bool>("isLimitAdTrackingEnabled"));
+		setUserProperty("device_ad_id", advertisingID);
 	}
 
     private void OnApplicationPause(bool pauseStatus)

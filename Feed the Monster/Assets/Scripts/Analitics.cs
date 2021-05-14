@@ -147,20 +147,7 @@ public class Analitics : MonoBehaviour
 			{
 				Debug.Log("initializing FB SDK");
 				FB.ActivateApp();
-				int isFirstOpen = PlayerPrefs.GetInt("isFirst");
-				Debug.Log("is first open: " + isFirstOpen.ToString());
-				if (isFirstOpen == 1)
-				{
-					Debug.Log("first open");
-					FB.Mobile.FetchDeferredAppLinkData(FbDeepLinkCallback);
-					PlayerPrefs.SetInt("isFirst", 0);
-				}
-				else
-				{
-					FB.GetAppLink(FbDeepLinkCallback);
-				}
-
-
+				FB.Mobile.FetchDeferredAppLinkData(FbDeepLinkCallback);
 			});
 		}
 		#endif

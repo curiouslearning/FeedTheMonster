@@ -55,7 +55,10 @@ public class LangPackParser : MonoBehaviour {
     }
 
 
-   // [MenuItem("LangPacks/Parse LangPack")]
+
+#if UNITY_EDITOR
+    [MenuItem("LangPacks/Parse LangPack")]
+
     static void ParseTest()
     {
         string path = null;// EditorUtility.OpenFolderPanel("Select LangPack Folder", "", "");
@@ -67,14 +70,14 @@ public class LangPackParser : MonoBehaviour {
 
      void doParse(string lppath)
     {
-        
+
         langpackdir = lppath;
         parseInternal();
-       
+
 
     }
 
-    
+
     void parseInternal() {
         /*
         //parse from settings file
@@ -89,11 +92,11 @@ public class LangPackParser : MonoBehaviour {
         LangPack nlp = curlp;
 
         UnityEditor.PlayerSettings.productName = nlp.ApplicationName;
-        
+
         myloc = Application.dataPath;
         fromloc = langpackdir + "/";
 
-        
+
 
         Debug.Log("parsing " + nlp.ApplicationName +  " from " + fromloc + " into " + myloc);
         gameplaycontroller.NumOfLevels = nlp.NumLevels;
@@ -112,10 +115,10 @@ public class LangPackParser : MonoBehaviour {
         string resourceloc = myloc + "/Resources/";
 
         string chardir = "charimg/";
-      
 
 
-        
+
+
         string charimgloc = resourceloc + chardir;
         string charimgfrom = fromloc + chardir;
 
@@ -155,10 +158,10 @@ public class LangPackParser : MonoBehaviour {
         foreach (string sfile in System.IO.Directory.GetFiles(soundsfrom + "other/"))
         {
             FileUtil.ReplaceFile(sfile, soundsprojdir + "Instructions/" + Path.GetFileName(sfile));
-           
+
         }
 
-        //referenced arts   
+        //referenced arts
         string fbartsfrom = fromloc + "art/feedbacks/";
 
         foreach (string sfile in System.IO.Directory.GetFiles(fbartsfrom))
@@ -183,7 +186,7 @@ public class LangPackParser : MonoBehaviour {
 
 
 
-     
+
 
 
         //deal with version number and version code
@@ -208,8 +211,7 @@ public class LangPackParser : MonoBehaviour {
         }*/
 
     }
+#endif
 
 
 }
-
-

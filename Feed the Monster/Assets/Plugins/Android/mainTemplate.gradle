@@ -21,20 +21,14 @@ allprojects {
 }
 
 // Android Resolver Repos Start
-([rootProject] + (rootProject.subprojects as List)).each {
-    ext {
-        it.setProperty("android.useAndroidX", true)
-        it.setProperty("android.enableJetifier", true)
-    }
-}
 ([rootProject] + (rootProject.subprojects as List)).each { project ->
     project.repositories {
-        def unityProjectPath = "file:///" + file(rootProject.projectDir.path + "/../../").absolutePath
+        def unityProjectPath = $/file:///**DIR_UNITYPROJECT**/$.replace("\\", "/")
         maven {
             url "https://maven.google.com"
         }
         maven {
-            url (unityProjectPath + "/Assets/Firebase/m2repository") // Assets/Firebase/Editor/AnalyticsDependencies.xml:20, Assets/Firebase/Editor/AppDependencies.xml:20
+            url (unityProjectPath + "/Assets/GeneratedLocalRepo/Firebase/m2repository") // Assets/Firebase/Editor/AnalyticsDependencies.xml:18, Assets/Firebase/Editor/AppDependencies.xml:22, Assets/Firebase/Editor/MessagingDependencies.xml:20
         }
         mavenLocal()
         jcenter()
@@ -42,16 +36,28 @@ allprojects {
     }
 }
 // Android Resolver Repos End
-apply plugin: 'com.android.application'
+apply plugin: 'com.android.library'
 
 dependencies {
 	compile fileTree(dir: 'libs', include: ['*.jar'])
 // Android Resolver Dependencies Start
-    implementation 'com.google.firebase:firebase-analytics:17.0.1' // Assets/Firebase/Editor/AppDependencies.xml:15
-    implementation 'com.google.firebase:firebase-analytics-unity:6.3.0' // Assets/Firebase/Editor/AnalyticsDependencies.xml:20
-    implementation 'com.google.firebase:firebase-app-unity:6.3.0' // Assets/Firebase/Editor/AppDependencies.xml:20
-    implementation 'com.google.firebase:firebase-common:18.0.0' // Assets/Firebase/Editor/AppDependencies.xml:13
-    implementation 'com.google.firebase:firebase-iid:[19.0.1]' // Assets/Firebase/Editor/AnalyticsDependencies.xml:15
+    implementation 'com.android.support:appcompat-v7:25.3.1' // Facebook.Unity.Editor.AndroidSupportLibraryResolver.addSupportLibraryDependency
+    implementation 'com.android.support:cardview-v7:25.3.1' // Facebook.Unity.Editor.AndroidSupportLibraryResolver.addSupportLibraryDependency
+    implementation 'com.android.support:customtabs:25.3.1' // Facebook.Unity.Editor.AndroidSupportLibraryResolver.addSupportLibraryDependency
+    implementation 'com.android.support:support-v4:25.3.1' // Facebook.Unity.Editor.AndroidSupportLibraryResolver.addSupportLibraryDependency
+    implementation 'com.facebook.android:facebook-applinks:[9.0, 10)' // Assets/FacebookSDK/Plugins/Editor/Dependencies.xml:6
+    implementation 'com.facebook.android:facebook-core:[9.0, 10)' // Assets/FacebookSDK/Plugins/Editor/Dependencies.xml:5
+    implementation 'com.facebook.android:facebook-gamingservices:[9.0, 10)' // Assets/FacebookSDK/Plugins/Editor/Dependencies.xml:9
+    implementation 'com.facebook.android:facebook-login:[9.0, 10)' // Assets/FacebookSDK/Plugins/Editor/Dependencies.xml:7
+    implementation 'com.facebook.android:facebook-share:[9.0, 10)' // Assets/FacebookSDK/Plugins/Editor/Dependencies.xml:8
+    implementation 'com.google.android.gms:play-services-base:17.6.0' // Assets/Firebase/Editor/AppDependencies.xml:17
+    implementation 'com.google.firebase:firebase-analytics:18.0.2' // Assets/Firebase/Editor/MessagingDependencies.xml:15
+    implementation 'com.google.firebase:firebase-analytics-unity:7.1.0' // Assets/Firebase/Editor/AnalyticsDependencies.xml:18
+    implementation 'com.google.firebase:firebase-app-unity:7.1.0' // Assets/Firebase/Editor/AppDependencies.xml:22
+    implementation 'com.google.firebase:firebase-common:19.5.0' // Assets/Firebase/Editor/AppDependencies.xml:13
+    implementation 'com.google.firebase:firebase-messaging:21.0.1' // Assets/Firebase/Editor/MessagingDependencies.xml:13
+    implementation 'com.google.firebase:firebase-messaging-unity:7.1.0' // Assets/Firebase/Editor/MessagingDependencies.xml:20
+    implementation 'com.parse.bolts:bolts-android:1.4.0' // Assets/FacebookSDK/Plugins/Editor/Dependencies.xml:4
 // Android Resolver Dependencies End
 **DEPS**}
 
@@ -71,11 +77,12 @@ android {
 	buildToolsVersion '**BUILDTOOLS**'
 
 	defaultConfig {
+consumerProguardFiles 'proguard-unity.txt'**USER_PROGUARD**
 		versionCode 10
 		versionName '10'
 		minSdkVersion **MINSDKVERSION**
 		targetSdkVersion **TARGETSDKVERSION**
-		applicationId '**APPLICATIONID**'
+		
 		ndk {
             abiFilters **ABIFILTERS**
         }
@@ -105,17 +112,7 @@ android {
   		}
 	}
 **PACKAGING_OPTIONS**
-    bundle {
-        language {
-            enableSplit = false
-        }
-        density {
-            enableSplit = false
-        }
-        abi {
-            enableSplit = true
-        }
-    }
+    
 }
 
 

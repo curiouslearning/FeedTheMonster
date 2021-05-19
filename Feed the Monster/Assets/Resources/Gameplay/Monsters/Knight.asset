@@ -3,8 +3,9 @@
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -13,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   booster: 7
   MonsterType: 6
-  MiniGame: 4
+  MiniGame: 2
   AssetId: 6
   MonsterPrefab: {fileID: 1937724657243988, guid: e1a24a06659bea440809056061b76043,
-    type: 2}
+    type: 3}
   GageCost: f82a0000c05d0000007d0000007d0000
   IdleStates: 0200000003000000
   EatStates: 02000000

@@ -91,7 +91,7 @@ public class UIProfileSelectionController : MonoBehaviour {
 
 		UsersController.Instance.CurrentProfileId = currentButton.ProfileId;
 
-        Analitics.Instance.startTimeTracking(currentButton.ProfileId);
+        //Analitics.Instance.startTimeTracking(currentButton.ProfileId);
 
 		UserInfo.Instance.AddFirstFriendsToCollection ();
 		UIController.Instance.OnChangeProfile (NextScreen);

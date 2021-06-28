@@ -124,14 +124,32 @@ public class Analitics : MonoBehaviour
 			}*/
 		}
 
-	    private void OnApplicationPause(bool pauseStatus)
+    void OnApplicationFocus(bool hasFocus)
+    {
+        if (hasFocus)
+        {
+            startTimeTracking(UsersController.Instance.CurrentProfileId);
+        }
+        else
+        {
+            dotimetracking();
+        }
+
+    }
+
+    private void OnApplicationQuit()
+    {
+        dotimetracking();
+    }
+
+    private void OnApplicationPause(bool pauseStatus)
 	    {
 	        if (!pauseStatus)
 	        {
 				activateFacebook();
+           
 	        }
-					if (pause)
-	        dotimetracking();
+				
 	    }
 
 	    void OnDisable() {
@@ -146,13 +164,13 @@ public class Analitics : MonoBehaviour
     {
         var uid = UsersController.Instance.CurrentProfileId;
         var timeSpan = System.DateTime.Now.Subtract(m_StartTime);
-        // Debug.Log("current session (" + numsessions + ")" + (float)timeSpan.TotalSeconds);
+         Debug.Log("current session (" + numsessions + ")" + (float)timeSpan.TotalSeconds);
 
         totalplaytime += (float)timeSpan.TotalSeconds;
         numsessions += 1;
-        // Debug.Log("total playtime: " + totalplaytime);
+         Debug.Log("total playtime: " + totalplaytime);
         avgsession = totalplaytime / numsessions;
-        //  Debug.Log("Average: " + avgsession);
+          Debug.Log("Average: " + avgsession);
         PlayerPrefs.SetInt(uid + "_numSessions", numsessions);
         PlayerPrefs.SetFloat(uid + "_totalPlayTime", totalplaytime);
 
@@ -163,7 +181,7 @@ public class Analitics : MonoBehaviour
             lastplayed = System.DateTime.Parse(PlayerPrefs.GetString(uid + "_LastPlayed"));
             var sincelast = System.DateTime.Now.Subtract(lastplayed);
             sincelastdays = (float)sincelast.TotalDays;
-            //  Debug.Log("since last play:" + sincelastdays + "days");
+              Debug.Log("since last play:" + sincelastdays + "days");
         }
 
 

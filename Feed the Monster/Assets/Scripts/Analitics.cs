@@ -91,7 +91,7 @@ public class Analitics : MonoBehaviour
 	        Instance = this;
 			// we need to explicitly exclude the editor to prevent Player crashes
 	#if UNITY_ANDROID && !UNITY_EDITOR
-			activateFacebook();
+			initFacebook();
 
 	#endif
 		}
@@ -129,6 +129,7 @@ public class Analitics : MonoBehaviour
         if (hasFocus)
         {
             startTimeTracking(UsersController.Instance.CurrentProfileId);
+            initFacebook();
         }
         else
         {
@@ -146,7 +147,7 @@ public class Analitics : MonoBehaviour
 	    {
 	        if (!pauseStatus)
 	        {
-				activateFacebook();
+				initFacebook();
            
 	        }
 				
@@ -302,50 +303,73 @@ public class Analitics : MonoBehaviour
 		});
     }
 
-	private void activateFacebook()
+	private void initFacebook()
 	{
 		#if UNITY_ANDROID && !UNITY_EDITOR
 		if (FB.IsInitialized)
 		{
-			FB.ActivateApp();
+			activateFacebook();
 		}
 		else
 		{
 			FB.Init(() =>
 			{
-				FB.ActivateApp();
-				int isFirstOpen = PlayerPrefs.GetInt("isFirst");
-				if (isFirstOpen == 0)
-				{
-					Debug.Log("first open");
-					FB.Mobile.FetchDeferredAppLinkData(FbDeepLinkCallback);
-					PlayerPrefs.SetInt("isFirst", 1);
-				}
-				else
-				{
-					FB.GetAppLink(FbDeepLinkCallback);
-				}
-
-
+				activateFacebook();
 			});
 		}
 		#endif
 	}
+    private void activateFacebook()
+    {
+#if UNITY_ANDROID && !UNITY_EDITOR
+        FB.ActivateApp();
+        FB.Mobile.FetchDeferredAppLinkData(FbDeepLinkCallback);
+#endif
 
-	void FbDeepLinkCallback(IAppLinkResult result)
+    }
+
+    void FbDeepLinkCallback(IAppLinkResult result)
     {
 		Debug.Log("received result");
-		if(!string.IsNullOrEmpty(result.TargetUrl))
+        Debug.Log("result URL: " + result.Url);
+        Debug.Log("Target URL: " + result.TargetUrl);
+        if (PlayerPrefs.GetInt("isFirst") == 1)
+        {
+            setDeepLinkUserProperty(result);
+            PlayerPrefs.SetInt("isFirst", 1);
+        }
+        if (!string.IsNullOrEmpty(result.TargetUrl))
         {
             Debug.Log("received Deep link URL: ");
             Debug.Log(result.TargetUrl);
-			setDeepLinkUserProperty(result);
+            sendInitEvent(result.TargetUrl);
+        } else if (!string.IsNullOrEmpty(result.Url)) {
+            Debug.Log("received Deep Link URL: ");
+            Debug.Log(result.Url);
+            sendInitEvent(result.Url);
+            
+        } else {
+            sendInitEvent("");
+        }
+    }
+    void sendInitEvent(string url)
+    {
+        Parameter[] @params = !string.IsNullOrEmpty(url) ? createParamList(parseDeepLink(url)) : null;
+        if (@params != null) { 
+            FirebaseAnalytics.LogEvent("app_initialized", @params); 
+        } else { 
+            FirebaseAnalytics.LogEvent("app_initialized"); 
         }
     }
 
 	private void setDeepLinkUserProperty(IAppLinkResult result)
     {
-		List<string[]> parameters = parseDeepLink(result.TargetUrl);
+        List<string[]> parameters = new List<string[]>();
+        if (!string.IsNullOrEmpty(result.TargetUrl)) {
+            parameters = parseDeepLink(result.TargetUrl);
+        } else if (!string.IsNullOrEmpty(result.Url)) {
+            parameters = parseDeepLink(result.TargetUrl);
+        }
 		for (int i=0; i < parameters.Count; i++)
         {
 			if (i > MAXUSERPROPERTIES) break; //Firebase will not accept more properties
@@ -378,6 +402,16 @@ public class Analitics : MonoBehaviour
         }
 		return paramList;
 
+    }
+
+    Parameter[] createParamList(List<string[]> paramList)
+    {
+        List<Parameter> @params = new List<Parameter>();
+        foreach(string[] kvp in paramList)
+        {
+            @params.Add(new Parameter(kvp[0], kvp[1]));
+        }
+        return @params.ToArray();
     }
 
 }

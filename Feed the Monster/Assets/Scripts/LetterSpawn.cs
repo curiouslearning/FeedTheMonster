@@ -12,7 +12,7 @@ public class LetterSpawn : MonoBehaviour {
 	void Start () {
 		Image img = gameObject.GetComponent<Image> ();
 
-		if (img != null) {
+		if (img == null) {
 			img.enabled = false;
 		}
 

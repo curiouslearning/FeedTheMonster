@@ -414,6 +414,7 @@ public class LetterController : MonoBehaviour
         }
         else
         {
+			charspot.gameObject.SetActive(false);
             text.text = this.stone.FixValue;
         }
 

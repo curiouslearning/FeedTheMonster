@@ -105,8 +105,10 @@ public class MonsterCalloutController : MonoBehaviour {
 		if(HidePartical != null) {
 			HidePartical.SetActive (false);
 		}
-        if (LangPackParser.IsImgRenderer)
+        if (!LangPackParser.IsImgRenderer)
+        {
             itext.enabled = false;
+        }
 	}
 
 	public void OnEatDone()

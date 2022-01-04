@@ -38,6 +38,19 @@ https://github.com/curiouslearning/ftm-languagepacks/tree/langpacks
 1. Run the game in Unity, and verify that your language's audio and titles show up.
 1. Build the app through the standard Unity build dialog.
 
+
+# Unity TextMeshPro bug workaround
+Depending on the version of TextMeshPro included with Unity, you may get the following error when opening the project for the first time:
+
+`Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Editor\TMP_PackageUtilities.cs(310,17): error CS0433: The type 'Task' exists in both 'Unity.Tasks, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null' and 'mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089'`
+  
+If this bug occurs, edit the *Unity.TextMeshPro.Editor.asmdef* file found in the directory `FeedTheMonster\Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Editor\` to include the line 
+
+`"overrideReferences": true,`
+
+A more detailed explanation of the bug and workaround can be found [here](https://stackoverflow.com/questions/56422962/unity3d-the-type-task-exist-in-both-unity-tasks-and-mscorelib/56430847).
+
+
 # Data flow from app events to storage
 
 To improve the Feed The Monster experience over time, the app has been outfitted with the Google Firebase SDK. With this SDK, we collect the following out-of-the-box [demographic and device data](https://support.google.com/firebase/answer/6317486?hl=en) and [event information](https://support.google.com/firebase/answer/6317485?hl=en).

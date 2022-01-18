@@ -1,39 +1,654 @@
 {
   "project_info": {
-    "project_number": "933341742172",
-    "firebase_url": "https://ftm-english.firebaseio.com",
-    "project_id": "ftm-english",
-    "storage_bucket": "ftm-english.appspot.com"
+    "project_number": "544913148328",
+    "firebase_url": "https://ftm-brazilian-portuguese.firebaseio.com",
+    "project_id": "ftm-brazilian-portuguese",
+    "storage_bucket": "ftm-brazilian-portuguese.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:933341742172:android:16da2c32b553b4f3",
+        "mobilesdk_app_id": "1:544913148328:android:f263979d48d96f6c23359d",
         "android_client_info": {
-          "package_name": "com.eduapp4syria.feedthemonsterENGLISH"
+          "package_name": "com.eduapp4syria.feedthemonsterAzerbaijani"
         }
       },
       "oauth_client": [
         {
-          "client_id": "933341742172-fvclfgbprggrct3cvj0pn3tphijeko0j.apps.googleusercontent.com",
+          "client_id": "544913148328-3rkpv6ejvos4s8m0vo6lptuvs8caop7q.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAcPtZwrUwOnTtsxWmdF3_43NgoCsvpv1k"
+          "current_key": "AIzaSyBnwzGcAQiR5hMfyOxpxf1Cm8Nss3jF8UU"
         }
       ],
       "services": {
-        "analytics_service": {
-          "status": 1
-        },
         "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "544913148328-3rkpv6ejvos4s8m0vo6lptuvs8caop7q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:544913148328:android:6ead57639725881a23359d",
+        "android_client_info": {
+          "package_name": "com.eduapp4syria.feedthemonsterBangla"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "544913148328-3rkpv6ejvos4s8m0vo6lptuvs8caop7q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBnwzGcAQiR5hMfyOxpxf1Cm8Nss3jF8UU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "544913148328-3rkpv6ejvos4s8m0vo6lptuvs8caop7q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:544913148328:android:8dfab09c2cdc0e35",
+        "android_client_info": {
+          "package_name": "com.eduapp4syria.feedthemonsterBrazilianPortuguese"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "544913148328-uce91340va1eq8bknu3k0qh9da40jloa.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.eduapp4syria.feedthemonsterBrazilianPortuguese",
+            "certificate_hash": "212c9725528d70bf935399fc75a60487b3cb6cd3"
+          }
         },
-        "ads_service": {
-          "status": 2
+        {
+          "client_id": "544913148328-3rkpv6ejvos4s8m0vo6lptuvs8caop7q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBnwzGcAQiR5hMfyOxpxf1Cm8Nss3jF8UU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "544913148328-3rkpv6ejvos4s8m0vo6lptuvs8caop7q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:544913148328:android:ad35c844e4fd503e23359d",
+        "android_client_info": {
+          "package_name": "com.eduapp4syria.feedthemonsterENGLISHAUS"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "544913148328-3rkpv6ejvos4s8m0vo6lptuvs8caop7q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBnwzGcAQiR5hMfyOxpxf1Cm8Nss3jF8UU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "544913148328-3rkpv6ejvos4s8m0vo6lptuvs8caop7q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:544913148328:android:92f704a719eda07023359d",
+        "android_client_info": {
+          "package_name": "com.eduapp4syria.feedthemonsterEnglishIndian"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "544913148328-3rkpv6ejvos4s8m0vo6lptuvs8caop7q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBnwzGcAQiR5hMfyOxpxf1Cm8Nss3jF8UU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "544913148328-3rkpv6ejvos4s8m0vo6lptuvs8caop7q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:544913148328:android:93f98c9985879f6523359d",
+        "android_client_info": {
+          "package_name": "com.eduapp4syria.feedthemonsterHatianCreole"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "544913148328-3rkpv6ejvos4s8m0vo6lptuvs8caop7q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBnwzGcAQiR5hMfyOxpxf1Cm8Nss3jF8UU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "544913148328-3rkpv6ejvos4s8m0vo6lptuvs8caop7q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:544913148328:android:9ff96a7767846ec723359d",
+        "android_client_info": {
+          "package_name": "com.eduapp4syria.feedthemonsterHausa"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "544913148328-3rkpv6ejvos4s8m0vo6lptuvs8caop7q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBnwzGcAQiR5hMfyOxpxf1Cm8Nss3jF8UU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "544913148328-3rkpv6ejvos4s8m0vo6lptuvs8caop7q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:544913148328:android:954a659708654c9e23359d",
+        "android_client_info": {
+          "package_name": "com.eduapp4syria.feedthemonsterIgbo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "544913148328-3rkpv6ejvos4s8m0vo6lptuvs8caop7q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBnwzGcAQiR5hMfyOxpxf1Cm8Nss3jF8UU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "544913148328-3rkpv6ejvos4s8m0vo6lptuvs8caop7q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:544913148328:android:8edbbc001b9947d523359d",
+        "android_client_info": {
+          "package_name": "com.eduapp4syria.feedthemonsterJavanese"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "544913148328-3rkpv6ejvos4s8m0vo6lptuvs8caop7q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBnwzGcAQiR5hMfyOxpxf1Cm8Nss3jF8UU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "544913148328-3rkpv6ejvos4s8m0vo6lptuvs8caop7q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:544913148328:android:1f215ebf460cf70823359d",
+        "android_client_info": {
+          "package_name": "com.eduapp4syria.feedthemonsterLugandan"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "544913148328-3rkpv6ejvos4s8m0vo6lptuvs8caop7q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBnwzGcAQiR5hMfyOxpxf1Cm8Nss3jF8UU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "544913148328-3rkpv6ejvos4s8m0vo6lptuvs8caop7q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:544913148328:android:0dd17f52a5e135bc23359d",
+        "android_client_info": {
+          "package_name": "com.eduapp4syria.feedthemonsterMalagasy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "544913148328-3rkpv6ejvos4s8m0vo6lptuvs8caop7q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBnwzGcAQiR5hMfyOxpxf1Cm8Nss3jF8UU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "544913148328-3rkpv6ejvos4s8m0vo6lptuvs8caop7q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:544913148328:android:1f75cdd4da02157823359d",
+        "android_client_info": {
+          "package_name": "com.eduapp4syria.feedthemonsterNdebele"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "544913148328-3rkpv6ejvos4s8m0vo6lptuvs8caop7q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBnwzGcAQiR5hMfyOxpxf1Cm8Nss3jF8UU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "544913148328-3rkpv6ejvos4s8m0vo6lptuvs8caop7q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:544913148328:android:ba67da9ae63f7b9223359d",
+        "android_client_info": {
+          "package_name": "com.eduapp4syria.feedthemonsterSesotho"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "544913148328-3rkpv6ejvos4s8m0vo6lptuvs8caop7q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBnwzGcAQiR5hMfyOxpxf1Cm8Nss3jF8UU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "544913148328-3rkpv6ejvos4s8m0vo6lptuvs8caop7q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:544913148328:android:aa08e2f97f90101923359d",
+        "android_client_info": {
+          "package_name": "com.eduapp4syria.feedthemonsterShona"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "544913148328-3rkpv6ejvos4s8m0vo6lptuvs8caop7q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBnwzGcAQiR5hMfyOxpxf1Cm8Nss3jF8UU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "544913148328-3rkpv6ejvos4s8m0vo6lptuvs8caop7q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:544913148328:android:171b41f48a66c90023359d",
+        "android_client_info": {
+          "package_name": "com.eduapp4syria.feedthemonsterSiswati"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "544913148328-3rkpv6ejvos4s8m0vo6lptuvs8caop7q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBnwzGcAQiR5hMfyOxpxf1Cm8Nss3jF8UU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "544913148328-3rkpv6ejvos4s8m0vo6lptuvs8caop7q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:544913148328:android:16cfba95d910834b23359d",
+        "android_client_info": {
+          "package_name": "com.eduapp4syria.feedthemonsterTagalog"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "544913148328-3rkpv6ejvos4s8m0vo6lptuvs8caop7q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBnwzGcAQiR5hMfyOxpxf1Cm8Nss3jF8UU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "544913148328-3rkpv6ejvos4s8m0vo6lptuvs8caop7q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:544913148328:android:b4cd380b2575b33423359d",
+        "android_client_info": {
+          "package_name": "com.eduapp4syria.feedthemonsterTsonga"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "544913148328-3rkpv6ejvos4s8m0vo6lptuvs8caop7q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBnwzGcAQiR5hMfyOxpxf1Cm8Nss3jF8UU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "544913148328-3rkpv6ejvos4s8m0vo6lptuvs8caop7q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:544913148328:android:228ef7cbfdea782b23359d",
+        "android_client_info": {
+          "package_name": "com.eduapp4syria.feedthemonsterTswana"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "544913148328-3rkpv6ejvos4s8m0vo6lptuvs8caop7q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBnwzGcAQiR5hMfyOxpxf1Cm8Nss3jF8UU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "544913148328-3rkpv6ejvos4s8m0vo6lptuvs8caop7q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:544913148328:android:e18bab12d267653523359d",
+        "android_client_info": {
+          "package_name": "com.eduapp4syria.feedthemonsterVenda"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "544913148328-3rkpv6ejvos4s8m0vo6lptuvs8caop7q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBnwzGcAQiR5hMfyOxpxf1Cm8Nss3jF8UU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "544913148328-3rkpv6ejvos4s8m0vo6lptuvs8caop7q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:544913148328:android:4c9d987d970cfcf723359d",
+        "android_client_info": {
+          "package_name": "com.eduapp4syria.feedthemonsterVietnamese"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "544913148328-3rkpv6ejvos4s8m0vo6lptuvs8caop7q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBnwzGcAQiR5hMfyOxpxf1Cm8Nss3jF8UU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "544913148328-3rkpv6ejvos4s8m0vo6lptuvs8caop7q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:544913148328:android:67ac4fb192bde7ad23359d",
+        "android_client_info": {
+          "package_name": "com.eduapp4syria.feedthemonsterWAENGLISH"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "544913148328-3rkpv6ejvos4s8m0vo6lptuvs8caop7q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBnwzGcAQiR5hMfyOxpxf1Cm8Nss3jF8UU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "544913148328-3rkpv6ejvos4s8m0vo6lptuvs8caop7q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:544913148328:android:8d58df5716362f0e23359d",
+        "android_client_info": {
+          "package_name": "com.eduapp4syria.feedthemonsterYoruba"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "544913148328-3rkpv6ejvos4s8m0vo6lptuvs8caop7q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBnwzGcAQiR5hMfyOxpxf1Cm8Nss3jF8UU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "544913148328-3rkpv6ejvos4s8m0vo6lptuvs8caop7q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }

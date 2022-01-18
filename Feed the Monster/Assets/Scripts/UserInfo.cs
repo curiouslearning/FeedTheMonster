@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System;
 using System.Collections;
 using System.Linq;
@@ -34,6 +34,8 @@ public class UserInfo : MonoBehaviour {
 		LastPlayingLevel,
 		LastMonsterIndex,
 		LastPettingZoneTutorial,
+        LevelSubskillEarned,
+        SubskillValue
 
 	}
 
@@ -41,7 +43,7 @@ public class UserInfo : MonoBehaviour {
 	{
 		string str = getPrefsKey(key, -1);
 		if (!string.IsNullOrEmpty (val)) {
-			str += "_" + val; 
+			str += "_" + val;
 		}
 		return str;
 	}
@@ -91,6 +93,11 @@ public class UserInfo : MonoBehaviour {
 			return str + "LastPlayingLevel";
 		case Keys.LastPettingZoneTutorial:
 			return str + "LastPettingZoneTutorial";
+        case Keys.LevelSubskillEarned:
+            return str + "LevelSubskillEarned";
+        case Keys.SubskillValue:
+            return str + "SubskillValue";
+
 		}
 		return str;
 	}
@@ -109,7 +116,7 @@ public class UserInfo : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-	
+
 	}
 
 	public void Save()
@@ -185,7 +192,7 @@ public class UserInfo : MonoBehaviour {
 	{
 		return PlayerPrefs.GetInt (getPrefsKey(Keys.MonsterLevelFaled, ((int)monster.MonsterType).ToString ()), 0);
 	}
-		
+
 	public int SetMonsterLastUsed(Monster monster)
 	{
 		PlayerPrefs.SetString (getPrefsKey(Keys.MonsterLastUsed, ((int)monster.MonsterType).ToString ()), System.DateTime.Now.Date.Ticks.ToString());
@@ -204,7 +211,7 @@ public class UserInfo : MonoBehaviour {
 
 	/*
 	 * return diff days
-	 * 
+	 *
 	 */
 	public int GetMonsterLastUsed(Monster monster)
 	{
@@ -244,6 +251,33 @@ public class UserInfo : MonoBehaviour {
 			return CollectedFriends.Length;
 		}
 	}
+
+    public void SetSubskillValue(string SubSkill, float value)
+    {
+        PlayerPrefs.SetFloat(getPrefsKey(Keys.SubskillValue, SubSkill), value);
+        Save();
+    }
+
+    public void SetEarnedSubskill(int levelIndex)
+    {
+        PlayerPrefs.SetInt(getPrefsKey(Keys.LevelSubskillEarned, levelIndex.ToString()), 1);
+        Save();
+    }
+
+    public bool HasEarnedSubskill (int levelIndex)
+    {
+        if (PlayerPrefs.GetInt(getPrefsKey(Keys.LevelSubskillEarned, levelIndex.ToString()),0) == 1)
+        {
+            return true;
+        }
+        return false;
+    }
+
+
+    public float GetSubskillValue(string Subskill)
+    {
+        return PlayerPrefs.GetFloat(getPrefsKey(Keys.SubskillValue, Subskill), 0);
+    }
 
 	public void SetHighestOpenLevel(int levelIndex)
 	{
@@ -298,7 +332,7 @@ public class UserInfo : MonoBehaviour {
 		return false;
 	}
 
-	public Monster[] CollectedFriends { 
+	public Monster[] CollectedFriends {
 		get {
 			List<Monster> monsters = new List<Monster>();
 

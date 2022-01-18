@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 public enum AnaliticsAction
 {
@@ -12,12 +12,15 @@ public enum AnaliticsAction
 
 	SelectMonster,
 
+
 	Start,
 	End,
-	Open
+	Open,
 
+    SubskillIncrease,
 
+    TotalPlaytime,
+    AvgSession,
+    DaysSinceLast,
 
 }
-
-

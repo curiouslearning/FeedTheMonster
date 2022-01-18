@@ -1,10 +1,11 @@
-﻿using System;
+using System;
 
 public enum AnaliticsCategory
 {
 	GamePlay,
 	Sel,
 	TracingGame,
-	Profiles
+    SubSkills,
+	Profiles,
+    TimeTracking,
 }
-

@@ -1255,6 +1255,11 @@ public class GameplayController : MonoBehaviour {
 			if (CurrentLevelIndex == 0) {
 				Invoke ("PointAtNextButton", 2f);
 			}
+
+            if (CurrentLevelIndex >= NumOfLevels - 1)
+            {
+                AssessmentHandler.instance.markneededafterlast();
+            }
 		}
 		else
 		{

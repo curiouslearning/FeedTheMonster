@@ -20,7 +20,7 @@ public class LangPackParser : MonoBehaviour {
         {
             if (s_Instance == null)
             {
-                // FindObjectOfType() returns the first AManager object in the scene.
+               
                 s_Instance = FindObjectOfType(typeof(LangPackParser)) as LangPackParser;
                 s_Instance.gameplaycontroller = s_Instance.GetComponent<GameplayController>();
                 s_Instance.uicontroller = s_Instance.GetComponent<UIController>();

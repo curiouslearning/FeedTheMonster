@@ -87,6 +87,8 @@ public class UIProfileSelectionController : MonoBehaviour {
 
 	void ChangeProfile()
 	{
+
+        
 		UserInfo.Instance.Save();
 
 		UsersController.Instance.CurrentProfileId = currentButton.ProfileId;
@@ -98,9 +100,11 @@ public class UIProfileSelectionController : MonoBehaviour {
 
 		NextScreen = null;
 
+        Analitics.Instance.requestuuid();
+        AssessmentHandler.instance.tryAssessment();
 
 
-		Analitics.Instance.treckEvent (AnaliticsCategory.Profiles, "Select Profile_" + currentButton.ProfileId.ToString(), currentButton.ProfileId.ToString ());
+        Analitics.Instance.treckEvent (AnaliticsCategory.Profiles, "Select Profile_" + currentButton.ProfileId.ToString(), currentButton.ProfileId.ToString ());
 	}
 
 

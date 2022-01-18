@@ -11,6 +11,7 @@ public class AudioController : MonoBehaviour {
 	private AudioClip NextMusic;
 	private AudioClip CurrentMusic;
 	private float musicVolume = 0.7f;
+    bool webpaused = false;
 
 	private string[] positiveFeedbacks = new string[] {
 		"amazing work",
@@ -49,6 +50,7 @@ public class AudioController : MonoBehaviour {
 			MusicSource.Stop ();
 			MusicSource.clip = clip;
 			MusicSource.loop = true;
+            if (!webpaused)
 			MusicSource.Play ();
 			musicFadeDirection = 1;
 		} else {
@@ -69,7 +71,8 @@ public class AudioController : MonoBehaviour {
 		if (NewMusic == Music) {
 			if (RestartMusic) {
 				MusicSource.volume = musicVolume;
-				PlayMusic (Music);
+                if (!webpaused)
+                    PlayMusic (Music);
 			} else {
 				MusicSource.UnPause ();
 				musicFadeDirection = 1; //fade in
@@ -79,14 +82,16 @@ public class AudioController : MonoBehaviour {
 			musicFadeDirection = -1; // fade out
 		} else {
 			MusicSource.volume = musicVolume;
-			PlayMusic (NewMusic);
+            if (!webpaused)
+                PlayMusic (NewMusic);
 		}
 		return;
 	}
 
 
 	void Update(){
-		if (UserInfo.Instance.IsMusicEnable ()) {
+        if (!webpaused)
+            if (UserInfo.Instance.IsMusicEnable ()) {
 			if (musicFadeDirection == 0) {
 			
 			} else if (musicFadeDirection < 0) {
@@ -185,4 +190,16 @@ public class AudioController : MonoBehaviour {
 			source.volume = UserInfo.Instance.IsSoundEnable() ? 1f : 0f;
 		}
 	}
+
+    public void pausefromweb()
+    {
+        MusicSource.Pause();
+        webpaused = true;
+    }
+
+    public void resumefromweb()
+    {
+        MusicSource.UnPause();
+        webpaused = false;
+    }
 }

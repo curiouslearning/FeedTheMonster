@@ -5,6 +5,7 @@ using UnityEngine.Networking;
 using Firebase;
 using Firebase.Messaging;
 using Firebase.Analytics;
+
 using Facebook.Unity;
 using System;
 
@@ -143,21 +144,17 @@ public class Analitics : MonoBehaviour
         else
         {
             // string adid = reportAdId();
-            string adid = "Manual Test";
-            
-            Application.RequestAdvertisingIdentifierAsync(
-               (string advertisingId, bool trackingEnabled, string error) =>
-               {
-                   
-                   Debug.Log("advertisingId " + advertisingId + " " + trackingEnabled + " " + error);
-                   adid = advertisingId;
-                   string rurl = "https://data.curiouslearning.org/generate_uuid?id=";
-                   rurl += "" + adid + "" + uid;
-                   rurl += "&organization=CuriousLearning&idType=adid+profileid";
-                   Debug.Log(rurl);
-                   StartCoroutine(GetRequest(rurl));
-               }
-             );
+
+            string adid = SystemInfo.deviceUniqueIdentifier;
+           // PlayerPrefs.SetString("uuid" + uid, "noAdidCollected");
+          
+                
+            string rurl = "https://data.curiouslearning.org/generate_uuid?id=";
+            rurl += "" + adid + "" + uid;
+            rurl += "&organization=CuriousLearning&idType=unityDeviceUniqueIdentifier+profileid";
+            Debug.Log(rurl);
+            StartCoroutine(GetRequest(rurl));
+              
         }
     }
 
@@ -187,6 +184,14 @@ public class Analitics : MonoBehaviour
                 var uid = UsersController.Instance.CurrentProfileId;
                 PlayerPrefs.SetString("uuid" + uid, json.uuid);
                 FirebaseAnalytics.SetUserProperty("uuid" + uid, json.uuid);
+
+                Parameter[] paramz = {
+                   new Parameter("uuid",json.uuid)
+                };
+                FirebaseAnalytics.LogEvent("UUIDGenerated", paramz);
+
+                // AssessmentHandler.instance.tryAssessment();
+
 
             }
         }
@@ -380,6 +385,7 @@ public class Analitics : MonoBehaviour
 
 	private void initFacebook()
 	{
+        Debug.Log("initing facebook");
 #if UNITY_ANDROID && !UNITY_EDITOR
 		if (FB.IsInitialized)
 		{
@@ -396,10 +402,19 @@ public class Analitics : MonoBehaviour
 	}
     private void activateFacebook()
     {
+        Debug.Log("activating facebook");
 #if UNITY_ANDROID && !UNITY_EDITOR
+       
         FB.ActivateApp();
+        FB.Mobile.SetAdvertiserIDCollectionEnabled (false);
         FB.Mobile.FetchDeferredAppLinkData(FbDeepLinkCallback);
+        FB.GetAppLink(FbDeepLinkCallback);
+        Debug.Log("facebook activations complete");
+
+
+
 #endif
+      
 
     }
 
@@ -422,10 +437,13 @@ public class Analitics : MonoBehaviour
 
     void FbDeepLinkCallback(IAppLinkResult result)
     {
-		Debug.Log("received result");
+		Debug.Log("received deeplink callback");
         Debug.Log("result URL: " + result.Url);
         Debug.Log("Target URL: " + result.TargetUrl);
-        if (PlayerPrefs.GetInt("isFirst") == 1)
+        createParamList(parseDeepLink(result.Url));
+        createParamList(parseDeepLink(result.TargetUrl));
+        setDeepLinkUserProperty(result);
+        if (PlayerPrefs.GetInt("isFirst") == 0)
         {
             setDeepLinkUserProperty(result);
             PlayerPrefs.SetInt("isFirst", 1);
@@ -446,28 +464,45 @@ public class Analitics : MonoBehaviour
     }
     void sendInitEvent(string url)
     {
+        Debug.Log("getting ready to send init events for " + url);
         Parameter[] @params = !string.IsNullOrEmpty(url) ? createParamList(parseDeepLink(url)) : null;
         if (@params != null) {
+            Debug.Log("params found");
             FirebaseAnalytics.LogEvent("app_initialized", @params);
+            FirebaseAnalytics.LogEvent("DeepLinkParams", @params);
         } else {
+            Debug.Log("no params found");
             FirebaseAnalytics.LogEvent("app_initialized");
         }
+        Debug.Log("init events sent");
+
     }
+
+   
 
 	private void setDeepLinkUserProperty(IAppLinkResult result)
     {
+        Debug.Log("trying to parse seep link user properties");
         List<string[]> parameters = new List<string[]>();
         if (!string.IsNullOrEmpty(result.TargetUrl)) {
             parameters = parseDeepLink(result.TargetUrl);
         } else if (!string.IsNullOrEmpty(result.Url)) {
-            parameters = parseDeepLink(result.TargetUrl);
+            parameters = parseDeepLink(result.Url);
         }
 		for (int i=0; i < parameters.Count; i++)
         {
-			if (i > MAXUSERPROPERTIES) break; //Firebase will not accept more properties
-			string[] vals = parameters[i];
-			FirebaseAnalytics.SetUserProperty(vals[0], vals[1]);
+            string[] vals = parameters[i];
+
+            Parameter[] paramz = {
+           new Parameter(vals[0], vals[1])
+            };
+            FirebaseAnalytics.LogEvent("DeepLinkParams", paramz);
+            if (i > MAXUSERPROPERTIES) break; //Firebase will not accept more properties
+			
+           
+            PlayerPrefs.SetString("dl_" + vals[0], vals[1]);
 			Debug.Log(string.Format("User Property \"{0}\" set to \"{1}\"", vals[0], vals[1]));
+            FirebaseAnalytics.SetUserProperty(vals[0], vals[1]);
         }
     }
 
@@ -478,6 +513,7 @@ public class Analitics : MonoBehaviour
 
     List<string[]> parseDeepLink(string url)
     {
+        Debug.Log(url);
 		string prefix = "feedthemonster://";
 		char paramParseChar = '/';
 		char valParseChar = '=';
@@ -499,10 +535,31 @@ public class Analitics : MonoBehaviour
     Parameter[] createParamList(List<string[]> paramList)
     {
         List<Parameter> @params = new List<Parameter>();
+        List<Parameter> rparts = new List<Parameter>();
         foreach(string[] kvp in paramList)
         {
             @params.Add(new Parameter(kvp[0], kvp[1]));
+
+            if (kvp[0]=="utm_campaign")
+             FirebaseAnalytics.SetUserProperty(kvp[0], kvp[1]);
+
+            if (kvp[0] == "ref")
+            {
+                string[] refparts = kvp[1].Split('.');
+               
+                for (int i = 0; i < refparts.Length-1; i+=2)
+                {
+                    string val = refparts[i];
+                    string val2 = refparts[i + 1];
+                    rparts.Add(new Parameter(val, val2));
+
+                }
+
+            }
+
+
         }
+        FirebaseAnalytics.LogEvent("DeepLinkParams", rparts.ToArray());
         return @params.ToArray();
     }
 

@@ -47,7 +47,7 @@ public class SampleWebView : MonoBehaviour
         }
     }
 
-    public string Url;
+    string Url = "";
     public bool hasLoaded = false;
     //public Text status;
     WebViewObject webViewObject;
@@ -56,13 +56,47 @@ public class SampleWebView : MonoBehaviour
     {
         //stop ftm music here
 
-
+        Url =  AssessmentHandler.instance.assessmentbaseurl();
         Url += "?uuid=";
         var uid = UsersController.Instance.CurrentProfileId;
         Url += PlayerPrefs.GetString("uuid" + uid);
 
+        //add other parameters here
+        var curlang = "ZULU";
+        Url += "&Organization=CuriousLearning&Language=" + curlang;
+        Url += "&Version=44";
+        Url += "&LastLevel=" + UserInfo.Instance.GetHighestOpenLevel();
+
+
+
+
+        if (PlayerPrefs.HasKey("nomorefilter"))
+        {
+            Url += "&filter=false";
+        }
+
+        else
+        {
+            Url += "&filter=false";
+        }
+            if (PlayerPrefs.HasKey("dl_utm_source"))
+        {
+            Url += "&utm_source=" + PlayerPrefs.GetString("dl_utm_source");
+        }
+        if (PlayerPrefs.HasKey("dl_utm_campaign"))
+        {
+            Url += "&utm_campaign=" + PlayerPrefs.GetString("dl_utm_campaign");
+        }
+        if (PlayerPrefs.HasKey("dl_ref"))
+        {
+            Url += "&ref=" + PlayerPrefs.GetString("dl_ref");
+        }
+
         Invoke("pausemusic", .2f);
-        
+        Debug.Log(Url);
+
+#if UNITY_ANDROID && !UNITY_EDITOR
+
         webViewObject = (new GameObject("WebViewObject")).AddComponent<WebViewObject>();
         webViewObject.Init(
             cb: (msg) =>
@@ -72,6 +106,17 @@ public class SampleWebView : MonoBehaviour
                 if (msg == "close")
                 {
                     clickbutton(true);
+                }
+
+                if (msg == "FatalError")
+                {
+                    clickbutton(false);
+                }
+
+                if (msg == "NoAssessment")
+                {
+                    AssessmentHandler.instance.MarkNoMore();
+                    closeweb();
                 }
 
                 if(msg == "loaded")
@@ -108,62 +153,14 @@ public class SampleWebView : MonoBehaviour
             ld: (msg) =>
             {
                 Debug.Log(string.Format("CallOnLoaded[{0}]", msg));
-#if UNITY_EDITOR_OSX || (!UNITY_ANDROID && !UNITY_WEBPLAYER && !UNITY_WEBGL)
-                // NOTE: depending on the situation, you might prefer
-                // the 'iframe' approach.
-                // cf. https://github.com/gree/unity-webview/issues/189
-#if true
-                webViewObject.EvaluateJS(@"
-                  if (window && window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.unityControl) {
-                    window.Unity = {
-                      call: function(msg) {
-                        window.webkit.messageHandlers.unityControl.postMessage(msg);
-                      }
-                    }
-                  } else {
-                    window.Unity = {
-                      call: function(msg) {
-                        window.location = 'unity:' + msg;
-                      }
-                    }
-                  }
-                ");
-#else
-                webViewObject.EvaluateJS(@"
-                  if (window && window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.unityControl) {
-                    window.Unity = {
-                      call: function(msg) {
-                        window.webkit.messageHandlers.unityControl.postMessage(msg);
-                      }
-                    }
-                  } else {
-                    window.Unity = {
-                      call: function(msg) {
-                        var iframe = document.createElement('IFRAME');
-                        iframe.setAttribute('src', 'unity:' + msg);
-                        document.documentElement.appendChild(iframe);
-                        iframe.parentNode.removeChild(iframe);
-                        iframe = null;
-                      }
-                    }
-                  }
-                ");
-#endif
-#elif UNITY_WEBPLAYER || UNITY_WEBGL
-                webViewObject.EvaluateJS(
-                    "window.Unity = {" +
-                    "   call:function(msg) {" +
-                    "       parent.unityWebView.sendMessage('WebViewObject', msg)" +
-                    "   }" +
-                    "};");
-#endif
+
                 webViewObject.EvaluateJS(@"Unity.call('ua=' + navigator.userAgent)");
-            }
-            //transparent: false,
-            //zoom: true,
+            },
+            transparent: false,
+            zoom: false,
             //ua: "custom user agent string",
             //// android
-            //androidForceDarkMode: 0,  // 0: follow system setting, 1: force dark off, 2: force dark on
+            androidForceDarkMode: 1  // 0: follow system setting, 1: force dark off, 2: force dark on
             //// ios
             //enableWKWebView: true,
             //wkContentMode: 0,  // 0: recommended, 1: mobile, 2: desktop
@@ -171,9 +168,7 @@ public class SampleWebView : MonoBehaviour
             //// editor
             //separated: false
             );
-#if UNITY_EDITOR_OSX || UNITY_STANDALONE_OSX
-        webViewObject.bitmapRefreshCycle = 1;
-#endif
+
         // cf. https://github.com/gree/unity-webview/pull/512
         // Added alertDialogEnabled flag to enable/disable alert/confirm/prompt dialogs. by KojiNakamaru · Pull Request #512 · gree/unity-webview
         webViewObject.SetAlertDialogEnabled(false);
@@ -236,6 +231,7 @@ public class SampleWebView : MonoBehaviour
             webViewObject.LoadURL("StreamingAssets/" + Url.Replace(" ", "%20"));
         }
 #endif
+#endif
         yield break;
     }
 
@@ -285,9 +281,25 @@ public class SampleWebView : MonoBehaviour
     **/
     }
 
+    public void closeweb()
+    {
+        //resume ftm music here
+        AudioController.Instance.resumefromweb();
+        webViewObject.SetVisibility(false);
+        var g = GameObject.Find("WebViewObject");
+        if (g != null)
+        {
+            Destroy(g);
+        }
+        Destroy(webViewObject);
+        Destroy(this.gameObject);
+    }
+
 
     public void clickbutton(bool exitedcorrectly = false)
     {
+      
+       
         if (exitedcorrectly)
         {
             AssessmentHandler.instance.MarkTested();
@@ -299,17 +311,7 @@ public class SampleWebView : MonoBehaviour
         {
             AssessmentHandler.instance.MarkClosedEarly();
         }
-
-
-        //resume ftm music here
-        AudioController.Instance.resumefromweb();
-        webViewObject.SetVisibility(false);
-        var g = GameObject.Find("WebViewObject");
-        if (g != null)
-        {
-            Destroy(g);
-        }
-        Destroy(webViewObject);
-        Destroy(this.gameObject);
+        closeweb();
+        
     }
 }

@@ -101,7 +101,9 @@ public class UIProfileSelectionController : MonoBehaviour {
 		NextScreen = null;
 
         Analitics.Instance.requestuuid();
-        AssessmentHandler.instance.tryAssessment();
+        #if UNITY_ANDROID && !UNITY_EDITOR
+            
+        #endif
 
 
         Analitics.Instance.treckEvent (AnaliticsCategory.Profiles, "Select Profile_" + currentButton.ProfileId.ToString(), currentButton.ProfileId.ToString ());

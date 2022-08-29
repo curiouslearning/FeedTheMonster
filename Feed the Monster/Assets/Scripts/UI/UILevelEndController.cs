@@ -74,6 +74,7 @@ public class UILevelEndController : MonoBehaviour {
 		if (statusQueue.Count > 0) {
 			doStatusQueue ((status)statusQueue.Dequeue ());
 		}
+
 	}
 
 	void OnEnable()
@@ -242,8 +243,8 @@ public class UILevelEndController : MonoBehaviour {
 			NextButton.interactable = true;
 			RetryButton.interactable = true;
 			MapButton.interactable = true;
-
-			gageZoomIn ();
+           
+            gageZoomIn ();
 			break;
 		}
 	}
@@ -259,7 +260,8 @@ public class UILevelEndController : MonoBehaviour {
 	void onFirstZoomInDone()
 	{
 		showSlider (true);
-	}
+        AssessmentHandler.instance.tryAssAfterLevel(GameplayController.Instance.CurrentLevelIndex);
+    }
 
 	void hideGageIcons ()
 	{

@@ -5776,8 +5776,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   curlp:
-    LanguageName: Zulu
-    ApplicationName: Dlisa Inunu
+    LanguageName: Australian English
+    ApplicationName: Feed The Monster
     VersionNumber: 1
     ImageBasedRendering: 0
     NumLevels: 77
@@ -78405,7 +78405,7 @@ MonoBehaviour:
   GameFailMusic: {fileID: 8300000, guid: d9e6671c2414c784eab09fa7bcf1c42e, type: 3}
   GameLostFanfare: {fileID: 8300000, guid: fa62a551c3b125f4b829c0a5fd8595fe, type: 3}
   GameWonFanfare: {fileID: 8300000, guid: eb0188a951d327a45adcbfa38e711263, type: 3}
-  SoundEvolve: {fileID: 8300000, guid: bf43d24cfa7874341a20fdc0b3d46720, type: 3}
+  SoundEvolve: {fileID: 8300000, guid: 5ed604058e25d496a854275645e9d330, type: 3}
   SoundScoreCount: {fileID: 8300000, guid: e304589b7b107b349b203d699f2ca5d4, type: 3}
   SoundBarFull: {fileID: 8300000, guid: 42b5ff3aa958df648b6aaedd9bcce607, type: 3}
 --- !u!114 &3864
@@ -79507,7 +79507,7 @@ MonoBehaviour:
   monsterBar: {fileID: 4098}
   ButtonPrevious: {fileID: 1149}
   ButtonNext: {fileID: 1201}
-  InstructionSound: {fileID: 8300000, guid: 26f37d0e41940cf43b4a5fc8f8e1f195, type: 3}
+  InstructionSound: {fileID: 8300000, guid: 0d53f670ea68a4262a9f1f24a4a6d3d1, type: 3}
   TouchController: {fileID: 4224}
 --- !u!114 &3922
 MonoBehaviour:
@@ -80082,12 +80082,12 @@ MonoBehaviour:
   Icon_Angry: {fileID: 21300000, guid: efaef7f81cf3ab74e9e8db4dc0d20290, type: 3}
   Icon_Bored: {fileID: 21300000, guid: 9918c2adabd755e4a84f86f422f1f08a, type: 3}
   Icon_Sad: {fileID: 21300000, guid: ed27d389379970341b2c1a2df9cea7ca, type: 3}
-  Title_Angry: {fileID: 21300000, guid: e16ec274d379f364cb95b10a9eceb64c, type: 3}
-  Title_Bored: {fileID: 21300000, guid: 90173f1615e514d41a4fdac9f57bd1ce, type: 3}
-  Title_Sad: {fileID: 21300000, guid: b362c265705507a498bcf6e63e841a13, type: 3}
-  Sound_Angry: {fileID: 8300000, guid: aafbd37c86c2d1d41aede97309798383, type: 3}
-  Sound_Bored: {fileID: 8300000, guid: 37ad96d49a88ae244809e72489fb5303, type: 3}
-  Sound_Sad: {fileID: 8300000, guid: 3e7bac48425e7fc488329585ca729c7a, type: 3}
+  Title_Angry: {fileID: 21300000, guid: ced21c25ef5576f4aa3ea195eb788cd1, type: 3}
+  Title_Bored: {fileID: 21300000, guid: 5b1ea3a5c9119214fa40ecf007abe20c, type: 3}
+  Title_Sad: {fileID: 21300000, guid: 88fa5c1f3578a5a4c9703c6646016a7d, type: 3}
+  Sound_Angry: {fileID: 8300000, guid: ba3d05ba0282ab745996b8f4043b7e04, type: 3}
+  Sound_Bored: {fileID: 8300000, guid: c76aa4760ba42c546ba2958a5776f491, type: 3}
+  Sound_Sad: {fileID: 8300000, guid: ed3763bb9ebb78f4e88b2b06b9ca237c, type: 3}
   SadMonster_m1e4: {fileID: 1000010523479964, guid: 54430236950c36e4aaa4567450749765,
     type: 3}
   SadMonster_m2e4: {fileID: 1000011703380614, guid: 7d6ab90f58eb657449515191c62c40fa,
@@ -81953,7 +81953,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5996e848dd6dd95469423bf25979bd27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TitleSound: {fileID: 8300000, guid: 1e524430f7b8464489a59b2b7799109e, type: 3}
+  TitleSound: {fileID: 8300000, guid: b5c3c56841f854b81bb48e071ef40813, type: 3}
   profiles:
   - {fileID: 4512}
   - {fileID: 4886}
@@ -82128,7 +82128,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fdfab411e49e6943929952cffd569eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MonsterDiscoveredSound: {fileID: 8300000, guid: 17b21b24dc6fe21439e899c4f98c3250,
+  MonsterDiscoveredSound: {fileID: 8300000, guid: bf045e2eabeac411fa24d5568be61d01,
     type: 3}
   FirstHolder: {fileID: 43}
 --- !u!114 &4060
@@ -82489,11 +82489,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GameOver: 0
   TitleImage: {fileID: 919}
-  TitleSound: {fileID: 8300000, guid: 721a4f4a2bccf924d85ed8365cf82a14, type: 3}
+  TitleSound: {fileID: 8300000, guid: 63bbfdbbe4880774891132f0ac4d268b, type: 3}
   VictoryImage: {fileID: 210}
-  VictoryFromAngry: {fileID: 8300000, guid: 9495a0d5b36d11e4589bd411b218d4ee, type: 3}
-  VictoryFromBored: {fileID: 8300000, guid: f42dc1800be18a6419f69617df29898d, type: 3}
-  VictoryFromSad: {fileID: 8300000, guid: 26997d7c3873abc4a85d545b6e7effb2, type: 3}
+  VictoryFromAngry: {fileID: 8300000, guid: e0f89913041c1cb46b52ef25edc71870, type: 3}
+  VictoryFromBored: {fileID: 8300000, guid: 78b3b11d9584a4643bb46cb936a2258b, type: 3}
+  VictoryFromSad: {fileID: 8300000, guid: 9a0c0171960d25d4c9bb152ccbdd4876, type: 3}
   Cheering: {fileID: 8300000, guid: a99d68238e065df4eba486a3754cb0c0, type: 3}
   PettingZones: {fileID: 1035}
   NeededPats: 5
@@ -82698,7 +82698,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mNextPanelToShow: {fileID: 0}
-  sndRUShure: {fileID: 8300000, guid: fce33370dadc62d429b408e20fbf5be5, type: 3}
+  sndRUShure: {fileID: 8300000, guid: 88d527be88793474fb8462ead30bf626, type: 3}
 --- !u!114 &4085
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -83157,7 +83157,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CurrentActive: {fileID: 0}
   CheatButton: {fileID: 36}
-  NumOfLevels: 77
+  NumOfLevels: 51
   DefaultLevelTempletes: {fileID: 11400000, guid: 912abc312cf981b46926d742a5f8a283,
     type: 2}
   LetterPrefab_1:
@@ -84132,7 +84132,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 3f2914cda21e7a2499522fc0b2a1d1fb, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 88fa5c1f3578a5a4c9703c6646016a7d, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -84392,7 +84392,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 84e1772625697004097d7cf8c25c8136, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c81c14efb51ba9c49ab8c4dd2f087f65, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -84980,7 +84980,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b625f11c0a9119b4ba6ae268b3eba035, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cd370bb62cf1b4f42ad41a0521520cf9, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -94235,7 +94235,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: bcbb1c078740c1f4d8aaf3dd5631460e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f5ed2fe8318fc7d4fb44e17c29621447, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -98282,7 +98282,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 440502981617e7745bfa63ed2a470336, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b2b27826225bb7442b733c93c76b219a, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -99455,7 +99455,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: bbdeb20abc694ce41ab5d1627b85842b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 910f1555b6d235c43ae69949c83acd75, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -103048,7 +103048,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4175ff8d7c4ce934782094aafce2be47, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 50aa0b62465080443a7e6e3445df99f2, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1

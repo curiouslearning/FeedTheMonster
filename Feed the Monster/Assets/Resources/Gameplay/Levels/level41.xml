@@ -3,73 +3,66 @@
     <Segment SegmentTime="10" spawnIds="">
     	
     	<MonsterRequiredLetters>
-    		<string>x</string>
+    		<string>im</string>
     	</MonsterRequiredLetters>
     	<MonsterAllLetters>
     	</MonsterAllLetters>
     	<Stones>
-    		<string spawnId="5">y</string>
-    		<string spawnId="21">o</string>
-			<string spawnId="86">gq</string>
-			<string spawnId="75">ngq</string>
-			<string spawnId="4">ngx</string>
-			<string spawnId="87">hl</string>
-			<string spawnId="22">y</string>
-			<string spawnId="74">ngx</string>
-			<string spawnId="60">x</string>
-    	</Stones>
+    		<string spawnId="5">im</string>
+    		<string spawnId="21">it</string>
+			<string spawnId="86">ig</string>
+			<string spawnId="75">if</string>
+			<string spawnId="4">ib</string>
+			<string spawnId="87">ip</string>
+			<string spawnId="22">is</string>
+			</Stones>
 	</Segment>
 	<Segment SegmentTime="10" spawnIds="">
 		
 		<MonsterRequiredLetters>
-			<string>y</string>
+			<string>ig</string>
 		</MonsterRequiredLetters>
 	  	<MonsterAllLetters>
 	  	</MonsterAllLetters>
 	  	<Stones>
-        	<string spawnId="95">ngq</string>
-        	<string spawnId="12">bh</string>
-        	<string spawnId="54">o</string>
-        	<string spawnId="96">x</string>
-			<string spawnId="69">n</string>
-			<string spawnId="55">gq</string>
-			<string spawnId="11">gq</string>
-			<string spawnId="72">y</string>
-      	</Stones>
+        	<string spawnId="95">ig</string>
+        	<string spawnId="12">is</string>
+        	<string spawnId="54">ip</string>
+        	<string spawnId="96">ib</string>
+			<string spawnId="69">im</string>
+			<string spawnId="55">if</string>
+			</Stones>
     </Segment>
 	<Segment SegmentTime="10" spawnIds="4,5,21,22,60,74,75,86,87">
 		
       	<MonsterRequiredLetters>
-			<string>bh</string>
+			<string>it</string>
 	  	</MonsterRequiredLetters>
 	  	<MonsterAllLetters>
 	  	</MonsterAllLetters>
 	  	<Stones>
-			<string>o</string>
-	        <string>x</string>
-			<string>ngq</string>
-	        <string>gq</string>
-			<string>x</string>
-			<string>ngq</string>
-			<string>gq</string>
-			<string>gq</string>
-			<string>bh</string>
-      	</Stones>
+			<string>it</string>
+	        <string>im</string>
+			<string>ig</string>
+	        <string>if</string>
+			<string>in</string>
+			<string>ib </string>
+			</Stones>
 	</Segment>
 	<Segment SegmentTime="10" spawnIds="">
 		
       	<MonsterRequiredLetters>
-			<string>x</string>
+			<string>ip</string>
 	  	</MonsterRequiredLetters>
 	  	<MonsterAllLetters>
 	  	</MonsterAllLetters>
 	  	<Stones>
-	        <string spawnId="73">ngq</string>
-	        <string spawnId="76">n</string>
-	        <string spawnId="89">y</string>
-			<string spawnId="90">n</string>
-			<string spawnId="93">bh</string>
-			<string spawnId="94">x</string>
+	        <string spawnId="73">ip</string>
+	        <string spawnId="76">it</string>
+	        <string spawnId="89">is</string>
+			<string spawnId="90">im</string>
+			<string spawnId="93">ig</string>
+			<string spawnId="94">if</string>
 			<string spawnId="74">Shield</string>
 			<string bonusScore="275" spawnId="75">BonusLetter</string>
       	</Stones>
@@ -77,21 +70,18 @@
 	<Segment SegmentTime="10" spawnIds="">
 		
       	<MonsterRequiredLetters>
-			<string>ngq</string>
+			<string>is</string>
 	  	</MonsterRequiredLetters>
 	  	<MonsterAllLetters>
 	  	</MonsterAllLetters>
 	  	<Stones>
-	        <string spawnId="60">hl</string>
-	        <string spawnId="74">ngq</string>
-			<string spawnId="22">o</string>
-	        <string spawnId="87">bh</string>
-			<string spawnId="4">y</string>
-			<string spawnId="75">o</string>
-			<string spawnId="86">ngx</string>
-			<string spawnId="21">bh</string>
-			<string spawnId="5">ngq</string>
-      	</Stones>
+	        <string spawnId="60">is</string>
+	        <string spawnId="74">ib</string>
+			<string spawnId="22">ip</string>
+	        <string spawnId="87">ig</string>
+			<string spawnId="4">if</string>
+			<string spawnId="75">it</string>
+			</Stones>
 	</Segment>
   </Segments>
 </XMLLevel>

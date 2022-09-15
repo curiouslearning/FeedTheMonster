@@ -5,7 +5,7 @@ using UnityEngine.Networking;
 using Firebase;
 using Firebase.Messaging;
 using Firebase.Analytics;
-
+using Ugi.PlayInstallReferrerPlugin;
 using Facebook.Unity;
 using System;
 
@@ -91,12 +91,71 @@ public class Analitics : MonoBehaviour
 		void Awake()
 	    {
 	        Instance = this;
-			// we need to explicitly exclude the editor to prevent Player crashes
-	#if UNITY_ANDROID && !UNITY_EDITOR
+        // we need to explicitly exclude the editor to prevent Player crashes
+#if UNITY_ANDROID && !UNITY_EDITOR
 			initFacebook();
 
-	#endif
-		}
+#endif
+        AndroidJNIHelper.debug = true;
+
+        PlayInstallReferrer.GetInstallReferrerInfo((installReferrerDetails) =>
+        {
+            Debug.Log("Install referrer details received!");
+
+            // check for error
+            if (installReferrerDetails.Error != null)
+            {
+                Debug.LogError("Error occurred!");
+                if (installReferrerDetails.Error.Exception != null)
+                {
+                    Debug.LogError("Exception message: " + installReferrerDetails.Error.Exception.Message);
+                }
+                Debug.LogError("Response code: " + installReferrerDetails.Error.ResponseCode.ToString());
+                return;
+            }
+
+            // print install referrer details
+            if (installReferrerDetails.InstallReferrer != null)
+            {
+                Debug.Log("Install referrer: " + installReferrerDetails.InstallReferrer);
+                PlayerPrefs.SetString("FirstOpenRefer", installReferrerDetails.InstallReferrer);
+                Parameter[] paramz = {
+                   new Parameter("referrer",installReferrerDetails.InstallReferrer)
+                };
+                FirebaseAnalytics.LogEvent("FirstOpenRefer", paramz);
+            }
+           /** if (installReferrerDetails.ReferrerClickTimestampSeconds != null)
+            {
+               
+                Debug.Log("Referrer click timestamp: " + installReferrerDetails.ReferrerClickTimestampSeconds);
+            }
+            if (installReferrerDetails.InstallBeginTimestampSeconds != null)
+            {
+               
+                Debug.Log("Install begin timestamp: " + installReferrerDetails.InstallBeginTimestampSeconds);
+            }
+            if (installReferrerDetails.ReferrerClickTimestampServerSeconds != null)
+            {
+               
+                Debug.Log("Referrer click server timestamp: " + installReferrerDetails.ReferrerClickTimestampServerSeconds);
+            }
+            if (installReferrerDetails.InstallBeginTimestampServerSeconds != null)
+            {
+               
+                Debug.Log("Install begin server timestamp: " + installReferrerDetails.InstallBeginTimestampServerSeconds);
+            }
+           **/ if (installReferrerDetails.InstallVersion != null)
+            {
+              
+                Debug.Log("Install version: " + installReferrerDetails.InstallVersion);
+            }
+            if (installReferrerDetails.GooglePlayInstant != null)
+            {
+              
+                Debug.Log("Google Play instant: " + installReferrerDetails.GooglePlayInstant);
+            }
+        });
+    }
 
 		// Use this for initialization
 		void Start ()

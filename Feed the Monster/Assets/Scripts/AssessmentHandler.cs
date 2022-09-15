@@ -77,11 +77,11 @@ public class AssessmentHandler : MonoBehaviour
 
     public void tryAssessment()
     {
-        Debug.Log("checking if assessment is needed");
+       // Debug.Log("checking if assessment is needed");
         if (true)
         {
-            Debug.Log("assessment is needed");
-            showAssessment();
+           // Debug.Log("assessment is needed");
+          //  showAssessment();
         }
     }
 
@@ -206,9 +206,9 @@ public class AssessmentHandler : MonoBehaviour
     public void showAssessment()
     {
        
-            AudioController.Instance.PlaySound(titleSound);
+        //    AudioController.Instance.PlaySound(titleSound);
         
-        var go = GameObject.Instantiate(webviewprefab,UIController.Instance.LevelEndPopup.transform.parent);
+       // var go = GameObject.Instantiate(webviewprefab,UIController.Instance.LevelEndPopup.transform.parent);
         
     }
 }

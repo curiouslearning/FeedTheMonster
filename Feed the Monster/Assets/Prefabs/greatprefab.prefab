@@ -54,8 +54,8 @@ MonoBehaviour:
   textRenderer: {fileID: 1883663277597160481}
   outlineRenderer: {fileID: 1883663276959405384}
   sounds:
-  - {fileID: 8300000, guid: 61504683c0b692f42bbaba1b2edf0a30, type: 3}
-  - {fileID: 8300000, guid: 37708f46b1cdcff40b4e5b05f76ad6b7, type: 3}
+  - {fileID: 8300000, guid: 5213fd46dfafdb24f9cda835b8aefaf4, type: 3}
+  - {fileID: 8300000, guid: d0314366faecd414b98316260db5675b, type: 3}
 --- !u!1 &1883663276959405386
 GameObject:
   m_ObjectHideFlags: 0

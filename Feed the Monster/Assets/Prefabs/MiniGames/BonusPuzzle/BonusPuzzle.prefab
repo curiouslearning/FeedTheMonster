@@ -389,7 +389,7 @@ MonoBehaviour:
   OpenParticale: {fileID: 1817691170898002}
   CloseBox: {fileID: 1980200870832314}
   title: {fileID: 114864237320827236}
-  titleSound: {fileID: 8300000, guid: 73f8b53596ee67043841de074fab8a54, type: 3}
+  titleSound: {fileID: 8300000, guid: b5a657aa2914e4816a69f5886797b0cb, type: 3}
   backSound: {fileID: 8300000, guid: 31dfef4da34b93e4aaf90d8e12dcd0b2, type: 3}
 --- !u!225 &225229074920567354
 CanvasGroup:
@@ -10086,7 +10086,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 03db67de1ec0df8459b7498a06b802f6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 20374848a0f83b04da4eb434c31903e3, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
